@@ -1,11 +1,9 @@
-title : Blog Title
-tagline: Blog Tagline
+title : CodeFodder
+tagline: a code notepad
 author :
-  name : Firstname Lastname
-  email : blah@email.test
-  github : username
-  twitter : username
-  feedburner : feedname
+  name : Jason Milkins
+  github : jasonm23
+  twitter : ocodo
 
 navigation :
   - archive.html
