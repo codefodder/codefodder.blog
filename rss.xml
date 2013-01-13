@@ -3,7 +3,7 @@
   <channel>
     <title>CodeFodder</title>
     <link>http://codefodder.github.com</link>
-    <pubDate>2013-01-13 20:20:44 +1100</pubDate>
+    <pubDate>2013-01-13 20:47:29 +1100</pubDate>
     <item>
       <title>Kendo mobile data-bind with formatting</title>
       <link>http://codefodder.github.com/kendo-javascript/kendo-mobile-data-bind-with-formatting</link>
@@ -34,10 +34,10 @@
     &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"&gt;
     &lt;meta name="author" content="Jason Milkins" /&gt;
     &lt;title&gt;Tinkerbin.com&lt;/title&gt;
-    &lt;link href="/assets/dinky/stylesheets/styles.css?0.6655096147810721" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5414236456839212" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/dinky/stylesheets/styles.css?0.6472887616445243" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.11444843131223559" type="text/css" rel="stylesheet" media="all"&gt;
 
-&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.2461007068664265"&gt;&lt;/script&gt;
+&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.5356244676736243"&gt;&lt;/script&gt;
 
     &lt;!--[if lt IE 9]&gt;
     &lt;script src="//html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
@@ -63,6 +63,7 @@
         &lt;div class="misc vcard"&gt;
           &lt;ul&gt;
             &lt;li class="github"&gt;&lt;a href="http://github.com/jasonm23/" rel="me"&gt;github&lt;/a&gt;&lt;/li&gt;
+            
           &lt;/ul&gt;
         &lt;/div&gt;&lt;!-- misc --&gt;
       &lt;/header&gt;
