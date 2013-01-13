@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="author" content="Jason Milkins" />
     <title>CodeFodder</title>
-    <link href="/assets/dinky/stylesheets/styles.css?0.5864268532536914" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8015893010782219" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/dinky/stylesheets/styles.css?0.5551603559165824" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9114966273191584" type="text/css" rel="stylesheet" media="all">
 
-<script src="/assets/dinky/javascripts/scale.fix.js?0.7975411009448011"></script>
+<script src="/assets/dinky/javascripts/scale.fix.js?0.8894358664405148"></script>
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -46,7 +46,9 @@
   <div class="post">
   <h3 class="title"><a href="/kendo-javascript/kendo-mobile-data-bind-with-formatting">Kendo mobile data-bind with formatting</a> <span class="date">2013-01-13</span></h3>
 
-  <p>KendoUI&#39;s MVVM data-binding is pretty useful <em>(as is KnockoutJS,
+  <h3 id="toc_0">Adding custom data-bind methods to Kendo</h3>
+
+<p>KendoUI&#39;s MVVM data-binding is pretty useful <em>(as is KnockoutJS,
 AngularJS, Backbone etc. for that matter.)</em></p>
 
 <p>Unfortunately in Kendo&#39;s implementation <code>data-bind=&quot;text: property&quot;</code>
@@ -75,9 +77,6 @@ etc. All we need to do is extend <code>kendo.data.binders.text</code> and
 override its <code>refresh</code> method.</p>
 
 <p>We&#39;ll create our new binder as <code>kendo.data.binders.currency</code> </p>
-
-<pre><code>kendo.data.binders.currency = kendo.data.binders.text.extend();
-</code></pre>
 
 
   <div class="more">
