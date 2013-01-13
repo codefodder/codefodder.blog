@@ -6,7 +6,7 @@ categories: kendo, javascript,
 
 ---
 
-KendoUI's MVVM data-binding is pretty useful_(as is KnockoutJS,
+KendoUI's MVVM data-binding is pretty useful _(as is KnockoutJS,
 AngularJS, Backbone etc. for that matter.)_
 
 Unfortunately in Kendo's implementation `data-bind="text: property"`

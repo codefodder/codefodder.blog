@@ -1,0 +1,26 @@
+{
+  "stylesheets" : {
+    "default" : [
+      "styles.css",
+    ],
+   
+    "widgets" : {
+      "google_prettify" : "sunburst.css"
+    }
+    
+  },
+
+  "javascripts" : {
+    "default" : [
+      "scale.fix.js"
+    ]
+  },
+  
+  "manifest" : {
+    "name" : "wingwang",
+    "author" : {
+      "name" : "Jason Milkins",
+      "website" : "http://emacsfodder.github.com/"
+    }
+  }
+}
