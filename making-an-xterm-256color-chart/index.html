@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="author" content="Jason Milkins" />
+    <title>Making an xterm-256color chart</title>
+      <meta name="description" content="in which we make a nice xterm color chart with SVG.">
+    <link href="/assets/dinky/stylesheets/styles.css?0.085032062326445" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.04692195547005962" type="text/css" rel="stylesheet" media="all">
+
+<script src="/assets/dinky/javascripts/scale.fix.js?0.27545593110714706"></script>
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header"><a href="/">CodeFodder</a></h1>
+        <p class="header">a code notepad</p>
+        <ul>
+            
+              <li><a href="/archive">Archive</a></li>
+            
+              <li><a href="/tags">Tags</a></li>
+            
+              <li><a href="/categories">Categories</a></li>
+            
+              <li><a href="/pages">Pages</a></li>
+            
+              <li><a href="/about">About...</a></li>
+        </ul>
+        <div class="misc vcard">
+          <ul>
+            <li class="github"><a href="http://github.com/jasonm23/" rel="me">github</a></li>
+          </ul>
+        </div><!-- misc -->
+      </header>
+
+      <section>
+      <section>
+  <h1>Making an xterm-256color chart</h1>
+
+  <p>I generally have a few terminal windows open, and I also tend to jump around a lot of locations on ssh, either in my home, or somewhere else in the world.</p>
+
+<p>I find it&#39;s useful to color parts of my <code>zsh</code> prompt differently for each box I commonly use, so I can see/feel at a glance where I am.</p>
+
+<p>Obviously the choices of colors for regular xterm are limited to the fairly ugly 16, and retinting those on Terminals that support such things is a bit of a maintenance headache that no one should endure.</p>
+
+<p>Terminals which support xterm-256color are plentiful enough for me for that to be a workable arrangement.</p>
+
+<p>I&#39;m a visually driven beast, so after fumbling about with ansi echo loops to find a approiate colors (googling xterm-256color chart didn&#39;t occur to me), I decided I&#39;d like to make a couple of helpful xterm-256color thingoes.</p>
+
+<p>So first up we need a dataset, I pulled these color mappings out of  <a href="http://www.frexx.de/xterm-256-notes/data/xterm-colortest">Here</a> and here they are Yaml format, I&#39;ve re-arranged them to match the table <a href="http://en.wikipedia.org/wiki/File:Xterm_color_chart.png">on Wikipedia</a>, because I guess I&#39;m going to donate the SVG output there as a public domain image, and wasn&#39;t sure what the hue spread algorithm used there was.</p>
+
+<p>Ok, so with our dataset, we can make our chart. We&#39;re using the same 80x60 box as the png, the xterm number sits in the bottom left corner and the hex color will sit near the vertical and horizontal center, we can use fixed postions for these since the strings are all the same size. The font is bitstream-vera-sans-mono for portablilty/licencing freedom.</p>
+
+<p>I used the handy <code>text_color</code> function in the <code>colorist</code> gem (<code>gem install colorist</code>) which is a nice little library of color functions...</p>
+
+<pre><code>require &#39;colorist&#39;   
+include Colorist
+
+puts &quot;#434392&quot;.to_color.text_color
+</code></pre>
+
+<p>Give you the text color from a CSS valid color string.</p>
+
+<p>Ok, so let&#39;s have a look at laying this out... As I mentioned there&#39;s some nice color coordination on the origial table, which I want to bring over, sorting the big color list into the appropriate chunks does the trick. <a href="https://raw.github.com/gist/2868981/b80871f36954f11c7a7ee95a2d8d4f9886ce7361/xterm-256color.yaml">You can see the color data here</a></p>
+
+<p>Then we divide into base (16), greyscales (24), and the rest... (216).</p>
+
+<p>The 24 greyscales looked nice arranged as a snaked pair of rows, </p>
+
+<pre><code>black -&gt; mid grey
+white &lt;- mid grey
+</code></pre>
+
+<p>So we just reverse the last 12 so we can just do a simple modular arithmetic grid.</p>
+
+<pre><code>x = i%12 * w
+y = i/12 * h
+</code></pre>
+
+<p>We do something similar for the base (16) colors, using <code>%8</code> instead.</p>
+
+<p>It&#39;s a bit more tricky to layout the 216 colors into 3 equal tables.</p>
+
+<p>Let&#39;s have a look at it...</p>
+
+<pre><code>x = i/6 * w % table_width
+y = i%6 * h + table_height * (i/cells_per_table)   
+</code></pre>
+
+<p>By the way this set of tables order by columns not rows, so we do modulo on 6 cells per column, each table has 72 cells, and we use the a modulo on the table width to reset the x position. </p>
+
+<p>These sorts of loops are more fun to step through, and watch them build, the math becomes much clearer, modulo is sweet.</p>
+
+<pre><code>## quick dirty script to render a xterm256 color chart in svg.
+require &#39;yaml&#39;
+require &#39;colorist&#39;
+include Colorist
+
+def svg_box x, y, s, w, h
+  xterm, hex = s.split &quot;,&quot;
+  text = &quot;##{hex}&quot;.to_color.text_color 0.6
+  &lt;&lt;-SVGBOX
+  &lt;g transform=&quot;translate(#{x},#{y})&quot;&gt;
+    &lt;rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;#{w}&quot; height=&quot;#{h}&quot; style=&quot;fill:##{hex};&quot; /&gt;
+    &lt;text x=&quot;#{w/2}&quot; y=&quot;#{(h/2)+2}&quot; style=&quot;fill:#{text};text-anchor:middle;&quot; &gt;#{hex}&lt;/text&gt;
+    &lt;text x=&quot;2&quot; y=&quot;#{h-3}&quot; style=&quot;fill:#{text};&quot; &gt;#{xterm}&lt;/text&gt;
+  &lt;/g&gt;
+  SVGBOX
+end
+
+xtermcolors = YAML.load_file &quot;xtermcolors.yaml&quot;
+rows = 6
+columns = 12
+cells_per_table = columns * rows
+w = 80
+h = 60
+table_spacing = 20
+table_height = rows * h + table_spacing 
+table_width = columns * w
+doc_height = (table_height *3) + (h*4) + table_spacing
+boxes256 = []
+boxesGrey = []
+boxes16 = []
+
+xtermcolors[:xterm256].each_with_index do |s,i|
+  x = i/rows * w % table_width
+  y = i%rows * h + table_height * (i/cells_per_table)   
+  boxes256 &lt;&lt; svg_box(x, y, s, w, h)
+end
+
+xtermcolors[:xtermGreyscale].each_with_index do |s,i|
+  x = i%12 * w
+  y = i/12 * h
+  boxesGrey &lt;&lt; svg_box(x, y, s, w, h)
+end
+
+xtermcolors[:xterm16].each_with_index do |s,i|
+  x = i%8 * w
+  y = i/8 * h
+  boxes16 &lt;&lt; svg_box(x, y, s, w, h)
+end
+
+svg = &lt;&lt;-SVG
+&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; version=&quot;1.1&quot; width=&quot;#{table_width}&quot; height=&quot;#{doc_height}&quot;&gt;
+  &lt;style&gt;
+     /* rect { stroke: black; stroke-width:0.15pt; } */
+     text {
+       font-size:9pt; 
+       font-family: &quot;Bitstream Vera Sans Mono&quot;, &quot;Droid Sans Mono&quot;, &quot;Menlo&quot;, &quot;Monaco&quot;, &quot;Consolas&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;; 
+       fill: white;
+     }
+     .head {
+       font-family: &#39;Helvetica Neue&#39;, Helvetica, Calibri, Arial, sans-serif;
+       font-size: 20pt;
+     }
+     .tiny { font-size: 6pt; }
+  &lt;/style&gt;
+  &lt;rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;#{table_width}&quot; height=&quot;#{doc_height}&quot; style=&quot;fill:black&quot;/&gt;
+  &lt;g transform=&quot;translate(0,0)&quot;&gt;
+    #{boxes256.join &quot;\n&quot;}
+  &lt;/g&gt;
+  &lt;g transform=&quot;translate(0,#{table_height*3})&quot;&gt;
+    #{boxesGrey.join &quot;\n&quot;}
+  &lt;/g&gt;
+  &lt;g transform=&quot;translate(0,#{table_height*3 + (h*2) + table_spacing})&quot;&gt;
+    #{boxes16.join &quot;\n&quot;}
+  &lt;/g&gt;
+  &lt;g transform=&quot;translate(#{w*8}, #{doc_height-(h*2)})&quot;&gt;
+    &lt;text x=&quot;20&quot; y=&quot;32&quot; class=&quot;head&quot;&gt;xterm-256-color chart&lt;/text&gt;
+    &lt;text x=&quot;20&quot; y=&quot;78&quot; class=&quot;head tiny&quot;&gt;Spooned carefully into SVG by Jason Milkins in 2012&lt;/text&gt;
+    &lt;text x=&quot;20&quot; y=&quot;90&quot; class=&quot;head tiny&quot;&gt;this SVG is in the public domain&lt;/text&gt;
+   &lt;a xlink:href=&quot;https://gist.github.com/2868981&quot;&gt;&lt;text x=&quot;20&quot; y=&quot;102&quot; class=&quot;head tiny&quot;&gt;https://gist.github.com/2868981 - contains the dataset in yaml&lt;/text&gt;&lt;/a&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;
+SVG
+
+puts svg
+</code></pre>
+
+<hr>
+
+<h3 id="toc_0">...and here&#39;s our xterm-256color chart...</h3>
+
+<p><img src="/assets/media/xterm-256-color.svg" alt=""></p>
+
+  
+  <ul class="pagination">
+      <li class="prev"><a href="/tinkerbin-com" title="Tinkerbin.com">&larr; Previous</a></li>
+
+      <li class="next"><a href="/kendo-javascript/kendo-mobile-data-bind-with-formatting" title="Kendo mobile data-bind with formatting">Next &rarr;</a></li>
+  </ul>
+  
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_developer = 1;
+    var disqus_shortname = 'codefodder'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</section>
+
+      </section>
+
+      <footer>
+      <p><small>Hosted on <a href="http://post.ruhoh.com">ruhoh.com</a> using the <a href="https://github.com/sodabrew/theme-dinky">Dinky theme</a> for <a href="http://ruhoh.com/">ruhoh</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    
+    <!-- Google Prettify -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+<script>
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i < pres.length; ++i) {
+    pres[i].className = "prettyprint ";
+  }
+  prettyPrint();
+</script>
+<!-- end Google Prettify -->
+    <script>
+  var _gaq=[['_setAccount','UA-123-12'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+  </body>
+</html>
