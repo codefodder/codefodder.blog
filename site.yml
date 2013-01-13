@@ -1,0 +1,14 @@
+title : CodeFodder
+tagline: a code notepad
+author :
+  name : Jason Milkins
+  github : jasonm23
+  twitter : ocodo
+
+navigation :
+  - archive.html
+  - tags.html
+  - categories.html
+  - pages.html
+  - about.md
+  
