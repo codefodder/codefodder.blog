@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="author" content="Jason Milkins" />
+    <title>Kendo mobile data-bind with formatting</title>
+      <meta name="description" content="Adding custom MVVM binders to KendoUI Mobile">
+    <link href="/assets/dinky/stylesheets/styles.css?0.948028921205139" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9012156076969038" type="text/css" rel="stylesheet" media="all">
+
+<script src="/assets/dinky/javascripts/scale.fix.js?0.9606736429820363"></script>
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header"><a href="/">CodeFodder</a></h1>
+        <p class="header">a code notepad</p>
+        <ul>
+            
+              <li><a href="/archive">Archive</a></li>
+            
+              <li><a href="/tags">Tags</a></li>
+            
+              <li><a href="/categories">Categories</a></li>
+            
+              <li><a href="/pages">Pages</a></li>
+            
+              <li><a href="/about">About...</a></li>
+        </ul>
+        <div class="misc vcard">
+          <ul>
+            <li class="github"><a href="http://github.com/jasonm23/" rel="me">github</a></li>
+          </ul>
+        </div><!-- misc -->
+      </header>
+
+      <section>
+      <section>
+  <h1>Kendo mobile data-bind with formatting</h1>
+
+  <h3 id="toc_0">Adding custom data-bind methods to Kendo</h3>
+
+<p>KendoUI&#39;s MVVM data-binding is pretty useful <em>(as is KnockoutJS,
+AngularJS, Backbone etc. for that matter.)</em></p>
+
+<p>Unfortunately in Kendo&#39;s implementation <code>data-bind=&quot;text: property&quot;</code>
+binding doesn&#39;t provide a method to format property result. The
+solution is quite simple though, in the form of custom binders.</p>
+
+<p>As a best practice, you should create a custom binder for each the
+format style you want, instead of placing a format expression as-is
+into a binding attribute, this keeps your formatters in one
+<a href="http://en.wikipedia.org/wiki/Don&#x27;t_repeat_yourself">DRY</a> place.</p>
+
+<p>So, instead of trying to do: </p>
+
+<pre><code>data-bind=&quot;text: {0:c}property&quot;
+</code></pre>
+
+<p>We give ourselves a new binder like this:</p>
+
+<pre><code>data-bind=&quot;currency: property&quot;
+</code></pre>
+
+<p>To create this new binder <code>currency:</code> we want to add a new binder
+definition to <code>kendo.data.binders</code>. We know the <code>text:</code> binder does
+most of the things we want, , initialising, keeping up to date,
+etc. All we need to do is extend <code>kendo.data.binders.text</code> and
+override its <code>refresh</code> method.</p>
+
+<p>We&#39;ll create our new binder as <code>kendo.data.binders.currency</code> </p>
+
+<pre><code>kendo.data.binders.currency = kendo.data.binders.text.extend();
+</code></pre>
+
+<p>Then we&#39;ll replace its <code>refresh</code> method: </p>
+
+<pre><code>kendo.data.binders.currency.refresh = function() {
+    var e = this.element;
+    var p = this.bindings.currency.path;
+    var s = this.bindings.currency.source;
+    $(e).text(kendo.format(&quot;{0:c}&quot;, s[p]));
+};
+</code></pre>
+
+<p>Now we can use this binder in our markup.</p>
+
+<pre><code>&lt;span data-bind=&quot;currency: property&quot;&gt;&lt;/span&gt;
+</code></pre>
+
+<p>The value of <code>property</code> will be formatted to the locale currency.</p>
+
+  
+  <ul class="pagination">
+      <li class="prev"><a href="/making-an-xterm-256color-chart" title="Making an xterm-256color chart">&larr; Previous</a></li>
+
+      <li class="next disabled"><a>Next &rarr;</a>
+  </ul>
+  
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_developer = 1;
+    var disqus_shortname = 'codefodder'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</section>
+
+      </section>
+
+      <footer>
+      <p><small>Hosted on <a href="http://post.ruhoh.com">ruhoh.com</a> using the <a href="https://github.com/sodabrew/theme-dinky">Dinky theme</a> for <a href="http://ruhoh.com/">ruhoh</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    
+    <!-- Google Prettify -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+<script>
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i < pres.length; ++i) {
+    pres[i].className = "prettyprint ";
+  }
+  prettyPrint();
+</script>
+<!-- end Google Prettify -->
+    <script>
+  var _gaq=[['_setAccount','UA-123-12'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+  </body>
+</html>

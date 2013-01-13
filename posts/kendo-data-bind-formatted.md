@@ -6,6 +6,8 @@ categories: kendo, javascript,
 
 ---
 
+### Adding custom data-bind methods to Kendo
+
 KendoUI's MVVM data-binding is pretty useful _(as is KnockoutJS,
 AngularJS, Backbone etc. for that matter.)_
 
