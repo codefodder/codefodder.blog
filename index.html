@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="author" content="Jason Milkins" />
     <title>CodeFodder</title>
-    <link href="/assets/dinky/stylesheets/styles.css?0.6346779125509056" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.662831673749624" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/dinky/stylesheets/styles.css?0.9197306803326843" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5986940702598613" type="text/css" rel="stylesheet" media="all">
 
-<script src="/assets/dinky/javascripts/scale.fix.js?0.21298690036739254"></script>
+<script src="/assets/dinky/javascripts/scale.fix.js?0.025295840959422833"></script>
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -45,6 +45,41 @@
   <h1>CodeFodder</h1>
 
   <div class="post">
+  <h3 class="title"><a href="/photoshop-color-palette/photoshop-aco-to-uicolors">Photoshop .aco to UIColors</a> <span class="date">2013-01-14</span></h3>
+
+  <p>Photoshop .ACO color palettes are probably the easiest way to get a color
+list from a designer, but getting those colors isn&#39;t all that
+easy. Adobe doesn&#39;t provide a tool (that I&#39;m aware of at
+least) that will export colors into a more accessible form.</p>
+
+<p>What I wanted was a tool which would export an .aco to a plain text datafile,
+ I found something quite close in the form of
+<a href="http://www.hping.org/aco2html/">aco2html</a>.</p>
+
+<p>My specific use case was to make Objective C / Cocoa <code>UIColor</code> so I
+grabbed the code and
+<a href="https://github.com/jasonm23/photoshop-aco2UIColors">made this</a>. </p>
+
+<p>This version generates a list of <code>UIColor</code> object values (undeclared),
+which can be quickly assigned to variables, I also tacked on hex and
+css <code>rgb()</code> colors. </p>
+
+<pre><code>[UIColor colorWithRed:0.658824 green:0.639216 blue:0.556863 alpha:1.0f], // #a8a38e  rgb(168,163,142) 
+[UIColor colorWithRed:0.513726 green:0.486275 blue:0.403922 alpha:1.0f], // #837c67  rgb(131,124,103) 
+[UIColor colorWithRed:0.913725 green:0.709804 blue:0.254902 alpha:1.0f], // #e9b541  rgb(233,181,65) 
+[UIColor colorWithRed:0.792157 green:0.768627 blue:0.709804 alpha:1.0f], // #cac4b5  rgb(202,196,181) 
+[UIColor colorWithRed:0.901961 green:0.886275 blue:0.847059 alpha:1.0f], // #e6e2d8  rgb(230,226,216) 
+[UIColor colorWithRed:0.254902 green:0.227451 blue:0.180392 alpha:1.0f], // #413a2e  rgb(65,58,46) 
+[UIColor colorWithRed:0.400000 green:0.380392 blue:0.313726 alpha:1.0f], // #666150  rgb(102,97,80) 
+[UIColor colorWithRed:0.560784 green:0.537255 blue:0.458824 alpha:1.0f], // #8f8975  rgb(143,137,117) 
+</code></pre>
+
+
+  <div class="more">
+    <a href="/photoshop-color-palette/photoshop-aco-to-uicolors" class="btn">read more..</a>
+  </div>
+</div>
+<div class="post">
   <h3 class="title"><a href="/kendo-javascript/kendo-mobile-data-bind-with-formatting">Kendo mobile data-bind with formatting</a> <span class="date">2013-01-13</span></h3>
 
   <h3 id="toc_0">Adding custom data-bind methods to Kendo</h3>
@@ -82,41 +117,6 @@ override its <code>refresh</code> method.</p>
 
   <div class="more">
     <a href="/kendo-javascript/kendo-mobile-data-bind-with-formatting" class="btn">read more..</a>
-  </div>
-</div>
-<div class="post">
-  <h3 class="title"><a href="/photoshop-color-palette/photoshop-aco-to-uicolors">Photoshop .aco to UIColors</a> <span class="date">2013-01-13</span></h3>
-
-  <p>Photoshop .ACO color palettes are probably the easiest way to get a color
-list from a designer, but getting those colors isn&#39;t all that
-easy. Adobe doesn&#39;t provide a tool (that I&#39;m aware of at
-least) that will export colors into a more accessible form.</p>
-
-<p>What I wanted was a tool which would export an .aco to a plain text datafile,
- I found something quite close in the form of
-<a href="http://www.hping.org/aco2html/">aco2html</a>.</p>
-
-<p>My specific use case was to make Objective C / Cocoa <code>UIColor</code> so I
-grabbed the code and
-<a href="https://github.com/jasonm23/photoshop-aco2UIColors">made this</a>. </p>
-
-<p>This version generates a list of <code>UIColor</code> object values (undeclared),
-which can be quickly assigned to variables, I also tacked on hex and
-css <code>rgb()</code> colors. </p>
-
-<pre><code>[UIColor colorWithRed:0.658824 green:0.639216 blue:0.556863 alpha:1.0f], // #a8a38e  rgb(168,163,142) 
-[UIColor colorWithRed:0.513726 green:0.486275 blue:0.403922 alpha:1.0f], // #837c67  rgb(131,124,103) 
-[UIColor colorWithRed:0.913725 green:0.709804 blue:0.254902 alpha:1.0f], // #e9b541  rgb(233,181,65) 
-[UIColor colorWithRed:0.792157 green:0.768627 blue:0.709804 alpha:1.0f], // #cac4b5  rgb(202,196,181) 
-[UIColor colorWithRed:0.901961 green:0.886275 blue:0.847059 alpha:1.0f], // #e6e2d8  rgb(230,226,216) 
-[UIColor colorWithRed:0.254902 green:0.227451 blue:0.180392 alpha:1.0f], // #413a2e  rgb(65,58,46) 
-[UIColor colorWithRed:0.400000 green:0.380392 blue:0.313726 alpha:1.0f], // #666150  rgb(102,97,80) 
-[UIColor colorWithRed:0.560784 green:0.537255 blue:0.458824 alpha:1.0f], // #8f8975  rgb(143,137,117) 
-</code></pre>
-
-
-  <div class="more">
-    <a href="/photoshop-color-palette/photoshop-aco-to-uicolors" class="btn">read more..</a>
   </div>
 </div>
 <div class="post">

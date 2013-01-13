@@ -3,18 +3,18 @@
   <channel>
     <title>CodeFodder</title>
     <link>http://codefodder.github.com</link>
-    <pubDate>2013-01-13 20:47:29 +1100</pubDate>
+    <pubDate>2013-01-14 09:00:07 +1100</pubDate>
+    <item>
+      <title>Photoshop .aco to UIColors</title>
+      <link>http://codefodder.github.com/photoshop-color-palette/photoshop-aco-to-uicolors</link>
+      <pubDate>2013-01-14</pubDate>
+      <description>Converting Adobe Photoshop .aco palette files to hex color codes.</description>
+    </item>
     <item>
       <title>Kendo mobile data-bind with formatting</title>
       <link>http://codefodder.github.com/kendo-javascript/kendo-mobile-data-bind-with-formatting</link>
       <pubDate>2013-01-13</pubDate>
       <description>Adding custom MVVM binders to KendoUI Mobile</description>
-    </item>
-    <item>
-      <title>Photoshop .aco to UIColors</title>
-      <link>http://codefodder.github.com/photoshop-color-palette/photoshop-aco-to-uicolors</link>
-      <pubDate>2013-01-13</pubDate>
-      <description>Converting Adobe Photoshop .aco palette files to hex color codes.</description>
     </item>
     <item>
       <title>Making an xterm-256color chart</title>
@@ -34,10 +34,10 @@
     &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"&gt;
     &lt;meta name="author" content="Jason Milkins" /&gt;
     &lt;title&gt;Tinkerbin.com&lt;/title&gt;
-    &lt;link href="/assets/dinky/stylesheets/styles.css?0.6472887616445243" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.11444843131223559" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/dinky/stylesheets/styles.css?0.7167044498615517" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6805674565839193" type="text/css" rel="stylesheet" media="all"&gt;
 
-&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.5356244676736243"&gt;&lt;/script&gt;
+&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.9565004601061883"&gt;&lt;/script&gt;
 
     &lt;!--[if lt IE 9]&gt;
     &lt;script src="//html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
