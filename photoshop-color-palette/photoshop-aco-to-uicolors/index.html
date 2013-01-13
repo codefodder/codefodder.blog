@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="author" content="Jason Milkins" />
+    <title>Photoshop .aco to UIColors</title>
+      <meta name="description" content="Converting Adobe Photoshop .aco palette files to hex color codes.">
+    <link href="/assets/dinky/stylesheets/styles.css?0.0635480681448618" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8856624920946361" type="text/css" rel="stylesheet" media="all">
+
+<script src="/assets/dinky/javascripts/scale.fix.js?0.318082256719606"></script>
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header"><a href="/">CodeFodder</a></h1>
+        <p class="header">a code notepad</p>
+        <ul>
+            
+              <li><a href="/archive">Archive</a></li>
+            
+              <li><a href="/tags">Tags</a></li>
+            
+              <li><a href="/categories">Categories</a></li>
+            
+              <li><a href="/pages">Pages</a></li>
+            
+              <li><a href="/about">About...</a></li>
+        </ul>
+        <div class="misc vcard">
+          <ul>
+            <li class="github"><a href="http://github.com/jasonm23/" rel="me">github</a></li>
+          </ul>
+        </div><!-- misc -->
+      </header>
+
+      <section>
+      <section>
+  <h1>Photoshop .aco to UIColors</h1>
+
+  <p>Photoshop .ACO color palettes are probably the easiest way to get a color
+list from a designer, but getting those colors isn&#39;t all that
+easy. Adobe at least doesn&#39;t provide a tool (that I&#39;m aware of at
+least) that will export colors into a more accessible form.</p>
+
+<p>What I wanted was a tool which would export an .aco to a plain text datafile,
+ I found something quite close in the form of
+<a href="http://www.hping.org/aco2html/">aco2html</a>.</p>
+
+<p>My specific use case was to make Objective C / Cocoa <code>UIColor</code> so I
+grabbed the code and
+<a href="https://github.com/jasonm23/photoshop-aco2UIColors">made this</a>. </p>
+
+<p>This version generates a list of <code>UIColor</code> object values (undeclared),
+which can be quickly assigned to variables, I also tacked on hex and
+css <code>rgb()</code> colors. </p>
+
+<p>[UIColor colorWithRed:0.658824 green:0.639216 blue:0.556863 alpha:1.0f], // #a8a38e  rgb(168,163,142) 
+[UIColor colorWithRed:0.513726 green:0.486275 blue:0.403922 alpha:1.0f], // #837c67  rgb(131,124,103) 
+[UIColor colorWithRed:0.913725 green:0.709804 blue:0.254902 alpha:1.0f], // #e9b541  rgb(233,181,65) 
+[UIColor colorWithRed:0.792157 green:0.768627 blue:0.709804 alpha:1.0f], // #cac4b5  rgb(202,196,181) 
+[UIColor colorWithRed:0.901961 green:0.886275 blue:0.847059 alpha:1.0f], // #e6e2d8  rgb(230,226,216) 
+[UIColor colorWithRed:0.254902 green:0.227451 blue:0.180392 alpha:1.0f], // #413a2e  rgb(65,58,46) 
+[UIColor colorWithRed:0.400000 green:0.380392 blue:0.313726 alpha:1.0f], // #666150  rgb(102,97,80) 
+[UIColor colorWithRed:0.560784 green:0.537255 blue:0.458824 alpha:1.0f], // #8f8975  rgb(143,137,117) </p>
+
+<p>This was a couple of months ago, and looking back integrating the
+templating was a bad move. although using <code>cut</code> it&#39;s not too
+difficult to extract the color values.</p>
+
+<p>To get the <code>rgb()</code> colors only:</p>
+
+<pre><code>cat example.aco | aco2UIColors | cut -c86-
+</code></pre>
+
+<p>To grab the hex colors:</p>
+
+<pre><code>cat example.aco | aco2UIColors | cut -c77-84
+</code></pre>
+
+<p>To get the decimal triplets, red, green, blue (0.0 - 1.0) </p>
+
+<pre><code>cat example.aco | aco2UIColors | cut -c19-60 
+</code></pre>
+
+<p>At some point I&#39;ll update this so it optionally spits out the colors
+as a JSON tree.</p>
+
+  
+  <ul class="pagination">
+      <li class="prev"><a href="/making-an-xterm-256color-chart" title="Making an xterm-256color chart">&larr; Previous</a></li>
+
+      <li class="next"><a href="/kendo-javascript/kendo-mobile-data-bind-with-formatting" title="Kendo mobile data-bind with formatting">Next &rarr;</a></li>
+  </ul>
+  
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_developer = 1;
+    var disqus_shortname = 'codefodder'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</section>
+
+      </section>
+
+      <footer>
+      <p><small>Hosted on <a href="http://post.ruhoh.com">ruhoh.com</a> using the <a href="https://github.com/sodabrew/theme-dinky">Dinky theme</a> for <a href="http://ruhoh.com/">ruhoh</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    
+    <!-- Google Prettify -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+<script>
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i < pres.length; ++i) {
+    pres[i].className = "prettyprint ";
+  }
+  prettyPrint();
+</script>
+<!-- end Google Prettify -->
+    <script>
+  var _gaq=[['_setAccount','UA-123-12'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+  </body>
+</html>

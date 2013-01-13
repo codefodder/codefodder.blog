@@ -3,12 +3,18 @@
   <channel>
     <title>CodeFodder</title>
     <link>http://codefodder.github.com</link>
-    <pubDate>2013-01-13 18:01:28 +1100</pubDate>
+    <pubDate>2013-01-13 20:11:58 +1100</pubDate>
     <item>
       <title>Kendo mobile data-bind with formatting</title>
       <link>http://codefodder.github.com/kendo-javascript/kendo-mobile-data-bind-with-formatting</link>
       <pubDate>2013-01-13</pubDate>
       <description>Adding custom MVVM binders to KendoUI Mobile</description>
+    </item>
+    <item>
+      <title>Photoshop .aco to UIColors</title>
+      <link>http://codefodder.github.com/photoshop-color-palette/photoshop-aco-to-uicolors</link>
+      <pubDate>2013-01-13</pubDate>
+      <description>Converting Adobe Photoshop .aco palette files to hex color codes.</description>
     </item>
     <item>
       <title>Making an xterm-256color chart</title>
@@ -28,10 +34,10 @@
     &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"&gt;
     &lt;meta name="author" content="Jason Milkins" /&gt;
     &lt;title&gt;Tinkerbin.com&lt;/title&gt;
-    &lt;link href="/assets/dinky/stylesheets/styles.css?0.09923235989549772" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6905725924527201" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/dinky/stylesheets/styles.css?0.33743126233585596" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.3230105827874252" type="text/css" rel="stylesheet" media="all"&gt;
 
-&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.7450444003047856"&gt;&lt;/script&gt;
+&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.11324907884417956"&gt;&lt;/script&gt;
 
     &lt;!--[if lt IE 9]&gt;
     &lt;script src="//html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
