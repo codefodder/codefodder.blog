@@ -5,12 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="author" content="Jason Milkins" />
-    <title>Kendo mobile data-bind with formatting</title>
-      <meta name="description" content="Adding custom MVVM binders to KendoUI Mobile">
-    <link href="/assets/dinky/stylesheets/styles.css?0.498217968748793" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.36750309528891545" type="text/css" rel="stylesheet" media="all">
+    <title>iTerm2 color theme Soothe</title>
+    <link href="/assets/dinky/stylesheets/styles.css?0.3385123701607772" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7765787187543816" type="text/css" rel="stylesheet" media="all">
 
-<script src="/assets/dinky/javascripts/scale.fix.js?0.3077285084580529"></script>
+<script src="/assets/dinky/javascripts/scale.fix.js?0.005969455210759422"></script>
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -43,65 +42,19 @@
 
       <section>
       <section>
-  <h1>Kendo mobile data-bind with formatting</h1>
+  <h1>iTerm2 color theme Soothe</h1>
 
-  <h3 id="toc_0">Adding custom data-bind methods to Kendo</h3>
+  <p>This is a cool little color theme for iTerm, based on an Emacs theme of the same name.</p>
 
-<p>KendoUI&#39;s MVVM data-binding is pretty useful <em>(as is KnockoutJS,
-AngularJS, Backbone etc. for that matter.)</em></p>
+<p><img src="https://raw.github.com/jasonm23/iterm2-color-themes/master/soothe-colors.png" alt=""></p>
 
-<p>Unfortunately in Kendo&#39;s implementation <code>data-bind=&quot;text: property&quot;</code>
-binding doesn&#39;t provide a method to format property result. The
-solution is quite simple though, in the form of custom binders.</p>
-
-<p>As a best practice, you should create a custom binder for each the
-format style you want, instead of placing a format expression as-is
-into a binding attribute, this keeps your formatters in one
-<a href="http://en.wikipedia.org/wiki/Don&#x27;t_repeat_yourself">DRY</a> place.</p>
-
-<p>So, instead of trying to do: </p>
-
-<pre><code>data-bind=&quot;text: {0:c}property&quot;
-</code></pre>
-
-<p>We give ourselves a new binder like this:</p>
-
-<pre><code>data-bind=&quot;currency: property&quot;
-</code></pre>
-
-<p>To create this new binder <code>currency:</code> we want to add a new binder
-definition to <code>kendo.data.binders</code>. We know the <code>text:</code> binder does
-most of the things we want, , initialising, keeping up to date,
-etc. All we need to do is extend <code>kendo.data.binders.text</code> and
-override its <code>refresh</code> method.</p>
-
-<p>We&#39;ll create our new binder as <code>kendo.data.binders.currency</code> </p>
-
-<pre><code>kendo.data.binders.currency = kendo.data.binders.text.extend();
-</code></pre>
-
-<p>Then we&#39;ll replace its <code>refresh</code> method: </p>
-
-<pre><code>kendo.data.binders.currency.refresh = function() {
-    var e = this.element;
-    var p = this.bindings.currency.path;
-    var s = this.bindings.currency.source;
-    $(e).text(kendo.format(&quot;{0:c}&quot;, s[p]));
-};
-</code></pre>
-
-<p>Now we can use this binder in our markup.</p>
-
-<pre><code>&lt;span data-bind=&quot;currency: property&quot;&gt;&lt;/span&gt;
-</code></pre>
-
-<p>The value of <code>property</code> will be formatted to the locale currency.</p>
+<p>Go get <a href="http://github.com/jasonm23/iterm2-color-themes">Soothe on GitHub</a></p>
 
   
   <ul class="pagination">
-      <li class="prev"><a href="/making-an-xterm-256color-chart" title="Making an xterm-256color chart">&larr; Previous</a></li>
+      <li class="prev"><a href="/photoshop-color-palette/photoshop-aco-to-uicolors" title="Photoshop .aco to UIColors">&larr; Previous</a></li>
 
-      <li class="next"><a href="/photoshop-color-palette/photoshop-aco-to-uicolors" title="Photoshop .aco to UIColors">Next &rarr;</a></li>
+      <li class="next disabled"><a>Next &rarr;</a>
   </ul>
   
   <div id="disqus_thread"></div>

@@ -3,7 +3,114 @@
   <channel>
     <title>CodeFodder</title>
     <link>http://codefodder.github.com</link>
-    <pubDate>2013-01-14 09:00:07 +1100</pubDate>
+    <pubDate>2013-01-18 19:25:22 +1100</pubDate>
+    <item>
+      <title>iTerm2 color theme Soothe</title>
+      <link>http://codefodder.github.com/iterm2-color-theme-soothe</link>
+      <pubDate>2013-01-18</pubDate>
+      <description>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="chrome=1" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"&gt;
+    &lt;meta name="author" content="Jason Milkins" /&gt;
+    &lt;title&gt;iTerm2 color theme Soothe&lt;/title&gt;
+    &lt;link href="/assets/dinky/stylesheets/styles.css?0.028020010867429224" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8487492999209149" type="text/css" rel="stylesheet" media="all"&gt;
+
+&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.7617432925517246"&gt;&lt;/script&gt;
+
+    &lt;!--[if lt IE 9]&gt;
+    &lt;script src="//html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="wrapper"&gt;
+      &lt;header&gt;
+        &lt;h1 class="header"&gt;&lt;a href="/"&gt;CodeFodder&lt;/a&gt;&lt;/h1&gt;
+        &lt;p class="header"&gt;a code notepad&lt;/p&gt;
+        &lt;ul&gt;
+            
+              &lt;li&gt;&lt;a href="/archive"&gt;Archive&lt;/a&gt;&lt;/li&gt;
+            
+              &lt;li&gt;&lt;a href="/tags"&gt;Tags&lt;/a&gt;&lt;/li&gt;
+            
+              &lt;li&gt;&lt;a href="/categories"&gt;Categories&lt;/a&gt;&lt;/li&gt;
+            
+              &lt;li&gt;&lt;a href="/pages"&gt;Pages&lt;/a&gt;&lt;/li&gt;
+            
+              &lt;li&gt;&lt;a href="/about"&gt;About...&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;div class="misc vcard"&gt;
+          &lt;ul&gt;
+            &lt;li class="github"&gt;&lt;a href="http://github.com/jasonm23/" rel="me"&gt;github&lt;/a&gt;&lt;/li&gt;
+            
+          &lt;/ul&gt;
+        &lt;/div&gt;&lt;!-- misc --&gt;
+      &lt;/header&gt;
+
+      &lt;section&gt;
+      &lt;section&gt;
+  &lt;h1&gt;iTerm2 color theme Soothe&lt;/h1&gt;
+
+  &lt;p&gt;This is a cool little color theme for iTerm, based on an Emacs theme of the same name.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://raw.github.com/jasonm23/iterm2-color-themes/master/soothe-colors.png" alt=""&gt;&lt;/p&gt;
+
+&lt;p&gt;Go get &lt;a href="http://github.com/jasonm23/iterm2-color-themes"&gt;Soothe on GitHub&lt;/a&gt;&lt;/p&gt;
+
+  
+  &lt;ul class="pagination"&gt;
+      &lt;li class="prev"&gt;&lt;a href="/photoshop-color-palette/photoshop-aco-to-uicolors" title="Photoshop .aco to UIColors"&gt;&amp;larr; Previous&lt;/a&gt;&lt;/li&gt;
+
+      &lt;li class="next disabled"&gt;&lt;a&gt;Next &amp;rarr;&lt;/a&gt;
+  &lt;/ul&gt;
+  
+  &lt;div id="disqus_thread"&gt;&lt;/div&gt;
+&lt;script&gt;
+    var disqus_developer = 1;
+    var disqus_shortname = 'codefodder'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+&lt;a href="http://disqus.com" class="dsq-brlink"&gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+
+&lt;/section&gt;
+
+      &lt;/section&gt;
+
+      &lt;footer&gt;
+      &lt;p&gt;&lt;small&gt;Hosted on &lt;a href="http://post.ruhoh.com"&gt;ruhoh.com&lt;/a&gt; using the &lt;a href="https://github.com/sodabrew/theme-dinky"&gt;Dinky theme&lt;/a&gt; for &lt;a href="http://ruhoh.com/"&gt;ruhoh&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+      &lt;/footer&gt;
+    &lt;/div&gt;
+    &lt;!--[if !IE]&gt;&lt;script&gt;fixScale(document);&lt;/script&gt;&lt;!--&lt;![endif]--&gt;
+    
+    &lt;!-- Google Prettify --&gt;
+&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i &lt; pres.length; ++i) {
+    pres[i].className = "prettyprint ";
+  }
+  prettyPrint();
+&lt;/script&gt;
+&lt;!-- end Google Prettify --&gt;
+    &lt;script&gt;
+  var _gaq=[['_setAccount','UA-123-12'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</description>
+    </item>
     <item>
       <title>Photoshop .aco to UIColors</title>
       <link>http://codefodder.github.com/photoshop-color-palette/photoshop-aco-to-uicolors</link>
@@ -34,10 +141,10 @@
     &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"&gt;
     &lt;meta name="author" content="Jason Milkins" /&gt;
     &lt;title&gt;Tinkerbin.com&lt;/title&gt;
-    &lt;link href="/assets/dinky/stylesheets/styles.css?0.7167044498615517" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6805674565839193" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/dinky/stylesheets/styles.css?0.8811597405369263" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9083815225802677" type="text/css" rel="stylesheet" media="all"&gt;
 
-&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.9565004601061883"&gt;&lt;/script&gt;
+&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.16932149198920976"&gt;&lt;/script&gt;
 
     &lt;!--[if lt IE 9]&gt;
     &lt;script src="//html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
