@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="author" content="Jason Milkins" />
-    <title>iTerm2 color theme Soothe</title>
-    <link href="/assets/dinky/stylesheets/styles.css?0.12537419762086155" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8134472120227183" type="text/css" rel="stylesheet" media="all">
+    <title>String.template()</title>
+    <link href="/assets/dinky/stylesheets/styles.css?0.9117474916471722" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.03905489253072181" type="text/css" rel="stylesheet" media="all">
 
-<script src="/assets/dinky/javascripts/scale.fix.js?0.4939192302898878"></script>
+<script src="/assets/dinky/javascripts/scale.fix.js?0.2877586182036126"></script>
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -42,19 +42,35 @@
 
       <section>
       <section>
-  <h1>iTerm2 color theme Soothe</h1>
+  <h1>String.template()</h1>
 
-  <p>This is a cool little color theme for iTerm, based on an Emacs theme of the same name.</p>
+  <p>This is just a little helper method I use in JavaScript a fair bit, it&#39;s an extension of the <code>String</code> class that provides basic parameter replacement, you could equally call it <code>String.format()</code> or even <code>String.$()</code> without angering the gods ... either way, it&#39;s a convenient and minimal way to doing interpolated strings in JS.</p>
 
-<p><img src="https://raw.github.com/jasonm23/iterm2-color-themes/master/soothe-colors.png" alt=""></p>
+<pre><code>String.prototype.template = function (o) {
+    return this.replace(/{([^{}]*)}/g,
+                  function (a, b) {
+                    var r = o[b];
+                    return typeof r === &#39;string&#39; || typeof r === &#39;number&#39; ? r : a;
+                  }
+           );
+    };
+</code></pre>
 
-<p>Go get <a href="http://github.com/jasonm23/iterm2-color-themes">Soothe on GitHub</a></p>
+<p>Usage is simple and reasonably flexible, although there&#39;s <strong>no</strong> printf or C#&#39;s <code>String.format</code> style formatting.</p>
+
+<pre><code>&quot;{0} an array {1} {2} {3}&quot;._([&quot;Using&quot;,&quot;is&quot;,&quot;pretty&quot;,&quot;simple&quot;]);
+</code></pre>
+
+<p>Or for a bit of semantic richness a use a POO (plain old object)</p>
+
+<pre><code>&quot;Your {name} has {length} entries.&quot;.template({name: &quot;Contacts List&quot;, length: contacts.length}); 
+</code></pre>
 
   
   <ul class="pagination">
-      <li class="prev"><a href="/photoshop-color-palette/photoshop-aco-to-uicolors" title="Photoshop .aco to UIColors">&larr; Previous</a></li>
+      <li class="prev"><a href="/iterm2-color-theme-soothe" title="iTerm2 color theme Soothe">&larr; Previous</a></li>
 
-      <li class="next"><a href="/string-template" title="String.template()">Next &rarr;</a></li>
+      <li class="next disabled"><a>Next &rarr;</a>
   </ul>
   
   <div id="disqus_thread"></div>

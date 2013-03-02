@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="author" content="Jason Milkins" />
     <title>CodeFodder</title>
-    <link href="/assets/dinky/stylesheets/styles.css?0.538746138448541" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.4753483741664938" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/dinky/stylesheets/styles.css?0.6053851865024498" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9321514487897699" type="text/css" rel="stylesheet" media="all">
 
-<script src="/assets/dinky/javascripts/scale.fix.js?0.34681244052121896"></script>
+<script src="/assets/dinky/javascripts/scale.fix.js?0.9138104945573886"></script>
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -45,6 +45,36 @@
   <h1>CodeFodder</h1>
 
   <div class="post">
+  <h3 class="title"><a href="/string-template">String.template()</a> <span class="date">2013-03-02</span></h3>
+
+  <p>This is just a little helper method I use in JavaScript a fair bit, it&#39;s an extension of the <code>String</code> class that provides basic parameter replacement, you could equally call it <code>String.format()</code> or even <code>String.$()</code> without angering the gods ... either way, it&#39;s a convenient and minimal way to doing interpolated strings in JS.</p>
+
+<pre><code>String.prototype.template = function (o) {
+    return this.replace(/{([^{}]*)}/g,
+                  function (a, b) {
+                    var r = o[b];
+                    return typeof r === &#39;string&#39; || typeof r === &#39;number&#39; ? r : a;
+                  }
+           );
+    };
+</code></pre>
+
+<p>Usage is simple and reasonably flexible, although there&#39;s <strong>no</strong> printf or C#&#39;s <code>String.format</code> style formatting.</p>
+
+<pre><code>&quot;{0} an array {1} {2} {3}&quot;._([&quot;Using&quot;,&quot;is&quot;,&quot;pretty&quot;,&quot;simple&quot;]);
+</code></pre>
+
+<p>Or for a bit of semantic richness a use a POO (plain old object)</p>
+
+<pre><code>&quot;Your {name} has {length} entries.&quot;.template({name: &quot;Contacts List&quot;, length: contacts.length}); 
+</code></pre>
+
+
+  <div class="more">
+    <a href="/string-template" class="btn">read more..</a>
+  </div>
+</div>
+<div class="post">
   <h3 class="title"><a href="/iterm2-color-theme-soothe">iTerm2 color theme Soothe</a> <span class="date">2013-01-18</span></h3>
 
   <p>This is a cool little color theme for iTerm, based on an Emacs theme of the same name.</p>
@@ -200,7 +230,7 @@ y = i/12 * h
       </section>
 
       <footer>
-      <p><small>Hosted on <a href="http://post.ruhoh.com">ruhoh.com</a> using the <a href="https://github.com/sodabrew/theme-dinky">Dinky theme</a> for <a href="http://ruhoh.com/">ruhoh</a></small></p>
+      <p><small>Hosted on <a href="http://github.com">github.com</a> using a modified version of the <a href="https://github.com/sodabrew/theme-dinky">Dinky theme</a></small></p>
       </footer>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
