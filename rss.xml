@@ -3,7 +3,7 @@
   <channel>
     <title>CodeFodder</title>
     <link>http://codefodder.github.com</link>
-    <pubDate>2013-03-05 13:44:53 +1100</pubDate>
+    <pubDate>2013-03-05 13:46:32 +1100</pubDate>
     <item>
       <title>Chrome/Chromium startup flags</title>
       <link>http://codefodder.github.com/chrome-chromium-startup-flags</link>
@@ -16,10 +16,10 @@
     &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"&gt;
     &lt;meta name="author" content="Jason Milkins" /&gt;
     &lt;title&gt;Chrome/Chromium startup flags&lt;/title&gt;
-    &lt;link href="/assets/dinky/stylesheets/styles.css?0.8868371071296302" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.40648871224404004" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/dinky/stylesheets/styles.css?0.12682305986794395" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.4827999330489663" type="text/css" rel="stylesheet" media="all"&gt;
 
-&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.8853989011817921"&gt;&lt;/script&gt;
+&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.18841491269330435"&gt;&lt;/script&gt;
 
     &lt;!--[if lt IE 9]&gt;
     &lt;script src="//html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
@@ -1010,8 +1010,8 @@ to disable host resolver retry attempts.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;--hsts-hosts
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Takes the JSON-formatted &lt;code&gt;[HSTS](http://tools.ietf.org/html/rfc6797)&lt;/code&gt; specification and loads it as if it were a
-preloaded &lt;code&gt;[HSTS](http://tools.ietf.org/html/rfc6797)&lt;/code&gt; entry. Takes precedence over both website-specified rules and
+&lt;p&gt;Takes the JSON-formatted &lt;a href="http://tools.ietf.org/html/rfc6797"&gt;HSTS&lt;/a&gt; specification and loads it as if it were a
+preloaded &lt;a href="http://tools.ietf.org/html/rfc6797"&gt;HSTS&lt;/a&gt; entry. Takes precedence over both website-specified rules and
 built-in rules. The JSON format is the same as that persisted in
 &lt;code&gt;&amp;lt;profile_dir&amp;gt;/Default/TransportSecurity&lt;/code&gt;&lt;/p&gt;
 
@@ -2308,10 +2308,10 @@ source files under a &lt;code&gt;foo/bar&lt;/code&gt; directory.&lt;/p&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"&gt;
     &lt;meta name="author" content="Jason Milkins" /&gt;
     &lt;title&gt;String.template()&lt;/title&gt;
-    &lt;link href="/assets/dinky/stylesheets/styles.css?0.16147111174534223" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9370099056964769" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/dinky/stylesheets/styles.css?0.330979420007676" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.21980083755739244" type="text/css" rel="stylesheet" media="all"&gt;
 
-&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.3494921505090339"&gt;&lt;/script&gt;
+&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.4515668477169512"&gt;&lt;/script&gt;
 
     &lt;!--[if lt IE 9]&gt;
     &lt;script src="//html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
@@ -2431,10 +2431,10 @@ source files under a &lt;code&gt;foo/bar&lt;/code&gt; directory.&lt;/p&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"&gt;
     &lt;meta name="author" content="Jason Milkins" /&gt;
     &lt;title&gt;iTerm2 color theme Soothe&lt;/title&gt;
-    &lt;link href="/assets/dinky/stylesheets/styles.css?0.9404741772097405" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.2188976010843109" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/dinky/stylesheets/styles.css?0.25244591936760796" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8790926317148451" type="text/css" rel="stylesheet" media="all"&gt;
 
-&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.8121989904472529"&gt;&lt;/script&gt;
+&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.7653122385986019"&gt;&lt;/script&gt;
 
     &lt;!--[if lt IE 9]&gt;
     &lt;script src="//html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
@@ -2556,10 +2556,10 @@ source files under a &lt;code&gt;foo/bar&lt;/code&gt; directory.&lt;/p&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"&gt;
     &lt;meta name="author" content="Jason Milkins" /&gt;
     &lt;title&gt;Tinkerbin.com&lt;/title&gt;
-    &lt;link href="/assets/dinky/stylesheets/styles.css?0.5847563647270815" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.05385988552503562" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/dinky/stylesheets/styles.css?0.256356708942321" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.3594971720641319" type="text/css" rel="stylesheet" media="all"&gt;
 
-&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.77741894242481"&gt;&lt;/script&gt;
+&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.23197733637738827"&gt;&lt;/script&gt;
 
     &lt;!--[if lt IE 9]&gt;
     &lt;script src="//html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
