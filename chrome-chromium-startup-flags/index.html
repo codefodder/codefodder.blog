@@ -1,0 +1,2286 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="author" content="Jason Milkins" />
+    <title>Chrome/Chromium startup flags</title>
+    <link href="/assets/dinky/stylesheets/styles.css?0.7792308633928021" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.3308068185515449" type="text/css" rel="stylesheet" media="all">
+
+<script src="/assets/dinky/javascripts/scale.fix.js?0.4922425003706523"></script>
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header"><a href="/">CodeFodder</a></h1>
+        <p class="header">a code notepad</p>
+        <ul>
+            
+              <li><a href="/archive">Archive</a></li>
+            
+              <li><a href="/tags">Tags</a></li>
+            
+              <li><a href="/categories">Categories</a></li>
+            
+              <li><a href="/pages">Pages</a></li>
+            
+              <li><a href="/about">About...</a></li>
+        </ul>
+        <div class="misc vcard">
+          <ul>
+            <li class="github"><a href="http://github.com/jasonm23/" rel="me">github</a></li>
+            
+          </ul>
+        </div><!-- misc -->
+      </header>
+
+      <section>
+      <section>
+  <h1>Chrome/Chromium startup flags</h1>
+
+  <p>Recently I discovered the <code>chrome://flags</code> page, and there was much
+rejoicing, of course, there&#39;s even more things you can do at startup
+than there are on the <code>chrome://flags</code>. I decide to compile a complete
+list from <code>chrome_switches.cc</code> and <code>base_switches.cc</code>. You can browse
+the full source at
+<a href="http://src.chromium.org/viewvc">http://src.chromium.org/viewvc</a> - and
+you can find lots of info at
+<a href="http://chromium.org">http://chromium.org</a>.</p>
+
+<h1 id="toc_0">Chrome/Chromium switches.</h1>
+
+<pre><code>--action-box
+</code></pre>
+
+<p>Enables or disables the &quot;action box&quot; UI in the toolbar.</p>
+
+<pre><code>--allow-cross-origin-auth-prompt
+</code></pre>
+
+<p>Allows third-party content included on a page to prompt for a HTTP basic
+auth username/password pair.</p>
+
+<pre><code>--allow-file-access
+</code></pre>
+
+<p>On ChromeOS, <code>file:access</code> is disabled except for certain whitelisted
+directories. This switch re-enables <code>file:for</code> testing.</p>
+
+<pre><code>--allow-http-background-page
+</code></pre>
+
+<p>Allows non-https URL for background_page for hosted apps.</p>
+
+<pre><code>--allow-nacl-socket-api
+</code></pre>
+
+<p>Allows the browser to load extensions that lack a modern manifest when that
+would otherwise be forbidden.</p>
+
+<pre><code>--allow-outdated-plugins
+</code></pre>
+
+<p>Don&#39;t block outdated plugins.</p>
+
+<pre><code>--allow-running-insecure-content
+</code></pre>
+
+<p>By default, an https page cannot run JavaScript, CSS or plug-ins from http
+URLs. This provides an override to get the old insecure behavior.</p>
+
+<pre><code>--allow-scripting-gallery
+</code></pre>
+
+<p>Allows injecting extensions and user scripts on the extensions gallery
+site. Normally prevented for security reasons, but can be useful for
+automation testing of the gallery.</p>
+
+<pre><code>--always-authorize-plugins
+</code></pre>
+
+<p>Prevents Chrome from requiring authorization to run certain widely installed
+but less commonly used plug-ins.</p>
+
+<pre><code>--app-id
+</code></pre>
+
+<p>Specifies that the extension-app with the specified id should be launched
+according to its configuration.</p>
+
+<pre><code>--app
+</code></pre>
+
+<p>Specifies that the associated value should be launched in &quot;application&quot;
+mode.</p>
+
+<pre><code>--apps-devtool
+</code></pre>
+
+<p>Flag to enable apps_devtool app.</p>
+
+<pre><code>--app-window-size
+</code></pre>
+
+<p>Specifies the initial size for application windows launched with <code>--app.
+--app-window-size=w,h</code></p>
+
+<pre><code>--app-notify-channel-server-url
+</code></pre>
+
+<p>A URL for the server which assigns channel ids for server pushed app
+notifications.</p>
+
+<pre><code>--apps-checkout-url
+</code></pre>
+
+<p>Overrides the apps checkout URL, which is used to determine when to expose
+some private APIs.</p>
+
+<pre><code>--apps-gallery-download-url
+</code></pre>
+
+<p>The URL that the webstore APIs download extensions from.
+Note: the URL must contain one <code>%s</code> (ie. for a replacable string) for the extension ID.</p>
+
+<pre><code>--apps-gallery-url
+</code></pre>
+
+<p>A setting to cause extension/app installs from the webstore skip the normal
+confirmation dialog. A value of &#39;accept&#39; means to always act as if the dialog
+was accepted, and &#39;cancel&#39; means to always act as if the dialog was
+cancelled.</p>
+
+<pre><code>--apps-gallery-update-url
+</code></pre>
+
+<p>The update url used by gallery/webstore extensions.</p>
+
+<pre><code>--app-mode-oauth-token
+</code></pre>
+
+<p>Value of OAuth2 refresh token for --force-app-mode.</p>
+
+<pre><code>--apps-new-install-bubble
+</code></pre>
+
+<p>Whether to always use the new app install bubble when installing an app.</p>
+
+<pre><code>--apps-no-throb
+</code></pre>
+
+<p>Disable throbber for extension apps.</p>
+
+<pre><code>--auth-schemes
+</code></pre>
+
+<p>Whitelist of servers that Negotiate will generate delegated Kerberos tickets
+for.</p>
+
+<pre><code>--auth-server-whitelist
+</code></pre>
+
+<p>Whitelist of servers which NTLM and Negotiate can automatically authenticate
+with using the default credentials of the currently logged in user.</p>
+
+<pre><code>--auto-launch-at-startup
+</code></pre>
+
+<p>A flag that is used to tell Chrome that it was launched automatically at
+computer startup and not by some user action.</p>
+
+<pre><code>--autofill-service-url
+</code></pre>
+
+<p>Flag used to tell Chrome the base url of the Autofill service.</p>
+
+<pre><code>--automation-channel
+</code></pre>
+
+<p>The value of this switch tells the app to listen for and broadcast
+automation-related messages on IPC channel with the given ID.</p>
+
+<pre><code>--check-for-update-interval
+</code></pre>
+
+<p>Causes the automation provider to reinitialize its IPC channel instead of
+shutting down when a client disconnects.</p>
+
+<pre><code>--chrome-frame-shutdown-delay
+</code></pre>
+
+<p>Checks the cloud print connector policy, informing the service process if
+the policy is set to disallow the connector, then quits.</p>
+
+<pre><code>--chrome-version
+</code></pre>
+
+<p>Tells chrome to load the specified version of chrome.dll on Windows. If this
+version cannot be loaded, Chrome will exit.</p>
+
+<pre><code>--cipher-suite-blacklist
+</code></pre>
+
+<p>Comma-separated list of SSL cipher suites to disable.</p>
+
+<pre><code>--clear-token-service
+</code></pre>
+
+<p>Clears the token service before using it. This allows simulating the
+expiration of credentials during testing.</p>
+
+<pre><code>--cloud-print-delete-file
+</code></pre>
+
+<p>Used with kCloudPrintFile. Tells Chrome to delete the file when finished
+displaying the print dialog.</p>
+
+<pre><code>--cloud-print-file
+</code></pre>
+
+<p>Tells chrome to display the cloud print dialog and upload the specified file
+for printing.</p>
+
+<pre><code>--cloud-print-file-type
+</code></pre>
+
+<p>Specifies the mime type to be used when uploading data from the file
+referenced by cloud-print-file. Defaults to &quot;application/pdf&quot; if
+unspecified.</p>
+
+<pre><code>--cloud-print-print-ticket
+</code></pre>
+
+<p>Used with kCloudPrintFile to specify a JSON print ticket for the resulting
+print job. Defaults to null if unspecified.</p>
+
+<pre><code>--cloud-print-job-title
+</code></pre>
+
+<p>Used with kCloudPrintFile to specify a title for the resulting print job.</p>
+
+<pre><code>--cloud-print-proxy-id
+</code></pre>
+
+<p>The unique id to be used for this cloud print proxy instance.</p>
+
+<pre><code>--cloud-print-service
+</code></pre>
+
+<p>The URL of the cloud print service to use, overrides any value stored in
+preferences, and the default. Only used if the cloud print service has been
+enabled (see enable-cloud-print).</p>
+
+<pre><code>--component-updater-debug
+</code></pre>
+
+<p>Comma-separated options to troubleshoot the component updater. Only valid
+for the browser process.</p>
+
+<pre><code>--conflicting-modules-check
+</code></pre>
+
+<p>Causes the browser process to inspect loaded and registered DLLs for known
+conflicts and warn the user.</p>
+
+<pre><code>--new-content-settings
+</code></pre>
+
+<p>Toggles a new version of the content settings dialog in options.</p>
+
+<pre><code>--country
+</code></pre>
+
+<p>The Country we should use. This is normally obtained from the operating
+system during first run and cached in the preferences afterwards. This is a
+string value, the 2 letter code from ISO 3166-1.</p>
+
+<pre><code>--crash-on-hang-threads
+</code></pre>
+
+<p>Comma-separated list of BrowserThreads that cause browser process to crash
+if the given browser thread is not responsive. UI,IO,DB,FILE,CACHE are the
+list of BrowserThreads that are supported.
+//
+For example:
+//
+<code>--crash-on-hang-threads=UI:3:18,IO:3:18</code> --&gt; Crash the browser if UI or IO
+is not responsive for 18 seconds and the number of browser threads that
+are responding is less than or equal to 3.</p>
+
+<pre><code>--debug-enable-frame-toggle
+</code></pre>
+
+<p>Some platforms like ChromeOS default to empty desktop.
+Browser tests may need to add this switch so that at least one browser
+instance is created on startup.</p>
+
+<pre><code>--debug-packed-apps
+</code></pre>
+
+<p>Adds debugging entries such as Inspect Element to context menus of packed
+apps.</p>
+
+<pre><code>--debug-print
+</code></pre>
+
+<p>Enables support to debug printing subsystem.</p>
+
+<pre><code>--device-management-url
+</code></pre>
+
+<p>Specifies the URL at which to fetch configuration policy from the device
+management backend. Specifying this switch turns on managed policy from the
+device management backend.</p>
+
+<pre><code>--diagnostics
+</code></pre>
+
+<p>Triggers a plethora of diagnostic modes.</p>
+
+<pre><code>--disable-async-dns
+</code></pre>
+
+<p>Disables the experimental asynchronous DNS client.</p>
+
+<pre><code>--disable-background-mode
+</code></pre>
+
+<p>Disables CNAME lookup of the host when generating the Kerberos SPN for a
+Negotiate challenge. See <code>HttpAuthHandlerNegotiate::CreateSPN</code> for more
+background.</p>
+
+<pre><code>--disable-background-networking
+</code></pre>
+
+<p>Disable several subsystems which run network requests in the background.
+This is for use when doing network performance testing to avoid noise in the
+measurements.</p>
+
+<pre><code>--disable-bundled-ppapi-flash
+</code></pre>
+
+<p>Disables the bundled PPAPI version of Flash.</p>
+
+<pre><code>--disable-component-update
+</code></pre>
+
+<p>Disables the bookmark autocomplete provider (BookmarkProvider).</p>
+
+<pre><code>--disable-crl-sets
+</code></pre>
+
+<p>Disables establishing certificate revocation information by downloading a
+set of CRLs rather than performing on-line checks.</p>
+
+<pre><code>--disable-custom-jumplist
+</code></pre>
+
+<p>Disables the custom JumpList on Windows 7.</p>
+
+<pre><code>--disable-default-apps
+</code></pre>
+
+<p>Disables installation of default apps on first run. This is used during
+automated testing.</p>
+
+<pre><code>--disable-dhcp-wpad
+</code></pre>
+
+<p>Disables retrieval of PAC URLs from DHCP as per the WPAD standard.</p>
+
+<pre><code>--disable-extensions
+</code></pre>
+
+<p>Disable extensions.</p>
+
+<pre><code>--disable-instant-extended-api
+</code></pre>
+
+<p>Disable checking for user opt-in for extensions that want to inject script
+into file URLs (ie, always allow it). This is used during automated testing.</p>
+
+<pre><code>--disable-ipv6
+</code></pre>
+
+<p>Disables improved SafeBrowsing download protection.</p>
+
+<pre><code>--disable-ip-pooling
+</code></pre>
+
+<p>Disables IP Pooling within the networks stack (SPDY only). When a connection
+is needed for a domain which shares an IP with an existing connection,
+attempt to use the existing connection.</p>
+
+<pre><code>--disable-ntp-other-sessions-menu
+</code></pre>
+
+<p>Disables the menu on the NTP for accessing sessions from other devices.</p>
+
+<pre><code>--disable-popup-blocking
+</code></pre>
+
+<p>Disable pop-up blocking.</p>
+
+<pre><code>--disable-preconnect
+</code></pre>
+
+<p>Disable speculative TCP/IP preconnection.</p>
+
+<pre><code>--disable-prompt-on-repost
+</code></pre>
+
+<p>Normally when the user attempts to navigate to a page that was the result of
+a post we prompt to make sure they want to. This switch may be used to
+disable that check. This switch is used during automated testing.</p>
+
+<pre><code>--disable-restore-session-state
+</code></pre>
+
+<p>Prevents the URLs of BackgroundContents from being remembered and
+re-launched when the browser restarts.</p>
+
+<pre><code>--disable-sync
+</code></pre>
+
+<p>Disables throttling prints initiated by scripts.</p>
+
+<pre><code>--disable-sync-app-settings
+</code></pre>
+
+<p>Disables syncing of app settings.</p>
+
+<pre><code>--disable-sync-apps
+</code></pre>
+
+<p>Disables syncing of apps.</p>
+
+<pre><code>--disable-sync-app-notifications
+</code></pre>
+
+<p>Disable syncing app notifications.</p>
+
+<pre><code>--disable-sync-autofill
+</code></pre>
+
+<p>Disables syncing of autofill.</p>
+
+<pre><code>--disable-sync-autofill-profile
+</code></pre>
+
+<p>Disables syncing of autofill Profile.</p>
+
+<pre><code>--disable-sync-bookmarks
+</code></pre>
+
+<p>Disables syncing of bookmarks.</p>
+
+<pre><code>--disable-sync-dictionary
+</code></pre>
+
+<p>Disables syncing of dictionary.</p>
+
+<pre><code>--disable-sync-extension-settings
+</code></pre>
+
+<p>Disables syncing extension settings.</p>
+
+<pre><code>--disable-sync-extensions
+</code></pre>
+
+<p>Disables syncing of extensions.</p>
+
+<pre><code>--disable-sync-passwords
+</code></pre>
+
+<p>Disables syncing of history delete directives.</p>
+
+<pre><code>--disable-sync-preferences
+</code></pre>
+
+<p>Disables syncing of preferences.</p>
+
+<pre><code>--disable-sync-search-engines
+</code></pre>
+
+<p>Disable syncing custom search engines.</p>
+
+<pre><code>--disable-sync-tabs
+</code></pre>
+
+<p>Disables syncing browser sessions. Will override kEnableSyncTabs.</p>
+
+<pre><code>--disable-sync-themes
+</code></pre>
+
+<p>Disables syncing of themes.</p>
+
+<pre><code>--disable-sync-typed-urls
+</code></pre>
+
+<p>Disables syncing browser typed urls.</p>
+
+<pre><code>--disable-translate
+</code></pre>
+
+<p>Allows disabling of translate from the command line to assist with automated
+browser testing (e.g. Selenium/WebDriver). Normal browser users should
+disable translate with the preference.</p>
+
+<pre><code>--disable-tls-channel-id
+</code></pre>
+
+<p>Disables TLS Channel ID extension.</p>
+
+<pre><code>--disable-web-resources
+</code></pre>
+
+<p>Disables the backend service for web resources.</p>
+
+<pre><code>--disk-cache-dir
+</code></pre>
+
+<p>Some tests seem to require the application to close when the last
+browser window is closed. Thus, we need a switch to force this behavior
+for ChromeOS Aura, disable &quot;zero window mode&quot;.</p>
+
+<pre><code>--disk-cache-size
+</code></pre>
+
+<p>Forces the maximum disk space to be used by the disk cache, in bytes.</p>
+
+<pre><code>--dns-log-details
+</code></pre>
+
+<p>Undocumented, but self explanatory. Log DNS details. </p>
+
+<pre><code>--dns-prefetch-disable
+</code></pre>
+
+<p>Disables prefetching of DNS information.</p>
+
+<pre><code>--dump-histograms-on-exit
+</code></pre>
+
+<p>Dump any accumualted histograms to the log when browser terminates (requires
+logging to be enabled to really do anything). Used by developers and test
+scripts.</p>
+
+<pre><code>--enable-async-dns
+</code></pre>
+
+<p>Enables the experimental asynchronous DNS client.</p>
+
+<pre><code>--enable-auth-negotiate-port
+</code></pre>
+
+<p>Enables the inclusion of non-standard ports when generating the Kerberos SPN
+in response to a Negotiate challenge. See <code>HttpAuthHandlerNegotiate::CreateSPN</code> for more background.</p>
+
+<pre><code>--enable-autologin
+</code></pre>
+
+<p>Enables the pre- and auto-login features. When a user signs in to sync, the
+browser&#39;s cookie jar is pre-filled with GAIA cookies. When the user visits a
+GAIA login page, an info bar can help the user login.</p>
+
+<pre><code>--enable-benchmarking
+</code></pre>
+
+<p>Enables the benchmarking extensions.</p>
+
+<pre><code>--enable-cloud-print-proxy
+</code></pre>
+
+<p>This applies only when the process type is &quot;service&quot;. Enables the Cloud
+Print Proxy component within the service process.</p>
+
+<pre><code>--enable-contacts
+</code></pre>
+
+<p>Enables fetching the user&#39;s contacts from Google and showing them in the
+Chrome OS apps list.</p>
+
+<pre><code>--enable-crxless-web-apps
+</code></pre>
+
+<p>Enables web developers to create apps for Chrome without using crx packages.</p>
+
+<pre><code>--enable-desktop-guest-mode
+</code></pre>
+
+<p>Enables desktop guest mode.</p>
+
+<pre><code>--enable-devtools-experiments
+</code></pre>
+
+<p>If true devtools experimental settings are enabled.</p>
+
+<pre><code>--enable-interactive-autocomplete
+</code></pre>
+
+<p>Enables an interactive autocomplete UI and a way to invoke this UI from
+WebKit by enabling <code>HTMLFormElement#requestAutocomplete</code> (and associated
+autocomplete events and logic).</p>
+
+<pre><code>--easy-off-store-extension-install
+</code></pre>
+
+<p>Enables extensions to be easily installed from sites other than the web
+store. Without this flag, they can still be installed, but must be manually
+dragged onto <code>chrome://extensions/</code>.</p>
+
+<pre><code>--enable-extension-activity-ui
+</code></pre>
+
+<p>Enables extension APIs that are in development.</p>
+
+<pre><code>--extensions-in-action-box
+</code></pre>
+
+<p>Enables or disables showing extensions in the action box.</p>
+
+<pre><code>--enable-file-cookies
+</code></pre>
+
+<p>By default, cookies are not allowed on <code>file://</code>. They are needed for testing,
+for example page cycler and layout tests. </p>
+
+<pre><code>--enable-google-now-integration
+</code></pre>
+
+<p>Enables Google Now integration.</p>
+
+<pre><code>--enable-instant-extended-api
+</code></pre>
+
+<p>Enable Instant extended API.</p>
+
+<pre><code>--enable-ipv6
+</code></pre>
+
+<p>Enables IPv6 support, even if probes suggest that it may not be fully
+supported. Some probes may require internet connections, and this flag will
+allow support independent of application testing. This flag overrides
+<code>--disable-ipv6</code> which appears elswhere in this file.</p>
+
+<pre><code>--enable-ipc-fuzzing
+</code></pre>
+
+<p>Enables the IPC fuzzer for reliability testing</p>
+
+<pre><code>--enable-ip-pooling
+</code></pre>
+
+<p>Enables IP Pooling within the networks stack (SPDY only). When a connection
+is needed for a domain which shares an IP with an existing connection,
+attempt to use the existing connection.</p>
+
+<pre><code>--enable-managed-users
+</code></pre>
+
+<p>Enables support for user profiles that are managed by another user and can
+have restrictions applied.</p>
+
+<pre><code>--enable-memory-info
+</code></pre>
+
+<p>Allows reporting memory info (JS heap size) to page.</p>
+
+<pre><code>--enable-memory-internals-ui
+</code></pre>
+
+<p>Enables metrics recording and reporting in the browser startup sequence, as
+if this was an official Chrome build where the user allowed metrics
+reporting. This is used for testing only.</p>
+
+<pre><code>--enable-nacl
+</code></pre>
+
+<p>Runs the Native Client inside the renderer process and enables GPU plugin
+(internally adds lEnableGpuPlugin to the command line).</p>
+
+<pre><code>--enable-nacl-debug
+</code></pre>
+
+<p>Enables debugging via RSP over a socket.</p>
+
+<pre><code>--nacl-debug-mask
+</code></pre>
+
+<p>Uses NaCl manifest URL to choose whether NaCl program will be debugged by
+debug stub.
+//
+Switch value format: <code>[!]pattern1,pattern2,...,patternN</code>. Each pattern uses
+the same syntax as patterns in Chrome extension manifest. The only difference
+is that <code>*</code> scheme matches all schemes instead of matching only http and https.
+If the value doesn&#39;t start with !, a program will be debugged if manifest URL
+matches any pattern. If the value starts with !, a program will be debugged
+if manifest URL does not match any pattern.</p>
+
+<pre><code>--enable-nacl-exception-handling
+</code></pre>
+
+<p>Enables hardware exception handling via debugger process.</p>
+
+<pre><code>--enable-native-messaging
+</code></pre>
+
+<p>Enables the native messaging extensions API.</p>
+
+<pre><code>--enable-net-benchmarking
+</code></pre>
+
+<p>Enables the network-related benchmarking extensions.</p>
+
+<pre><code>--enable-new-autofill-ui
+</code></pre>
+
+<p>Enables the new Autofill UI, which is part of the browser process rather than
+part of the renderer process.</p>
+
+<pre><code>--enable-npn
+</code></pre>
+
+<p>Enables NPN and SPDY. In case server supports SPDY, browser will use SPDY.</p>
+
+<pre><code>--enable-npn-http
+</code></pre>
+
+<p>Enables NPN with HTTP. It means NPN is enabled but SPDY won&#39;t be used.
+HTTP is still used for all requests.</p>
+
+<pre><code>--enable-panels
+</code></pre>
+
+<p>Enables panels (always on-top docked pop-up windows).</p>
+
+<pre><code>--enable-panel-stacking
+</code></pre>
+
+<p>Enables panel stacking support.</p>
+
+<pre><code>--enable-password-generation
+</code></pre>
+
+<p>Enables password generation when we detect that the user is going through
+account creation.</p>
+
+<pre><code>--enable-pnacl
+</code></pre>
+
+<p>Enables the installation and usage of Portable Native Client.</p>
+
+<pre><code>--enable-profiling
+</code></pre>
+
+<p>Enables tracking of tasks in profiler for viewing via about:profiler.
+To predominantly disable tracking (profiling), use the command line
+switch: <code>--enable-profiling=0</code> Some tracking will still take place at
+startup, but it will be turned off during <code>chrome_browser_main</code>.</p>
+
+<pre><code>--enable-query-extraction
+</code></pre>
+
+<p>Enables query extraction in the omnibox.</p>
+
+<pre><code>--enable-quic
+</code></pre>
+
+<p>Enables support for the QUIC protocol.  This is a temporary testing flag.</p>
+
+<pre><code>--enable-sdch
+</code></pre>
+
+<p>Enables content settings based on host <em>and</em> plug-in in the user
+preferences.</p>
+
+<pre><code>--enable-spdy3
+</code></pre>
+
+<p>Enable SPDY/3. This is a temporary testing flag.</p>
+
+<pre><code>--enable-spdy-credential-frames
+</code></pre>
+
+<p>Enable SPDY CREDENTIAL frame support.  This is a temporary testing flag.</p>
+
+<pre><code>--enable-spelling-auto-correct
+</code></pre>
+
+<p>Enables auto correction for misspelled words.</p>
+
+<pre><code>--enable-stacked-tab-strip
+</code></pre>
+
+<p>Enables the stacked tabstrip.</p>
+
+<pre><code>--enable-suggestions-ntp
+</code></pre>
+
+<p>Enables experimental suggestions pane in New Tab page.</p>
+
+<pre><code>--enable-tab-groups-context-menu
+</code></pre>
+
+<p>Enables synced notifications.</p>
+
+<pre><code>--enable-watchdog
+</code></pre>
+
+<p>Enables Alternate-Protocol when the port is user controlled (&gt; 1024).</p>
+
+<pre><code>--enable-websocket-over-spdy
+</code></pre>
+
+<p>Uses WebSocket over SPDY.</p>
+
+<pre><code>--explicitly-allowed-ports
+</code></pre>
+
+<p>Explicitly allows additional ports using a comma-separated list of port
+numbers.</p>
+
+<pre><code>--event-page-idle-time
+</code></pre>
+
+<p>The time in seconds that an extension event page can be idle before it
+is shut down.</p>
+
+<pre><code>--event-page-unloading-time
+</code></pre>
+
+<p>The time in seconds that an extension event page has between being notified
+of its impending unload and that unload happening.</p>
+
+<pre><code>--extension-process
+</code></pre>
+
+<p>Marks a renderer as extension process.</p>
+
+<pre><code>--extensions-update-frequency
+</code></pre>
+
+<p>Frequency in seconds for Extensions auto-update.</p>
+
+<pre><code>--fake-variations-channel
+</code></pre>
+
+<p>Fakes the channel of the browser for purposes of Variations filtering. This
+is to be used for testing only. Possible values are &quot;stable&quot;, &quot;beta&quot;, &quot;dev&quot;
+and &quot;canary&quot;. Note that this only applies if the browser&#39;s reported channel
+is UNKNOWN.</p>
+
+<pre><code>--flag-switches-begin /  --flag-switches-end
+</code></pre>
+
+<p>These two flags are added around the switches <code>chrome:flags</code> adds to the
+command line. This is useful to see which switches were added by <code>chrome:flags</code>
+on <code>chrome:version</code>. They don&#39;t have any effect.</p>
+
+<pre><code>--feedback-server
+</code></pre>
+
+<p>Alternative feedback server to use when submitting user feedback</p>
+
+<pre><code>--file-descriptor-limit
+</code></pre>
+
+<p>The file descriptor limit is set to the value of this switch, subject to the
+OS hard limits. Useful for testing that file descriptor exhaustion is
+handled gracefully.</p>
+
+<pre><code>--force-app-mode
+</code></pre>
+
+<p>Forces application mode. This hides certain system UI elements and forces
+the app to be installed if it hasn&#39;t been already.</p>
+
+<pre><code>--force-first-run
+</code></pre>
+
+<p>Displays the First Run experience when the browser is started, regardless of
+whether or not it&#39;s actually the First Run (this overrides kNoFirstRun).</p>
+
+<pre><code>--force-load-cloud-policy
+</code></pre>
+
+<p>Tries to load cloud policy for every signed in user, regardless of whether
+they are a dasher user or not. Used to allow any GAIA account to be used for
+testing the cloud policy framework.</p>
+
+<pre><code>--gaia-profile-info
+</code></pre>
+
+<p>Enables using GAIA information to populate profile name and icon.</p>
+
+<pre><code>--google-search-domain-check-url
+</code></pre>
+
+<p>Specifies an alternate URL to use for retrieving the search domain for
+Google. Useful for testing.</p>
+
+<pre><code>--gssapi-library-name
+</code></pre>
+
+<p>Specifies a custom name for the GSSAPI library to load.</p>
+
+<pre><code>--help / --h
+</code></pre>
+
+<p>These flags show the man page on Linux. They are equivalent to each
+other.</p>
+
+<pre><code>--hide-icons
+</code></pre>
+
+<p>Makes Windows happy by allowing it to show &quot;Enable access to this program&quot;
+checkbox in Add/Remove Programs-&gt;Set Program Access and Defaults. This only
+shows an error box because the only way to hide Chrome is by uninstalling
+it.</p>
+
+<pre><code>--disable-full-history-sync
+</code></pre>
+
+<p>Disables full history sync.</p>
+
+<pre><code>--enable-full-history-sync
+</code></pre>
+
+<p>Enables full history sync (not just typed URLs) for signed-in users.</p>
+
+<pre><code>--enable-grouped-history
+</code></pre>
+
+<p>Enables grouping websites by domain and filtering them by period.</p>
+
+<pre><code>--homepage
+</code></pre>
+
+<p>Specifies which page will be displayed in newly-opened tabs. We need this
+for testing purposes so that the UI tests don&#39;t depend on what comes up for
+<a href="http://google.com">http://google.com</a>.</p>
+
+<pre><code>--host-rules
+</code></pre>
+
+<p>Comma-separated list of rules that control how hostnames are mapped.</p>
+
+<p>For example:</p>
+
+<ul>
+<li><code>MAP * 127.0.0.1</code> →  Forces all hostnames to be mapped to <code>127.0.0.1</code></li>
+<li><code>MAP *.google.com proxy</code> → Forces all google.com subdomains to be resolved to <code>proxy</code>.</li>
+<li><code>MAP test.com [::1]:77</code> → Forces <code>test.com</code> to resolve to IPv6 loopback. Will also force the port of the resulting socket address to be <code>77</code>.</li>
+<li><code>MAP * baz, EXCLUDE www.google.com</code> → Remaps everything to <code>baz</code>, except for <code>www.google.com</code>.</li>
+</ul>
+
+<p>These mappings apply to the endpoint host in a <code>net::URLRequest</code> (the TCP
+connect and host resolver in a direct connection, and the CONNECT in an http
+proxy connection, and the endpoint host in a SOCKS proxy connection).</p>
+
+<pre><code>--host-resolver-parallelism
+</code></pre>
+
+<p>The maximum number of concurrent host resolve requests (i.e. DNS) to allow
+(not counting backup attempts which would also consume threads).
+<code>--host-resolver-retry-attempts</code> must be set to zero for this to be exact.</p>
+
+<pre><code>--host-resolver-retry-attempts
+</code></pre>
+
+<p>The maximum number of retry attempts to resolve the host. Set this to zero
+to disable host resolver retry attempts.</p>
+
+<pre><code>--hsts-hosts
+</code></pre>
+
+<p>Takes the JSON-formatted <code>[HSTS](http://tools.ietf.org/html/rfc6797)</code> specification and loads it as if it were a
+preloaded <code>[HSTS](http://tools.ietf.org/html/rfc6797)</code> entry. Takes precedence over both website-specified rules and
+built-in rules. The JSON format is the same as that persisted in
+<code>&lt;profile_dir&gt;/Default/TransportSecurity</code></p>
+
+<pre><code>--import
+</code></pre>
+
+<p>Causes net::URLFetchers to ignore requests for SSL client certificates,
+causing them to attempt an unauthenticated SSL/TLS session. This is intended
+for use when testing various service URLs (eg: <code>kPromoServerURL</code>, <code>kInstantURL</code>,
+<code>kSbURLPrefix</code>,<code>kSyncServiceURL</code>, <code>kWalletServiceUrl</code>, etc.)</p>
+
+<pre><code>--import-from-file
+</code></pre>
+
+<p>Performs bookmark importing from an HTML file. The value associated with
+this setting encodes the file path. It may be used jointly with <code>kImport</code>.</p>
+
+<pre><code>--incognito
+</code></pre>
+
+<p>Causes the browser to launch directly in incognito mode.</p>
+
+<pre><code>--install-from-webstore
+</code></pre>
+
+<p>Causes Chrome to attempt to get metadata from the webstore for the
+app/extension ID given, and then prompt the user to download and install it.</p>
+
+<pre><code>--instant-process
+</code></pre>
+
+<p>Marks a renderer as an Instant process.</p>
+
+<pre><code>--instant-url
+</code></pre>
+
+<p>URL to use for instant. If specified this overrides the url from the
+TemplateURL.</p>
+
+<pre><code>--keep-alive-for-test
+</code></pre>
+
+<p>Used for testing - keeps browser alive after last browser window closes.</p>
+
+<pre><code>--kiosk
+</code></pre>
+
+<p>Enable Kiosk mode.</p>
+
+<pre><code>--kiosk-printing
+</code></pre>
+
+<p>Print automatically in kiosk mode. &#39;kKioskMode&#39; must be set as well.</p>
+
+<pre><code>--limited-install-from-webstore
+</code></pre>
+
+<p>Causes Chrome to attempt to get metadata from the webstore for the
+given item, and then prompt the user to download and install it.</p>
+
+<pre><code>--load-and-launch-app
+</code></pre>
+
+<p>Loads an app from the specified directory and launches it.</p>
+
+<pre><code>--load-component-extension
+</code></pre>
+
+<p>Comma-separated list of directories with component extensions to load.</p>
+
+<pre><code>--disable-cloud-policy-on-signin
+</code></pre>
+
+<p>If present, disables the loading and application of cloud policy for
+signed-in users.</p>
+
+<pre><code>--load-extension
+</code></pre>
+
+<p>Loads an extension from the specified directory.</p>
+
+<pre><code>--load-opencryptoki
+</code></pre>
+
+<p>Loads the <code>opencryptoki</code> library into NSS at startup. This is only needed
+temporarily for developers who need to work on WiFi/VPN certificate code.</p>
+
+<pre><code>--log-net-log
+</code></pre>
+
+<p>Enables displaying net log events on the command line, or writing the events
+to a separate file if a file name is given.</p>
+
+<pre><code>--uninstall-extension
+</code></pre>
+
+<p>Uninstalls an extension with the specified extension id.</p>
+
+<pre><code>--managed
+</code></pre>
+
+<p>Starts the browser in managed mode.</p>
+
+<pre><code>--make-default-browser
+</code></pre>
+
+<p>Makes Chrome default browser</p>
+
+<pre><code>--media-cache-size
+</code></pre>
+
+<p>Forces the maximum disk space to be used by the media cache, in bytes.</p>
+
+<pre><code>--memory-profile
+</code></pre>
+
+<p>Enables dynamic loading of the Memory Profiler DLL, which will trace all
+memory allocations during the run.</p>
+
+<pre><code>--message-loop-histogrammer
+</code></pre>
+
+<p>Enables histograming of tasks served by MessageLoop. See
+about:histograms/Loop for results, which show frequency of messages on each
+thread, including APC count, object signalling count, etc.</p>
+
+<pre><code>--metrics-recording-only
+</code></pre>
+
+<p>Enables the recording of metrics reports but disables reporting. In contrast
+to kDisableMetrics, this executes all the code that a normal client would
+use for reporting, except the report is dropped rather than sent to the
+server. This is useful for finding issues in the metrics code during UI and
+performance tests.</p>
+
+<pre><code>--multi-profiles
+</code></pre>
+
+<p>Enables multiprofile Chrome.</p>
+
+<pre><code>--nacl-gdb
+</code></pre>
+
+<p>Native Client GDB debugger for loader. It needs switches calculated
+at run time in order to work correctly. That&#39;s why NaClLoadCmdPrefix
+flag can&#39;t be used.</p>
+
+<pre><code>--nacl-gdb-script
+</code></pre>
+
+<p>GDB script to pass to the nacl-gdb debugger at startup.</p>
+
+<pre><code>--nacl-loader-cmd-prefix
+</code></pre>
+
+<p>On POSIX only: the contents of this flag are prepended to the nacl-loader
+command line. Useful values might be <code>valgrind</code> or <code>xterm -e gdb --args</code>.</p>
+
+<pre><code>--native-messaging-hosts
+</code></pre>
+
+<p>List of native messaging hosts outside of the default location. Used for
+tests. The value must be comma-separate lists of key-value pairs separated
+equal sign. E.g. <code>host1=/path/to/host1/manifest.json,host2=/path/host2.json</code>.</p>
+
+<pre><code>--net-log-level
+</code></pre>
+
+<p>Sets the base logging level for the net log. Log 0 logs the most data.
+Intended primarily for use with <code>--log-net-log</code>.</p>
+
+<pre><code>--no-default-browser-check
+</code></pre>
+
+<p>Disables the default browser check. Useful for UI/browser tests where we
+want to avoid having the default browser info-bar displayed.</p>
+
+<pre><code>--no-displaying-insecure-content
+</code></pre>
+
+<p>By default, an https page can load images, fonts or frames from an http
+page. This switch overrides this to block this lesser mixed-content problem.</p>
+
+<pre><code>--no-events
+</code></pre>
+
+<p>Don&#39;t record/playback events when using record &amp; playback.</p>
+
+<pre><code>--no-experiments
+</code></pre>
+
+<p>Disables all experiments set on <code>chrome:flags</code>. Does not disable <code>chrome:flags</code>
+itself. Useful if an experiment makes chrome crash at startup: One can start
+chrome with <code>--no-experiments</code>, disable the problematic lab at <code>chrome:flags</code> and
+then restart chrome without this switch again.</p>
+
+<pre><code>--no-first-run
+</code></pre>
+
+<p>Skip First Run tasks, whether or not it&#39;s actually the First Run. Overridden
+by <code>kForceFirstRun</code>.</p>
+
+<p>Also drops the First Run beacon so that First Run will not occur in
+subsequent runs as well.</p>
+
+<pre><code>--no-js-randomness
+</code></pre>
+
+<p>Support a separate switch that enables the v8 playback extension.
+The extension causes javascript calls to <code>Date.now()</code> and <code>Math.random()</code>
+to return consistent values, such that subsequent loads of the same
+page will result in consistent js-generated data and <code>XHR</code> requests.
+Pages may still be able to generate inconsistent data from plugins.</p>
+
+<pre><code>--no-managed
+</code></pre>
+
+<p>Starts the browser outside of managed mode.</p>
+
+<pre><code>--no-network-profile-warning
+</code></pre>
+
+<p>Whether or not the browser should warn if the profile is on a network share.
+This flag is only relevant for Windows currently.</p>
+
+<pre><code>--no-pings
+</code></pre>
+
+<p>Don&#39;t send hyperlink auditing pings</p>
+
+<pre><code>--no-proxy-server
+</code></pre>
+
+<p>Don&#39;t use a proxy server, always make direct connections. Overrides any
+other proxy server flags that are passed.</p>
+
+<pre><code>--no-service-autorun
+</code></pre>
+
+<p>Disables the service process from adding itself as an autorun process. This
+does not delete existing autorun registrations, it just prevents the service
+from registering a new one.</p>
+
+<pre><code>--no-startup-window
+</code></pre>
+
+<p>Does not automatically open a browser window on startup (used when
+launching Chrome for the purpose of hosting background apps).</p>
+
+<pre><code>--num-pac-threads
+</code></pre>
+
+<p>Specifies the maximum number of threads to use for running the Proxy
+Autoconfig (PAC) script.</p>
+
+<pre><code>--new-window
+</code></pre>
+
+<p>When the option to block third-party cookies is enabled, only block
+third-party cookies from being set.</p>
+
+<pre><code>--organic
+</code></pre>
+
+<p>Simulates an organic Chrome install.</p>
+
+<pre><code>--origin-port-to-force-quic-on
+</code></pre>
+
+<p>Force use of QUIC for requests over the specified port.</p>
+
+<pre><code>--pack-extension
+</code></pre>
+
+<p>Packages an extension to a .crx installable file from a given directory.</p>
+
+<pre><code>--pack-extension-key
+</code></pre>
+
+<p>Optional PEM private key to use in signing packaged .crx.</p>
+
+<pre><code>--parent-profile
+</code></pre>
+
+<p>Specifies the path to the user data folder for the parent profile.</p>
+
+<pre><code>--performance-monitor-gathering
+</code></pre>
+
+<p>Launches PerformanceMonitor at startup, which will gather statistics about
+Chrome&#39;s CPU and memory usage, page load times, startup times, and network
+usage, and will also store information about events which may be of interest,
+such as extension-related occurrences and crashes. Optionally, this may be
+run with an integer value representing the interval between the timed
+metric gatherings, measured in seconds (if invalid or not provided, the
+default interval is used).</p>
+
+<pre><code>--perform-crash-analysis
+</code></pre>
+
+<p>Enable the post crash analyzer which uploads detailed crash information in
+situations where a crash is determined to be particularly interesting.</p>
+
+<pre><code>--playback-mode
+</code></pre>
+
+<p>Read previously recorded data from the cache. Only cached data is read.
+See <code>kRecordMode</code>.</p>
+
+<pre><code>--pnacl-dir
+</code></pre>
+
+<p>Overrides the path to the location that PNaCl is installed.</p>
+
+<pre><code>--ppapi-flash-in-process
+</code></pre>
+
+<p>Forces the PPAPI version of Flash (if it&#39;s being used) to run in the
+renderer process rather than in a separate plugin process.</p>
+
+<pre><code>--ppapi-flash-path
+</code></pre>
+
+<p>Use the PPAPI (Pepper) Flash found at the given path.</p>
+
+<pre><code>--ppapi-flash-version
+</code></pre>
+
+<p>Report the given version for the PPAPI (Pepper) Flash. The version should be
+numbers separated by <code>.</code>s (e.g., <code>12.3.456.78</code>). If not specified, it
+defaults to <code>10.2.999.999</code>.</p>
+
+<pre><code>--prerender-from-omnibox
+</code></pre>
+
+<p>Triggers prerendering of pages from suggestions in the omnibox. Only has an
+effect when Instant is either disabled or restricted to search, and when
+prerender is enabled.</p>
+
+<pre><code>--prerender
+</code></pre>
+
+<p>These are the values the kPrerenderFromOmnibox switch may have, as in <code>--prerender-from-omnibox=auto</code>. </p>
+
+<ul>
+<li><code>auto</code> Allow field trial selection.</li>
+<li><code>disabled</code> No prerendering.</li>
+<li><code>enabled</code> Guaranteed prerendering.</li>
+</ul>
+
+<p>Controls speculative prerendering of pages, and content
+prefetching. Both are dispatched from <link rel=prefetch href=...>
+elements.</p>
+
+<pre><code>--print-raster
+</code></pre>
+
+<p>These are the values the kPrerenderMode switch may have, as in <code>--prerender=auto</code>.</p>
+
+<ul>
+<li><code>auto</code> Allow field trial selection in both prerender and prefetch.</li>
+<li><code>disabled</code> No prerendering or prefetching.</li>
+<li><code>enabled</code> Both prerendering and prefetching.</li>
+<li><code>prefetch_only</code> No prerendering, but enables prefetching.</li>
+</ul>
+
+<p>Enable conversion from vector to raster for any page.</p>
+
+<pre><code>--product-version
+</code></pre>
+
+<p>Outputs the product version information and quit. Used as an internal api to
+detect the installed version of Chrome on Linux.</p>
+
+<pre><code>--profile-directory
+</code></pre>
+
+<p>Selects directory of profile to associate with the first browser launched.</p>
+
+<pre><code>--profiling-at-start
+</code></pre>
+
+<p>Starts the sampling based profiler for the browser process at startup. This
+will only work if chrome has been built with the gyp variable <code>profiling=1</code>.
+The output will go to the value of <code>kProfilingFile</code>.</p>
+
+<pre><code> --profiling-file
+</code></pre>
+
+<p>Specifies a location for profiling output. This will only work if
+chrome has been built with the gyp variable <code>profiling=1</code>.  <code>{pid}</code> if
+present will be replaced by the pid of the process.  <code>{count}</code> if
+present will be incremented each time a profile is generated for this
+process.  The default is <code>chrome-profile-{pid}</code>.</p>
+
+<pre><code>--profiling-output-file
+</code></pre>
+
+<p>Specifies a path for the output of task-level profiling which can be loaded
+and viewed in about:profiler.</p>
+
+<pre><code>--profiling-flush
+</code></pre>
+
+<p>Controls whether profile data is periodically flushed to a file. Normally
+the data gets written on exit but cases exist where chrome doesn&#39;t exit
+cleanly (especially when using single-process). A time in seconds can be
+specified.</p>
+
+<pre><code>--promo-server-url
+</code></pre>
+
+<p>Specifies a custom URL for fetching NTP promo data.</p>
+
+<pre><code>--prompt-for-external-extensions
+</code></pre>
+
+<p>Should we prompt the user before allowing external extensions to install?
+Default is yes.</p>
+
+<pre><code>--proxy-auto-detect
+</code></pre>
+
+<p>Forces proxy auto-detection.</p>
+
+<pre><code>--proxy-bypass-list
+</code></pre>
+
+<p>Specifies a list of hosts for whom we bypass proxy settings and use direct
+connections. Ignored if <code>--proxy-auto-detect</code> or <code>--no-proxy-server</code> are also
+specified. This is a comma-separated list of bypass rules. See:
+<code>net/proxy/proxy_bypass_rules.h</code> for the format of these rules.</p>
+
+<pre><code>--proxy-pac-url
+</code></pre>
+
+<p>Uses the pac script at the given URL</p>
+
+<pre><code>--proxy-server
+</code></pre>
+
+<p>Uses a specified proxy server, overrides system settings. This switch only
+affects HTTP and HTTPS requests.</p>
+
+<pre><code>--purge-memory-button
+</code></pre>
+
+<p>Adds a <code>Purge memory&quot;</code>button to the Task Manager, which tries to dump as
+much memory as possible. This is mostly useful for testing how well the
+MemoryPurger functionality works. </p>
+
+<p>NOTE: This is only implemented for Views.</p>
+
+<pre><code>--record-stats
+</code></pre>
+
+<p>Capture resource consumption information through page cycling and output the
+data to the specified file.</p>
+
+<pre><code>--record-mode
+</code></pre>
+
+<p>Chrome supports a playback and record mode.  Record mode saves <em>everything</em>
+to the cache.  Playback mode reads data exclusively from the cache.  This
+allows us to record a session into the cache and then replay it at will.
+See also <code>kPlaybackMode</code>.</p>
+
+<pre><code>--remote-debugging-frontend
+</code></pre>
+
+<p>Uses custom front-end URL for the remote debugging.</p>
+
+<pre><code>--silent-debugger-extension-api
+</code></pre>
+
+<p>Does not show an infobar when an extension attaches to a page using
+chrome.debugger page. Required to attach to extension background pages.</p>
+
+<pre><code>--renderer-print-preview
+</code></pre>
+
+<p>Enables print preview in the renderer. This flag is generated internally by
+Chrome and does nothing when directly passed to the browser.</p>
+
+<pre><code>--reset-local-passphrase
+</code></pre>
+
+<p>Forces a reset of the local passphrase of the managed user account, and
+the managed user settings dialog is shown where a new passphrase can be set.</p>
+
+<pre><code>--reset-variation-state
+</code></pre>
+
+<p>Forces a reset of the one-time-randomized FieldTrials on this client, also
+known as the Chrome Variations state.</p>
+
+<pre><code>--restore-last-session
+</code></pre>
+
+<p>Indicates the last session should be restored on startup. This overrides the
+preferences value and is primarily intended for testing. The value of this
+switch is the number of tabs to wait until loaded before &#39;load completed&#39; is
+sent to the ui_test.</p>
+
+<pre><code>--save-page-as-mhtml
+</code></pre>
+
+<p>Disable saving pages as HTML-only, disable saving pages as HTML Complete
+(with a directory of sub-resources). Enable only saving pages as MHTML.</p>
+
+<pre><code>--safebrowsing-url-prefix
+</code></pre>
+
+<p>URL prefix used by safebrowsing to fetch hash, download data and report
+malware.</p>
+
+<pre><code>--safebrowsing-disable-auto-update
+</code></pre>
+
+<p>If present, safebrowsing only performs update when
+<code>SafeBrowsingProtocolManager::ForceScheduleNextUpdate()</code> is explicitly called.
+This is used for testing only.</p>
+
+<pre><code>--script-badges
+</code></pre>
+
+<p>Disables safebrowsing feature that checks download url and downloads
+content&#39;s hash to make sure the content are not malicious.</p>
+
+<pre><code>--script-bubble
+</code></pre>
+
+<p>Enable or diable the <em>script bubble</em> icon in the URL bar that tells you how
+many extensions are running scripts on a page.</p>
+
+<pre><code>--search-in-omnibox-hint
+</code></pre>
+
+<p>Enables the showing of an info-bar instructing user they can search directly
+from the omnibox.</p>
+
+<pre><code>--set-token
+</code></pre>
+
+<p>Sets a token in the token service, for testing.</p>
+
+<pre><code>--show-app-list
+</code></pre>
+
+<p>If true the app list will be shown.</p>
+
+<pre><code>--show-autofill-type-predictions
+</code></pre>
+
+<p>Annotates forms with Autofill field type predictions.</p>
+
+<pre><code>--show-icons
+</code></pre>
+
+<p>Makes component extensions appear in <code>chrome://settings/extensions</code>.</p>
+
+<pre><code>--show-launcher-alignment-menu
+</code></pre>
+
+<p>If true the alignment of the launcher can be changed.</p>
+
+<pre><code>--sideload-wipeout
+</code></pre>
+
+<p>Enables or disables sideload wipeout extension effort.</p>
+
+<pre><code>--silent-dump-on-dcheck
+</code></pre>
+
+<p>Changes the DCHECKS to dump memory and continue instead of displaying error
+dialog. This is valid only in Release mode when <code>--enable-dcheck</code> is
+specified.</p>
+
+<pre><code>--silent-launch
+</code></pre>
+
+<p>Causes Chrome to launch without opening any windows by default. Useful if
+one wishes to use Chrome as an ash server.</p>
+
+<pre><code>--simulate-upgrade
+</code></pre>
+
+<p>Simulates an update being available.</p>
+
+<pre><code>--simulate-critical-update
+</code></pre>
+
+<p>Simulates a critical update being available.</p>
+
+<pre><code>--simulate-outdated
+</code></pre>
+
+<p>Simulates that current version is outdated.</p>
+
+<pre><code>--socket-reuse-policy
+</code></pre>
+
+<p>Socket reuse policy. The value should be of type enum
+<code>ClientSocketReusePolicy</code>.</p>
+
+<pre><code>--spdy-proxy-auth-origin
+</code></pre>
+
+<p>Origin for which <em>SpdyProxy</em> authentication is supported.</p>
+
+<pre><code>--disabled
+</code></pre>
+
+<p>Speculative resource prefetching.</p>
+
+<pre><code>--learning
+</code></pre>
+
+<p>Speculative resource prefetching will only learn about resources that need to
+be prefetched but will not prefetch them.</p>
+
+<pre><code>--enabled
+</code></pre>
+
+<p>Speculative resource prefetching is enabled.</p>
+
+<pre><code>--ssl-version-max
+</code></pre>
+
+<p>Specifies the maximum SSL/TLS version (<code>ssl3</code>, <code>tls1</code>, <code>tls1.1</code>, or
+<code>tls1.2</code>).</p>
+
+<pre><code>--ssl-version-min
+</code></pre>
+
+<p>Specifies the minimum SSL/TLS version (<code>ssl3</code>, <code>tls1</code>, <code>tls1.1</code>, or
+<code>tls1.2</code>).</p>
+
+<pre><code>--start-maximized
+</code></pre>
+
+<p>Starts the browser maximized, regardless of any previous settings.</p>
+
+<pre><code>--suggestion-ntp-filter-width
+</code></pre>
+
+<p>Controls the width of time-of-day filters on the &#39;suggested&#39; ntp page, in
+minutes.</p>
+
+<pre><code>--suggestion-ntp-gaussian-filter
+</code></pre>
+
+<p>Enables a normal distribution dropoff to the relevancy of visits with respect
+to the time of day.</p>
+
+<pre><code>--suggestion-ntp-linear-filter
+</code></pre>
+
+<p>Enables a linear dropoff to the relevancy of visits with respect to the time
+of day.</p>
+
+<pre><code>--sync-invalidate-xmpp-login
+</code></pre>
+
+<p>Allows insecure XMPP connections for sync (for testing).</p>
+
+<pre><code>--sync-keystore-encryption
+</code></pre>
+
+<p>Enable support for keystore key based encryption.</p>
+
+<pre><code>--sync-notification-method
+</code></pre>
+
+<p>Defines the sync notification method, not documented, but I assume either <code>ntp</code> or <code>xmpp</code> - you&#39;ll have to look this one up though.</p>
+
+<pre><code>--sync-notification-host-port
+</code></pre>
+
+<p>Overrides the default <code>host:port</code> used for sync notifications.</p>
+
+<pre><code>--sync-url
+</code></pre>
+
+<p>Overrides the default server used for profile sync.</p>
+
+<pre><code>--sync-tab-favicons
+</code></pre>
+
+<p>Enables syncing of favicons as part of tab sync.</p>
+
+<pre><code>--sync-throw-unrecoverable-error
+</code></pre>
+
+<p>Makes the sync code to throw an unrecoverable error after initialization.
+Useful for testing unrecoverable error scenarios.</p>
+
+<pre><code>--sync-try-ssltcp-first-for-xmpp
+</code></pre>
+
+<p>Tries to connect to XMPP using SSLTCP first (for testing).</p>
+
+<pre><code>--enable-tab-browser-dragging
+</code></pre>
+
+<p>Enables tab dragging to create a real browser.</p>
+
+<pre><code>--enable-tab-capture
+</code></pre>
+
+<p>Enables tab capture.</p>
+
+<pre><code>--test-name
+</code></pre>
+
+<p>Passes the name of the current running automated test to Chrome.</p>
+
+<pre><code>--test-nacl-sandbox
+</code></pre>
+
+<p>Runs the security test for the NaCl loader sandbox.</p>
+
+<pre><code>--test-type
+</code></pre>
+
+<p>Type of the current test harness (&quot;browser&quot; or &quot;ui&quot;).</p>
+
+<pre><code>--testing-channel
+</code></pre>
+
+<p>Tells the app to listen for and broadcast testing-related messages on IPC
+channel with the given ID.</p>
+
+<pre><code>--track-active-visit-time
+</code></pre>
+
+<p>Enables tracking the amount of non-idle time spent viewing pages.</p>
+
+<pre><code>--trusted-spdy-proxy
+</code></pre>
+
+<p>Disables same-origin check on HTTP resources pushed via a SPDY proxy.
+The value is the host:port of the trusted proxy.</p>
+
+<pre><code>--try-chrome-again
+</code></pre>
+
+<p>Experimental. Shows a dialog asking the user to try chrome. This flag is to
+be used only by the upgrade process.</p>
+
+<pre><code>--uninstall
+</code></pre>
+
+<p>Runs un-installation steps that were done by chrome first-run.</p>
+
+<pre><code>--use-spdy
+</code></pre>
+
+<p>Uses Spdy for the transport protocol instead of HTTP. This is a temporary
+testing flag.</p>
+
+<pre><code>--use-spelling-suggestions
+</code></pre>
+
+<p>Disables use of the spelling web service and only provides suggestions.
+This will only work if asynchronous spell checking is not disabled.</p>
+
+<pre><code>--max-spdy-sessions-per-domain
+</code></pre>
+
+<p>Sets the maximum SPDY sessions per domain.</p>
+
+<pre><code>--max-spdy-concurrent-streams
+</code></pre>
+
+<p>Sets the maximum concurrent streams over a SPDY session.</p>
+
+<pre><code>--user-data-dir
+</code></pre>
+
+<p>Specifies the user data directory, which is where the browser will look for
+all of its state.</p>
+
+<pre><code>--use-client-login-signin-flow
+</code></pre>
+
+<p>Uses the ClientLogin signin flow instead of the web-based signin flow.</p>
+
+<pre><code>--variations-server-url
+</code></pre>
+
+<p>Specifies a custom URL for the server which reports variation data to the
+client. Specifying this switch enables the Variations service on
+unofficial builds. See variations_service.cc.</p>
+
+<pre><code>--version
+</code></pre>
+
+<p>Prints version information and quits.</p>
+
+<pre><code>--viewer-connection
+</code></pre>
+
+<p>Requests that Chrome connect to a remote viewer process using an IPC
+channel of the given name.</p>
+
+<pre><code>--visit-urls
+</code></pre>
+
+<p>Cycle through a series of URLs listed in the specified file.</p>
+
+<pre><code>--wallet-secure-service-url
+</code></pre>
+
+<p>Secure service URL for Online Wallet service. Used as the base url to escrow
+credit card numbers.</p>
+
+<pre><code>--wallet-service-url
+</code></pre>
+
+<p>Service URL for Online Wallet service. Used as the base url for Online Wallet
+API calls.</p>
+
+<pre><code>--whitelisted-extension-id
+</code></pre>
+
+<p>Enable the &quot;native services&quot; feature of web-intents.</p>
+
+<pre><code>--window-position
+</code></pre>
+
+<p>Specify the initial window position: --window-position=x,y</p>
+
+<pre><code>--window-size
+</code></pre>
+
+<p>Specify the initial window size: --window-size=w,h</p>
+
+<pre><code>--winhttp-proxy-resolver
+</code></pre>
+
+<p>Uses WinHTTP to fetch and evaluate PAC scripts. Otherwise the default is to
+use Chromium&#39;s network stack to fetch, and V8 to evaluate.</p>
+
+<h2 id="toc_1">When plugin installation is enabled</h2>
+
+<pre><code>--plugins-metadata-server-url
+</code></pre>
+
+<p>Specifies a custom URL for fetching plug-ins metadata. Used for testing.</p>
+
+<h2 id="toc_2">Android specific switches</h2>
+
+<pre><code>--enable-spdy-proxy-auth
+</code></pre>
+
+<p>Enable SPDY proxy.</p>
+
+<pre><code>--enable-translate
+</code></pre>
+
+<p>Pops the translate infobar if possible.</p>
+
+<pre><code>--tablet-ui
+</code></pre>
+
+<p>Uses the tablet specific UI components when available.</p>
+
+<h2 id="toc_3">Chrome OS switches</h2>
+
+<pre><code>--ash-webui-init
+</code></pre>
+
+<p>For use when running Chrome/Chromium on ChromeOS.</p>
+
+<pre><code>--enable-carrier-switching
+</code></pre>
+
+<p>Enables switching between different cellular carriers from the UI.</p>
+
+<pre><code>--disable-boot-animation
+</code></pre>
+
+<p>Disables wallpaper boot animation (except of OOBE case).</p>
+
+<pre><code>--disable-drive
+</code></pre>
+
+<p>Disables Chrome Captive Portal detector, which initiates Captive
+Portal detection for new active networks.</p>
+
+<pre><code>--enable-drive-prefetch
+</code></pre>
+
+<p>Enables file prefetching in Google Drive Client for Chrome OS.</p>
+
+<pre><code>--disable-login-animations
+</code></pre>
+
+<p>Avoid doing expensive animations upon login.</p>
+
+<pre><code>--disable-oobe-animation
+</code></pre>
+
+<p>Avoid doing animations upon oobe.</p>
+
+<pre><code>--enable-app-mode
+</code></pre>
+
+<p>Enable Kiosk app mode for ChromeOS.</p>
+
+<pre><code>--enable-background-loader
+</code></pre>
+
+<p>Enables component extension that initializes background pages of
+certain hosted applications.</p>
+
+<pre><code>--enable-drive-metadata-prefetch
+</code></pre>
+
+<p>Enables Chrome Captive Portal detector, which initiates Captive
+Portal detection for new active networks.</p>
+
+<pre><code>--enable-touchpad-three-finger-click
+</code></pre>
+
+<p>Enables touchpad three-finger-click as middle button.</p>
+
+<pre><code>--enable-touchpad-three-finger-swipe
+</code></pre>
+
+<p>Enables touchpad three-finger swipe.</p>
+
+<pre><code>--enable-kiosk-mode
+</code></pre>
+
+<p>Enable Kiosk mode for ChromeOS.</p>
+
+<pre><code>--disable-local-accounts
+</code></pre>
+
+<p>Disable policy-configured local accounts.</p>
+
+<pre><code>--enable-request-tablet-site
+</code></pre>
+
+<p>Enables request of tablet site (via user agent override).</p>
+
+<pre><code>--enable-static-ip-config
+</code></pre>
+
+<p>Enables static ip configuration. This flag should be removed when it&#39;s on by
+default.</p>
+
+<pre><code>--first-boot
+</code></pre>
+
+<p>Passed to Chrome on first boot. Not passed on restart after sign out.</p>
+
+<pre><code>--force-login-manager-in-tests
+</code></pre>
+
+<p>Usually in browser tests the usual login manager bringup is skipped so that
+tests can change how it&#39;s brought up. This flag disables that.</p>
+
+<pre><code>--has-chromeos-keyboard
+</code></pre>
+
+<p>If true, the Chromebook has a Chrome OS keyboard. Don&#39;t use the flag for
+Chromeboxes.</p>
+
+<pre><code>--has-chromeos-diamond-key
+</code></pre>
+
+<p>If true, the Chromebook has a keyboard with a diamond key.</p>
+
+<pre><code>--kiosk-mode-screensaver-path
+</code></pre>
+
+<p>Path for the screensaver used in Kiosk mode</p>
+
+<pre><code>--login-manager
+</code></pre>
+
+<p>Enables Chrome-as-a-login-manager behavior.</p>
+
+<pre><code>--login-screen
+</code></pre>
+
+<p>Allows to override the first login screen. The value should be the name of
+the first login screen to show</p>
+
+<pre><code>--login-screen-size
+</code></pre>
+
+<p>Controls the initial login screen size. Pass width,height.</p>
+
+<pre><code>--login-profile
+</code></pre>
+
+<p>Specifies the profile to use once a chromeos user is logged in.</p>
+
+<pre><code>--login-user
+</code></pre>
+
+<p>Specifies the user which is already logged in.</p>
+
+<pre><code>--login-password
+</code></pre>
+
+<p>Specifies a password to be used to login (along with login-user).</p>
+
+<pre><code>--enable-natural-scroll-default
+</code></pre>
+
+<p>Enables natural scroll by default.</p>
+
+<pre><code>--no-discard-tabs
+</code></pre>
+
+<p>Disables tab discard in low memory conditions, a feature which silently
+closes inactive tabs to free memory and to attempt to avoid the kernel&#39;s
+out-of-memory process killer.</p>
+
+<pre><code>--bwsi
+</code></pre>
+
+<p>Indicates that the browser is in &quot;browse without sign-in&quot; (Guest session)
+mode. Should completely disable extensions, sync and bookmarks.</p>
+
+<pre><code>--echo-ext-path
+</code></pre>
+
+<p>Enables overriding the path for the default echo component extension.
+Useful for testing.</p>
+
+<pre><code>--stub-cros-settings
+</code></pre>
+
+<p>Indicates that a stub implementation of CrosSettings that stores settings in
+memory without signing should be used, treating current user as the owner.
+This option is for testing the chromeos build of chrome on the desktop only.</p>
+
+<pre><code>--auth-ext-path
+</code></pre>
+
+<p>Enables overriding the path for the default authentication extension.</p>
+
+<pre><code>--file-manager-packaged
+</code></pre>
+
+<p>Power of the power-of-2 initial modulus that will be used by the
+auto-enrollment client. E.g. &quot;4&quot; means the modulus will be 2^4 = 16.</p>
+
+<pre><code>--oobe-skip-postlogin
+</code></pre>
+
+<p>Skips all other OOBE pages after user login. In NDebug mode</p>
+
+<h2 id="toc_4">Posix specific switches</h2>
+
+<p>For running on any *nix, ie. Linux, Solaris, OS X, etc.</p>
+
+<pre><code>--enable-crash-reporter
+</code></pre>
+
+<p>A flag, generated internally by Chrome for renderer and other helper process
+command lines on Linux and Mac. It tells the helper process to enable crash
+dumping and reporting, because helpers cannot access the profile or other
+files needed to make this decision.</p>
+
+<pre><code>--password-store
+</code></pre>
+
+<p>Used for turning on Breakpad crash reporting in a debug environment where
+crash reporting is typically compiled but disabled.</p>
+
+<h2 id="toc_5">OS X specific switches</h2>
+
+<p>Mac only stuff...</p>
+
+<pre><code>--enable-expose-for-tabs
+</code></pre>
+
+<p>Enables the tabs expose feature</p>
+
+<pre><code>--keychain-reauthorize
+</code></pre>
+
+<p>Performs Keychain reauthorization from the command line on behalf of a
+special Keychain reauthorization stub executable. Used during auto-update.</p>
+
+<pre><code>--relauncher
+</code></pre>
+
+<p>A process type (switches::kProcessType) that relaunches the browser. See
+chrome/browser/mac/relauncher.h.</p>
+
+<pre><code>--use-mock-keychain
+</code></pre>
+
+<p>Uses mock keychain for testing purposes, which prevents blocking dialogs
+from causing timeouts.</p>
+
+<h2 id="toc_6">Windows specific switches</h2>
+
+<pre><code>--force-immersive
+</code></pre>
+
+<p>Enables media transfer protocol device media support for
+mediaGalleries extension API.</p>
+
+<pre><code>--force-desktop
+</code></pre>
+
+<p>For the DelegateExecute verb handler to launch Chrome in desktop mode on
+Windows 8 and higher.  Used when relaunching metro Chrome.</p>
+
+<pre><code>--overlapped-reads
+</code></pre>
+
+<p>Allows for disabling the overlapped I/O for TCP reads.
+Possible values are &quot;on&quot; or &quot;off&quot;.
+The default is &quot;on&quot; which matches the existing behavior.
+&quot;off&quot; switches to use non-blocking reads and WSAEventSelect.</p>
+
+<pre><code>--relaunch-shortcut
+</code></pre>
+
+<p>Relaunches metro Chrome on Windows 8 and higher using a given shortcut.</p>
+
+<pre><code>--wait-for-mutex
+</code></pre>
+
+<p>Waits for the given handle to be signaled before relaunching metro Chrome on
+Windows 8 and higher.</p>
+
+<h2 id="toc_7">NDebug switches</h2>
+
+<p>I don&#39;t know what NDebug is, so you&#39;ll have to look that up.</p>
+
+<pre><code>--filemgr-ext-path
+</code></pre>
+
+<p>Enables overriding the path of file manager extension.</p>
+
+<pre><code>--image-loader-ext-path
+</code></pre>
+
+<p>Enables overriding the path of image loader extension.</p>
+
+<pre><code>--dump-profile-graph
+</code></pre>
+
+<p>Dumps dependency information about our profile services into a dot file in
+the profile directory.</p>
+
+<h2 id="toc_8">Print preview in the browser process.</h2>
+
+<p>Google Chrome builds only.</p>
+
+<pre><code>--disable-print-preview
+</code></pre>
+
+<p>Disables print preview (For testing, and for users who don&#39;t like us. :[ )</p>
+
+<pre><code>--enable-print-preview
+</code></pre>
+
+<p>Enables print preview (Force enable on Chromium, which normally does not have the PDF viewer required for print preview.)</p>
+
+<h1 id="toc_9">Base switches</h1>
+
+<p>Although it&#39;s likely you&#39;ll never need these, I&#39;ve added them for completeness, and Emacs just made short work of extracting them from the source code, so there you go...</p>
+
+<pre><code>--debug-on-start
+</code></pre>
+
+<p>If the program includes <code>base/debug/debug_on_start_win.h</code>, the process will
+(on Windows only) start the JIT system-registered debugger on itself and
+will wait for 60 seconds for the debugger to attach to itself. Then a break
+point will be hit.</p>
+
+<pre><code>--disable-breakpad
+</code></pre>
+
+<p>Disables the crash reporting.</p>
+
+<pre><code>--enable-dcheck
+</code></pre>
+
+<p>Enable DCHECKs in release mode.</p>
+
+<pre><code>--full-memory-crash-report
+</code></pre>
+
+<p>Generates full memory crash dump.</p>
+
+<pre><code>--noerrdialogs
+</code></pre>
+
+<p>Suppresses all error dialogs when present.</p>
+
+<pre><code>--test-child-process
+</code></pre>
+
+<p>When running certain tests that spawn child processes, this switch indicates
+to the test framework that the current process is a child process.</p>
+
+<pre><code>--v
+</code></pre>
+
+<p>Gives the default maximal active V-logging level; 0 is the default.
+Normally positive values are used for V-logging levels.</p>
+
+<p>Gives the per-module maximal V-logging levels to override the value
+given by --v.  E.g. <code>my_module=2,foo*=3</code> would change the logging
+level for all code in source files <code>my_module.*</code> and <code>foo*.*</code>
+(<code>-inl</code> suffixes are also disregarded for this matching).</p>
+
+<p>Any pattern containing a forward or backward slash will be tested
+against the whole pathname and not just the module.  E.g.,
+<code>*/foo/bar/*=2</code> would change the logging level for all code in
+source files under a <code>foo/bar</code> directory.</p>
+
+<pre><code>--vmodule
+</code></pre>
+
+<p>// Will wait for 60 seconds for a debugger to come to attach to the process.</p>
+
+<pre><code>--wait-for-debugger
+</code></pre>
+
+  
+  <ul class="pagination">
+      <li class="prev"><a href="/string-template" title="String.template()">&larr; Previous</a></li>
+
+      <li class="next disabled"><a>Next &rarr;</a>
+  </ul>
+  
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_developer = 1;
+    var disqus_shortname = 'codefodder'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</section>
+
+      </section>
+
+      <footer>
+      <p><small>Hosted on <a href="http://github.com">github.com</a> using a modified version of the <a href="https://github.com/sodabrew/theme-dinky">Dinky theme</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    
+    <!-- Google Prettify -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+<script>
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i < pres.length; ++i) {
+    pres[i].className = "prettyprint ";
+  }
+  prettyPrint();
+</script>
+<!-- end Google Prettify -->
+    <script>
+  var _gaq=[['_setAccount','UA-123-12'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+  </body>
+</html>

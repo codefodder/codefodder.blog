@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="author" content="Jason Milkins" />
     <title>CodeFodder</title>
-    <link href="/assets/dinky/stylesheets/styles.css?0.6053851865024498" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9321514487897699" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/dinky/stylesheets/styles.css?0.8686006425378263" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8055738996184469" type="text/css" rel="stylesheet" media="all">
 
-<script src="/assets/dinky/javascripts/scale.fix.js?0.9138104945573886"></script>
+<script src="/assets/dinky/javascripts/scale.fix.js?0.49607252485850295"></script>
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -45,6 +45,50 @@
   <h1>CodeFodder</h1>
 
   <div class="post">
+  <h3 class="title"><a href="/chrome-chromium-startup-flags">Chrome/Chromium startup flags</a> <span class="date">2013-03-05</span></h3>
+
+  <p>Recently I discovered the <code>chrome://flags</code> page, and there was much
+rejoicing, of course, there&#39;s even more things you can do at startup
+than there are on the <code>chrome://flags</code>. I decide to compile a complete
+list from <code>chrome_switches.cc</code> and <code>base_switches.cc</code>. You can browse
+the full source at
+<a href="http://src.chromium.org/viewvc">http://src.chromium.org/viewvc</a> - and
+you can find lots of info at
+<a href="http://chromium.org">http://chromium.org</a>.</p>
+
+<h1 id="toc_0">Chrome/Chromium switches.</h1>
+
+<pre><code>--action-box
+</code></pre>
+
+<p>Enables or disables the &quot;action box&quot; UI in the toolbar.</p>
+
+<pre><code>--allow-cross-origin-auth-prompt
+</code></pre>
+
+<p>Allows third-party content included on a page to prompt for a HTTP basic
+auth username/password pair.</p>
+
+<pre><code>--allow-file-access
+</code></pre>
+
+<p>On ChromeOS, <code>file:access</code> is disabled except for certain whitelisted
+directories. This switch re-enables <code>file:for</code> testing.</p>
+
+<pre><code>--allow-http-background-page
+</code></pre>
+
+<p>Allows non-https URL for background_page for hosted apps.</p>
+
+<pre><code>--allow-nacl-socket-api
+</code></pre>
+
+
+  <div class="more">
+    <a href="/chrome-chromium-startup-flags" class="btn">read more..</a>
+  </div>
+</div>
+<div class="post">
   <h3 class="title"><a href="/string-template">String.template()</a> <span class="date">2013-03-02</span></h3>
 
   <p>This is just a little helper method I use in JavaScript a fair bit, it&#39;s an extension of the <code>String</code> class that provides basic parameter replacement, you could equally call it <code>String.format()</code> or even <code>String.$()</code> without angering the gods ... either way, it&#39;s a convenient and minimal way to doing interpolated strings in JS.</p>
