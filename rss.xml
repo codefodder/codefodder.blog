@@ -3,7 +3,7 @@
   <channel>
     <title>CodeFodder</title>
     <link>http://codefodder.github.com</link>
-    <pubDate>2013-03-05 13:52:04 +1100</pubDate>
+    <pubDate>2013-03-05 13:58:42 +1100</pubDate>
     <item>
       <title>Chrome/Chromium startup flags</title>
       <link>http://codefodder.github.com/chrome-chromium-startup-flags</link>
@@ -16,10 +16,10 @@
     &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"&gt;
     &lt;meta name="author" content="Jason Milkins" /&gt;
     &lt;title&gt;Chrome/Chromium startup flags&lt;/title&gt;
-    &lt;link href="/assets/dinky/stylesheets/styles.css?0.13595154657621555" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.23562591195237625" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/dinky/stylesheets/styles.css?0.19862736068354125" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.005076160510457783" type="text/css" rel="stylesheet" media="all"&gt;
 
-&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.7132623500855436"&gt;&lt;/script&gt;
+&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.38414125421072154"&gt;&lt;/script&gt;
 
     &lt;!--[if lt IE 9]&gt;
     &lt;script src="//html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
@@ -63,665 +63,550 @@ the full source at
 you can find lots of info at
 &lt;a href="http://chromium.org"&gt;http://chromium.org&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h1 id="toc_0"&gt;Chrome/Chromium switches.&lt;/h1&gt;
+&lt;h3 id="toc_0"&gt;Chrome/Chromium switches.&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;--action-box
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_1"&gt;--action-box&lt;/h4&gt;
 
 &lt;p&gt;Enables or disables the &amp;quot;action box&amp;quot; UI in the toolbar.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--allow-cross-origin-auth-prompt
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_2"&gt;--allow-cross-origin-auth-prompt&lt;/h4&gt;
 
 &lt;p&gt;Allows third-party content included on a page to prompt for a HTTP basic
 auth username/password pair.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--allow-file-access
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_3"&gt;--allow-file-access&lt;/h4&gt;
 
 &lt;p&gt;On ChromeOS, &lt;code&gt;file:access&lt;/code&gt; is disabled except for certain whitelisted
 directories. This switch re-enables &lt;code&gt;file:for&lt;/code&gt; testing.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--allow-http-background-page
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_4"&gt;--allow-http-background-page&lt;/h4&gt;
 
 &lt;p&gt;Allows non-https URL for background_page for hosted apps.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--allow-nacl-socket-api
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_5"&gt;--allow-nacl-socket-api&lt;/h4&gt;
 
 &lt;p&gt;Allows the browser to load extensions that lack a modern manifest when that
 would otherwise be forbidden.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--allow-outdated-plugins
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_6"&gt;--allow-outdated-plugins&lt;/h4&gt;
 
 &lt;p&gt;Don&amp;#39;t block outdated plugins.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--allow-running-insecure-content
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_7"&gt;--allow-running-insecure-content&lt;/h4&gt;
 
 &lt;p&gt;By default, an https page cannot run JavaScript, CSS or plug-ins from http
 URLs. This provides an override to get the old insecure behavior.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--allow-scripting-gallery
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_8"&gt;--allow-scripting-gallery&lt;/h4&gt;
 
 &lt;p&gt;Allows injecting extensions and user scripts on the extensions gallery
 site. Normally prevented for security reasons, but can be useful for
 automation testing of the gallery.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--always-authorize-plugins
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_9"&gt;--always-authorize-plugins&lt;/h4&gt;
 
 &lt;p&gt;Prevents Chrome from requiring authorization to run certain widely installed
 but less commonly used plug-ins.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--app-id
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_10"&gt;--app-id&lt;/h4&gt;
 
 &lt;p&gt;Specifies that the extension-app with the specified id should be launched
 according to its configuration.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--app
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_11"&gt;--app&lt;/h4&gt;
 
 &lt;p&gt;Specifies that the associated value should be launched in &amp;quot;application&amp;quot;
 mode.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--apps-devtool
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_12"&gt;--apps-devtool&lt;/h4&gt;
 
 &lt;p&gt;Flag to enable apps_devtool app.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--app-window-size
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_13"&gt;--app-window-size&lt;/h4&gt;
 
 &lt;p&gt;Specifies the initial size for application windows launched with &lt;code&gt;--app.
 --app-window-size=w,h&lt;/code&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--app-notify-channel-server-url
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_14"&gt;--app-notify-channel-server-url&lt;/h4&gt;
 
 &lt;p&gt;A URL for the server which assigns channel ids for server pushed app
 notifications.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--apps-checkout-url
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_15"&gt;--apps-checkout-url&lt;/h4&gt;
 
 &lt;p&gt;Overrides the apps checkout URL, which is used to determine when to expose
 some private APIs.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--apps-gallery-download-url
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_16"&gt;--apps-gallery-download-url&lt;/h4&gt;
 
 &lt;p&gt;The URL that the webstore APIs download extensions from.
 Note: the URL must contain one &lt;code&gt;%s&lt;/code&gt; (ie. for a replacable string) for the extension ID.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--apps-gallery-url
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_17"&gt;--apps-gallery-url&lt;/h4&gt;
 
 &lt;p&gt;A setting to cause extension/app installs from the webstore skip the normal
 confirmation dialog. A value of &amp;#39;accept&amp;#39; means to always act as if the dialog
 was accepted, and &amp;#39;cancel&amp;#39; means to always act as if the dialog was
 cancelled.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--apps-gallery-update-url
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_18"&gt;--apps-gallery-update-url&lt;/h4&gt;
 
 &lt;p&gt;The update url used by gallery/webstore extensions.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--app-mode-oauth-token
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_19"&gt;--app-mode-oauth-token&lt;/h4&gt;
 
 &lt;p&gt;Value of OAuth2 refresh token for --force-app-mode.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--apps-new-install-bubble
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_20"&gt;--apps-new-install-bubble&lt;/h4&gt;
 
 &lt;p&gt;Whether to always use the new app install bubble when installing an app.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--apps-no-throb
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_21"&gt;--apps-no-throb&lt;/h4&gt;
 
 &lt;p&gt;Disable throbber for extension apps.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--auth-schemes
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_22"&gt;--auth-schemes&lt;/h4&gt;
 
 &lt;p&gt;Whitelist of servers that Negotiate will generate delegated Kerberos tickets
 for.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--auth-server-whitelist
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_23"&gt;--auth-server-whitelist&lt;/h4&gt;
 
 &lt;p&gt;Whitelist of servers which NTLM and Negotiate can automatically authenticate
 with using the default credentials of the currently logged in user.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--auto-launch-at-startup
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_24"&gt;--auto-launch-at-startup&lt;/h4&gt;
 
 &lt;p&gt;A flag that is used to tell Chrome that it was launched automatically at
 computer startup and not by some user action.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--autofill-service-url
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_25"&gt;--autofill-service-url&lt;/h4&gt;
 
 &lt;p&gt;Flag used to tell Chrome the base url of the Autofill service.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--automation-channel
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_26"&gt;--automation-channel&lt;/h4&gt;
 
 &lt;p&gt;The value of this switch tells the app to listen for and broadcast
 automation-related messages on IPC channel with the given ID.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--check-for-update-interval
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_27"&gt;--check-for-update-interval&lt;/h4&gt;
 
 &lt;p&gt;Causes the automation provider to reinitialize its IPC channel instead of
 shutting down when a client disconnects.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--chrome-frame-shutdown-delay
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_28"&gt;--chrome-frame-shutdown-delay&lt;/h4&gt;
 
 &lt;p&gt;Checks the cloud print connector policy, informing the service process if
 the policy is set to disallow the connector, then quits.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--chrome-version
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_29"&gt;--chrome-version&lt;/h4&gt;
 
 &lt;p&gt;Tells chrome to load the specified version of chrome.dll on Windows. If this
 version cannot be loaded, Chrome will exit.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--cipher-suite-blacklist
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_30"&gt;--cipher-suite-blacklist&lt;/h4&gt;
 
 &lt;p&gt;Comma-separated list of SSL cipher suites to disable.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--clear-token-service
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_31"&gt;--clear-token-service&lt;/h4&gt;
 
 &lt;p&gt;Clears the token service before using it. This allows simulating the
 expiration of credentials during testing.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--cloud-print-delete-file
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_32"&gt;--cloud-print-delete-file&lt;/h4&gt;
 
 &lt;p&gt;Used with kCloudPrintFile. Tells Chrome to delete the file when finished
 displaying the print dialog.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--cloud-print-file
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_33"&gt;--cloud-print-file&lt;/h4&gt;
 
 &lt;p&gt;Tells chrome to display the cloud print dialog and upload the specified file
 for printing.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--cloud-print-file-type
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_34"&gt;--cloud-print-file-type&lt;/h4&gt;
 
 &lt;p&gt;Specifies the mime type to be used when uploading data from the file
 referenced by cloud-print-file. Defaults to &amp;quot;application/pdf&amp;quot; if
 unspecified.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--cloud-print-print-ticket
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_35"&gt;--cloud-print-print-ticket&lt;/h4&gt;
 
 &lt;p&gt;Used with kCloudPrintFile to specify a JSON print ticket for the resulting
 print job. Defaults to null if unspecified.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--cloud-print-job-title
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_36"&gt;--cloud-print-job-title&lt;/h4&gt;
 
 &lt;p&gt;Used with kCloudPrintFile to specify a title for the resulting print job.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--cloud-print-proxy-id
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_37"&gt;--cloud-print-proxy-id&lt;/h4&gt;
 
 &lt;p&gt;The unique id to be used for this cloud print proxy instance.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--cloud-print-service
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_38"&gt;--cloud-print-service&lt;/h4&gt;
 
 &lt;p&gt;The URL of the cloud print service to use, overrides any value stored in
 preferences, and the default. Only used if the cloud print service has been
 enabled (see enable-cloud-print).&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--component-updater-debug
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_39"&gt;--component-updater-debug&lt;/h4&gt;
 
 &lt;p&gt;Comma-separated options to troubleshoot the component updater. Only valid
 for the browser process.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--conflicting-modules-check
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_40"&gt;--conflicting-modules-check&lt;/h4&gt;
 
 &lt;p&gt;Causes the browser process to inspect loaded and registered DLLs for known
 conflicts and warn the user.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--new-content-settings
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_41"&gt;--new-content-settings&lt;/h4&gt;
 
 &lt;p&gt;Toggles a new version of the content settings dialog in options.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--country
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_42"&gt;--country&lt;/h4&gt;
 
 &lt;p&gt;The Country we should use. This is normally obtained from the operating
 system during first run and cached in the preferences afterwards. This is a
 string value, the 2 letter code from ISO 3166-1.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--crash-on-hang-threads
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_43"&gt;--crash-on-hang-threads&lt;/h4&gt;
 
 &lt;p&gt;Comma-separated list of BrowserThreads that cause browser process to crash
 if the given browser thread is not responsive. UI,IO,DB,FILE,CACHE are the
-list of BrowserThreads that are supported.
-//
-For example:
-//
-&lt;code&gt;--crash-on-hang-threads=UI:3:18,IO:3:18&lt;/code&gt; --&amp;gt; Crash the browser if UI or IO
+list of BrowserThreads that are supported.&lt;/p&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;--crash-on-hang-threads=UI:3:18,IO:3:18&lt;/code&gt; --&amp;gt; Crash the browser if UI or IO
 is not responsive for 18 seconds and the number of browser threads that
 are responding is less than or equal to 3.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--debug-enable-frame-toggle
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_44"&gt;--debug-enable-frame-toggle&lt;/h4&gt;
 
 &lt;p&gt;Some platforms like ChromeOS default to empty desktop.
 Browser tests may need to add this switch so that at least one browser
 instance is created on startup.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--debug-packed-apps
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_45"&gt;--debug-packed-apps&lt;/h4&gt;
 
 &lt;p&gt;Adds debugging entries such as Inspect Element to context menus of packed
 apps.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--debug-print
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_46"&gt;--debug-print&lt;/h4&gt;
 
 &lt;p&gt;Enables support to debug printing subsystem.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--device-management-url
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_47"&gt;--device-management-url&lt;/h4&gt;
 
 &lt;p&gt;Specifies the URL at which to fetch configuration policy from the device
 management backend. Specifying this switch turns on managed policy from the
 device management backend.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--diagnostics
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_48"&gt;--diagnostics&lt;/h4&gt;
 
 &lt;p&gt;Triggers a plethora of diagnostic modes.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-async-dns
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_49"&gt;--disable-async-dns&lt;/h4&gt;
 
 &lt;p&gt;Disables the experimental asynchronous DNS client.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-background-mode
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_50"&gt;--disable-background-mode&lt;/h4&gt;
 
 &lt;p&gt;Disables CNAME lookup of the host when generating the Kerberos SPN for a
 Negotiate challenge. See &lt;code&gt;HttpAuthHandlerNegotiate::CreateSPN&lt;/code&gt; for more
 background.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-background-networking
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_51"&gt;--disable-background-networking&lt;/h4&gt;
 
 &lt;p&gt;Disable several subsystems which run network requests in the background.
 This is for use when doing network performance testing to avoid noise in the
 measurements.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-bundled-ppapi-flash
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_52"&gt;--disable-bundled-ppapi-flash&lt;/h4&gt;
 
 &lt;p&gt;Disables the bundled PPAPI version of Flash.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-component-update
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_53"&gt;--disable-component-update&lt;/h4&gt;
 
 &lt;p&gt;Disables the bookmark autocomplete provider (BookmarkProvider).&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-crl-sets
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_54"&gt;--disable-crl-sets&lt;/h4&gt;
 
 &lt;p&gt;Disables establishing certificate revocation information by downloading a
 set of CRLs rather than performing on-line checks.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-custom-jumplist
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_55"&gt;--disable-custom-jumplist&lt;/h4&gt;
 
 &lt;p&gt;Disables the custom JumpList on Windows 7.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-default-apps
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_56"&gt;--disable-default-apps&lt;/h4&gt;
 
 &lt;p&gt;Disables installation of default apps on first run. This is used during
 automated testing.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-dhcp-wpad
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_57"&gt;--disable-dhcp-wpad&lt;/h4&gt;
 
 &lt;p&gt;Disables retrieval of PAC URLs from DHCP as per the WPAD standard.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-extensions
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_58"&gt;--disable-extensions&lt;/h4&gt;
 
 &lt;p&gt;Disable extensions.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-instant-extended-api
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_59"&gt;--disable-instant-extended-api&lt;/h4&gt;
 
 &lt;p&gt;Disable checking for user opt-in for extensions that want to inject script
 into file URLs (ie, always allow it). This is used during automated testing.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-ipv6
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_60"&gt;--disable-ipv6&lt;/h4&gt;
 
 &lt;p&gt;Disables improved SafeBrowsing download protection.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-ip-pooling
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_61"&gt;--disable-ip-pooling&lt;/h4&gt;
 
 &lt;p&gt;Disables IP Pooling within the networks stack (SPDY only). When a connection
 is needed for a domain which shares an IP with an existing connection,
 attempt to use the existing connection.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-ntp-other-sessions-menu
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_62"&gt;--disable-ntp-other-sessions-menu&lt;/h4&gt;
 
 &lt;p&gt;Disables the menu on the NTP for accessing sessions from other devices.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-popup-blocking
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_63"&gt;--disable-popup-blocking&lt;/h4&gt;
 
 &lt;p&gt;Disable pop-up blocking.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-preconnect
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_64"&gt;--disable-preconnect&lt;/h4&gt;
 
 &lt;p&gt;Disable speculative TCP/IP preconnection.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-prompt-on-repost
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_65"&gt;--disable-prompt-on-repost&lt;/h4&gt;
 
 &lt;p&gt;Normally when the user attempts to navigate to a page that was the result of
 a post we prompt to make sure they want to. This switch may be used to
 disable that check. This switch is used during automated testing.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-restore-session-state
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_66"&gt;--disable-restore-session-state&lt;/h4&gt;
 
 &lt;p&gt;Prevents the URLs of BackgroundContents from being remembered and
 re-launched when the browser restarts.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-sync
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_67"&gt;--disable-sync&lt;/h4&gt;
 
 &lt;p&gt;Disables throttling prints initiated by scripts.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-sync-app-settings
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_68"&gt;--disable-sync-app-settings&lt;/h4&gt;
 
 &lt;p&gt;Disables syncing of app settings.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-sync-apps
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_69"&gt;--disable-sync-apps&lt;/h4&gt;
 
 &lt;p&gt;Disables syncing of apps.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-sync-app-notifications
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_70"&gt;--disable-sync-app-notifications&lt;/h4&gt;
 
 &lt;p&gt;Disable syncing app notifications.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-sync-autofill
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_71"&gt;--disable-sync-autofill&lt;/h4&gt;
 
 &lt;p&gt;Disables syncing of autofill.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-sync-autofill-profile
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_72"&gt;--disable-sync-autofill-profile&lt;/h4&gt;
 
 &lt;p&gt;Disables syncing of autofill Profile.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-sync-bookmarks
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_73"&gt;--disable-sync-bookmarks&lt;/h4&gt;
 
 &lt;p&gt;Disables syncing of bookmarks.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-sync-dictionary
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_74"&gt;--disable-sync-dictionary&lt;/h4&gt;
 
 &lt;p&gt;Disables syncing of dictionary.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-sync-extension-settings
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_75"&gt;--disable-sync-extension-settings&lt;/h4&gt;
 
 &lt;p&gt;Disables syncing extension settings.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-sync-extensions
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_76"&gt;--disable-sync-extensions&lt;/h4&gt;
 
 &lt;p&gt;Disables syncing of extensions.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-sync-passwords
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_77"&gt;--disable-sync-passwords&lt;/h4&gt;
 
 &lt;p&gt;Disables syncing of history delete directives.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-sync-preferences
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_78"&gt;--disable-sync-preferences&lt;/h4&gt;
 
 &lt;p&gt;Disables syncing of preferences.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-sync-search-engines
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_79"&gt;--disable-sync-search-engines&lt;/h4&gt;
 
 &lt;p&gt;Disable syncing custom search engines.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-sync-tabs
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_80"&gt;--disable-sync-tabs&lt;/h4&gt;
 
 &lt;p&gt;Disables syncing browser sessions. Will override kEnableSyncTabs.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-sync-themes
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_81"&gt;--disable-sync-themes&lt;/h4&gt;
 
 &lt;p&gt;Disables syncing of themes.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-sync-typed-urls
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_82"&gt;--disable-sync-typed-urls&lt;/h4&gt;
 
 &lt;p&gt;Disables syncing browser typed urls.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-translate
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_83"&gt;--disable-translate&lt;/h4&gt;
 
 &lt;p&gt;Allows disabling of translate from the command line to assist with automated
 browser testing (e.g. Selenium/WebDriver). Normal browser users should
 disable translate with the preference.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-tls-channel-id
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_84"&gt;--disable-tls-channel-id&lt;/h4&gt;
 
 &lt;p&gt;Disables TLS Channel ID extension.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-web-resources
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_85"&gt;--disable-web-resources&lt;/h4&gt;
 
 &lt;p&gt;Disables the backend service for web resources.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disk-cache-dir
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_86"&gt;--disk-cache-dir&lt;/h4&gt;
 
 &lt;p&gt;Some tests seem to require the application to close when the last
 browser window is closed. Thus, we need a switch to force this behavior
 for ChromeOS Aura, disable &amp;quot;zero window mode&amp;quot;.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disk-cache-size
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_87"&gt;--disk-cache-size&lt;/h4&gt;
 
 &lt;p&gt;Forces the maximum disk space to be used by the disk cache, in bytes.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--dns-log-details
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_88"&gt;--dns-log-details&lt;/h4&gt;
 
 &lt;p&gt;Undocumented, but self explanatory. Log DNS details. &lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--dns-prefetch-disable
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_89"&gt;--dns-prefetch-disable&lt;/h4&gt;
 
 &lt;p&gt;Disables prefetching of DNS information.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--dump-histograms-on-exit
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_90"&gt;--dump-histograms-on-exit&lt;/h4&gt;
 
 &lt;p&gt;Dump any accumualted histograms to the log when browser terminates (requires
 logging to be enabled to really do anything). Used by developers and test
 scripts.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-async-dns
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_91"&gt;--enable-async-dns&lt;/h4&gt;
 
 &lt;p&gt;Enables the experimental asynchronous DNS client.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-auth-negotiate-port
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_92"&gt;--enable-auth-negotiate-port&lt;/h4&gt;
 
 &lt;p&gt;Enables the inclusion of non-standard ports when generating the Kerberos SPN
 in response to a Negotiate challenge. See &lt;code&gt;HttpAuthHandlerNegotiate::CreateSPN&lt;/code&gt; for more background.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-autologin
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_93"&gt;--enable-autologin&lt;/h4&gt;
 
 &lt;p&gt;Enables the pre- and auto-login features. When a user signs in to sync, the
 browser&amp;#39;s cookie jar is pre-filled with GAIA cookies. When the user visits a
 GAIA login page, an info bar can help the user login.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-benchmarking
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_94"&gt;--enable-benchmarking&lt;/h4&gt;
 
 &lt;p&gt;Enables the benchmarking extensions.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-cloud-print-proxy
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_95"&gt;--enable-cloud-print-proxy&lt;/h4&gt;
 
 &lt;p&gt;This applies only when the process type is &amp;quot;service&amp;quot;. Enables the Cloud
 Print Proxy component within the service process.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-contacts
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_96"&gt;--enable-contacts&lt;/h4&gt;
 
 &lt;p&gt;Enables fetching the user&amp;#39;s contacts from Google and showing them in the
 Chrome OS apps list.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-crxless-web-apps
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_97"&gt;--enable-crxless-web-apps&lt;/h4&gt;
 
 &lt;p&gt;Enables web developers to create apps for Chrome without using crx packages.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-desktop-guest-mode
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_98"&gt;--enable-desktop-guest-mode&lt;/h4&gt;
 
 &lt;p&gt;Enables desktop guest mode.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-devtools-experiments
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_99"&gt;--enable-devtools-experiments&lt;/h4&gt;
 
 &lt;p&gt;If true devtools experimental settings are enabled.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-interactive-autocomplete
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_100"&gt;--enable-interactive-autocomplete&lt;/h4&gt;
 
 &lt;p&gt;Enables an interactive autocomplete UI and a way to invoke this UI from
 WebKit by enabling &lt;code&gt;HTMLFormElement#requestAutocomplete&lt;/code&gt; (and associated
 autocomplete events and logic).&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--easy-off-store-extension-install
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_101"&gt;--easy-off-store-extension-install&lt;/h4&gt;
 
 &lt;p&gt;Enables extensions to be easily installed from sites other than the web
 store. Without this flag, they can still be installed, but must be manually
 dragged onto &lt;code&gt;chrome://extensions/&lt;/code&gt;.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-extension-activity-ui
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_102"&gt;--enable-extension-activity-ui&lt;/h4&gt;
 
 &lt;p&gt;Enables extension APIs that are in development.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--extensions-in-action-box
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_103"&gt;--extensions-in-action-box&lt;/h4&gt;
 
 &lt;p&gt;Enables or disables showing extensions in the action box.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-file-cookies
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_104"&gt;--enable-file-cookies&lt;/h4&gt;
 
 &lt;p&gt;By default, cookies are not allowed on &lt;code&gt;file://&lt;/code&gt;. They are needed for testing,
 for example page cycler and layout tests. &lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-google-now-integration
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_105"&gt;--enable-google-now-integration&lt;/h4&gt;
 
 &lt;p&gt;Enables Google Now integration.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-instant-extended-api
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_106"&gt;--enable-instant-extended-api&lt;/h4&gt;
 
 &lt;p&gt;Enable Instant extended API.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-ipv6
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_107"&gt;--enable-ipv6&lt;/h4&gt;
 
 &lt;p&gt;Enables IPv6 support, even if probes suggest that it may not be fully
 supported. Some probes may require internet connections, and this flag will
 allow support independent of application testing. This flag overrides
 &lt;code&gt;--disable-ipv6&lt;/code&gt; which appears elswhere in this file.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-ipc-fuzzing
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_108"&gt;--enable-ipc-fuzzing&lt;/h4&gt;
 
 &lt;p&gt;Enables the IPC fuzzer for reliability testing&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-ip-pooling
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_109"&gt;--enable-ip-pooling&lt;/h4&gt;
 
 &lt;p&gt;Enables IP Pooling within the networks stack (SPDY only). When a connection
 is needed for a domain which shares an IP with an existing connection,
 attempt to use the existing connection.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-managed-users
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_110"&gt;--enable-managed-users&lt;/h4&gt;
 
 &lt;p&gt;Enables support for user profiles that are managed by another user and can
 have restrictions applied.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-memory-info
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_111"&gt;--enable-memory-info&lt;/h4&gt;
 
 &lt;p&gt;Allows reporting memory info (JS heap size) to page.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-memory-internals-ui
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_112"&gt;--enable-memory-internals-ui&lt;/h4&gt;
 
 &lt;p&gt;Enables metrics recording and reporting in the browser startup sequence, as
 if this was an official Chrome build where the user allowed metrics
 reporting. This is used for testing only.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-nacl
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_113"&gt;--enable-nacl&lt;/h4&gt;
 
 &lt;p&gt;Runs the Native Client inside the renderer process and enables GPU plugin
 (internally adds lEnableGpuPlugin to the command line).&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-nacl-debug
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_114"&gt;--enable-nacl-debug&lt;/h4&gt;
 
 &lt;p&gt;Enables debugging via RSP over a socket.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--nacl-debug-mask
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_115"&gt;--nacl-debug-mask&lt;/h4&gt;
 
 &lt;p&gt;Uses NaCl manifest URL to choose whether NaCl program will be debugged by
 debug stub.
@@ -733,251 +618,207 @@ If the value doesn&amp;#39;t start with !, a program will be debugged if manifes
 matches any pattern. If the value starts with !, a program will be debugged
 if manifest URL does not match any pattern.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-nacl-exception-handling
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_116"&gt;--enable-nacl-exception-handling&lt;/h4&gt;
 
 &lt;p&gt;Enables hardware exception handling via debugger process.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-native-messaging
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_117"&gt;--enable-native-messaging&lt;/h4&gt;
 
 &lt;p&gt;Enables the native messaging extensions API.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-net-benchmarking
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_118"&gt;--enable-net-benchmarking&lt;/h4&gt;
 
 &lt;p&gt;Enables the network-related benchmarking extensions.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-new-autofill-ui
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_119"&gt;--enable-new-autofill-ui&lt;/h4&gt;
 
 &lt;p&gt;Enables the new Autofill UI, which is part of the browser process rather than
 part of the renderer process.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-npn
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_120"&gt;--enable-npn&lt;/h4&gt;
 
 &lt;p&gt;Enables NPN and SPDY. In case server supports SPDY, browser will use SPDY.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-npn-http
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_121"&gt;--enable-npn-http&lt;/h4&gt;
 
 &lt;p&gt;Enables NPN with HTTP. It means NPN is enabled but SPDY won&amp;#39;t be used.
 HTTP is still used for all requests.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-panels
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_122"&gt;--enable-panels&lt;/h4&gt;
 
 &lt;p&gt;Enables panels (always on-top docked pop-up windows).&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-panel-stacking
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_123"&gt;--enable-panel-stacking&lt;/h4&gt;
 
 &lt;p&gt;Enables panel stacking support.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-password-generation
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_124"&gt;--enable-password-generation&lt;/h4&gt;
 
 &lt;p&gt;Enables password generation when we detect that the user is going through
 account creation.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-pnacl
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_125"&gt;--enable-pnacl&lt;/h4&gt;
 
 &lt;p&gt;Enables the installation and usage of Portable Native Client.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-profiling
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_126"&gt;--enable-profiling&lt;/h4&gt;
 
 &lt;p&gt;Enables tracking of tasks in profiler for viewing via about:profiler.
 To predominantly disable tracking (profiling), use the command line
 switch: &lt;code&gt;--enable-profiling=0&lt;/code&gt; Some tracking will still take place at
 startup, but it will be turned off during &lt;code&gt;chrome_browser_main&lt;/code&gt;.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-query-extraction
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_127"&gt;--enable-query-extraction&lt;/h4&gt;
 
 &lt;p&gt;Enables query extraction in the omnibox.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-quic
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_128"&gt;--enable-quic&lt;/h4&gt;
 
 &lt;p&gt;Enables support for the QUIC protocol.  This is a temporary testing flag.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-sdch
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_129"&gt;--enable-sdch&lt;/h4&gt;
 
 &lt;p&gt;Enables content settings based on host &lt;em&gt;and&lt;/em&gt; plug-in in the user
 preferences.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-spdy3
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_130"&gt;--enable-spdy3&lt;/h4&gt;
 
 &lt;p&gt;Enable SPDY/3. This is a temporary testing flag.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-spdy-credential-frames
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_131"&gt;--enable-spdy-credential-frames&lt;/h4&gt;
 
 &lt;p&gt;Enable SPDY CREDENTIAL frame support.  This is a temporary testing flag.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-spelling-auto-correct
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_132"&gt;--enable-spelling-auto-correct&lt;/h4&gt;
 
 &lt;p&gt;Enables auto correction for misspelled words.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-stacked-tab-strip
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_133"&gt;--enable-stacked-tab-strip&lt;/h4&gt;
 
 &lt;p&gt;Enables the stacked tabstrip.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-suggestions-ntp
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_134"&gt;--enable-suggestions-ntp&lt;/h4&gt;
 
 &lt;p&gt;Enables experimental suggestions pane in New Tab page.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-tab-groups-context-menu
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_135"&gt;--enable-tab-groups-context-menu&lt;/h4&gt;
 
 &lt;p&gt;Enables synced notifications.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-watchdog
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_136"&gt;--enable-watchdog&lt;/h4&gt;
 
 &lt;p&gt;Enables Alternate-Protocol when the port is user controlled (&amp;gt; 1024).&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-websocket-over-spdy
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_137"&gt;--enable-websocket-over-spdy&lt;/h4&gt;
 
 &lt;p&gt;Uses WebSocket over SPDY.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--explicitly-allowed-ports
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_138"&gt;--explicitly-allowed-ports&lt;/h4&gt;
 
 &lt;p&gt;Explicitly allows additional ports using a comma-separated list of port
 numbers.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--event-page-idle-time
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_139"&gt;--event-page-idle-time&lt;/h4&gt;
 
 &lt;p&gt;The time in seconds that an extension event page can be idle before it
 is shut down.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--event-page-unloading-time
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_140"&gt;--event-page-unloading-time&lt;/h4&gt;
 
 &lt;p&gt;The time in seconds that an extension event page has between being notified
 of its impending unload and that unload happening.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--extension-process
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_141"&gt;--extension-process&lt;/h4&gt;
 
 &lt;p&gt;Marks a renderer as extension process.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--extensions-update-frequency
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_142"&gt;--extensions-update-frequency&lt;/h4&gt;
 
 &lt;p&gt;Frequency in seconds for Extensions auto-update.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--fake-variations-channel
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_143"&gt;--fake-variations-channel&lt;/h4&gt;
 
 &lt;p&gt;Fakes the channel of the browser for purposes of Variations filtering. This
 is to be used for testing only. Possible values are &amp;quot;stable&amp;quot;, &amp;quot;beta&amp;quot;, &amp;quot;dev&amp;quot;
 and &amp;quot;canary&amp;quot;. Note that this only applies if the browser&amp;#39;s reported channel
 is UNKNOWN.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--flag-switches-begin /  --flag-switches-end
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_144"&gt;--flag-switches-begin /  --flag-switches-end&lt;/h4&gt;
 
 &lt;p&gt;These two flags are added around the switches &lt;code&gt;chrome:flags&lt;/code&gt; adds to the
 command line. This is useful to see which switches were added by &lt;code&gt;chrome:flags&lt;/code&gt;
 on &lt;code&gt;chrome:version&lt;/code&gt;. They don&amp;#39;t have any effect.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--feedback-server
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_145"&gt;--feedback-server&lt;/h4&gt;
 
 &lt;p&gt;Alternative feedback server to use when submitting user feedback&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--file-descriptor-limit
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_146"&gt;--file-descriptor-limit&lt;/h4&gt;
 
 &lt;p&gt;The file descriptor limit is set to the value of this switch, subject to the
 OS hard limits. Useful for testing that file descriptor exhaustion is
 handled gracefully.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--force-app-mode
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_147"&gt;--force-app-mode&lt;/h4&gt;
 
 &lt;p&gt;Forces application mode. This hides certain system UI elements and forces
 the app to be installed if it hasn&amp;#39;t been already.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--force-first-run
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_148"&gt;--force-first-run&lt;/h4&gt;
 
 &lt;p&gt;Displays the First Run experience when the browser is started, regardless of
 whether or not it&amp;#39;s actually the First Run (this overrides kNoFirstRun).&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--force-load-cloud-policy
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_149"&gt;--force-load-cloud-policy&lt;/h4&gt;
 
 &lt;p&gt;Tries to load cloud policy for every signed in user, regardless of whether
 they are a dasher user or not. Used to allow any GAIA account to be used for
 testing the cloud policy framework.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--gaia-profile-info
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_150"&gt;--gaia-profile-info&lt;/h4&gt;
 
 &lt;p&gt;Enables using GAIA information to populate profile name and icon.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--google-search-domain-check-url
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_151"&gt;--google-search-domain-check-url&lt;/h4&gt;
 
 &lt;p&gt;Specifies an alternate URL to use for retrieving the search domain for
 Google. Useful for testing.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--gssapi-library-name
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_152"&gt;--gssapi-library-name&lt;/h4&gt;
 
 &lt;p&gt;Specifies a custom name for the GSSAPI library to load.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--help / --h
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_153"&gt;--help / --h&lt;/h4&gt;
 
 &lt;p&gt;These flags show the man page on Linux. They are equivalent to each
 other.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--hide-icons
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_154"&gt;--hide-icons&lt;/h4&gt;
 
 &lt;p&gt;Makes Windows happy by allowing it to show &amp;quot;Enable access to this program&amp;quot;
 checkbox in Add/Remove Programs-&amp;gt;Set Program Access and Defaults. This only
 shows an error box because the only way to hide Chrome is by uninstalling
 it.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-full-history-sync
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_155"&gt;--disable-full-history-sync&lt;/h4&gt;
 
 &lt;p&gt;Disables full history sync.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-full-history-sync
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_156"&gt;--enable-full-history-sync&lt;/h4&gt;
 
 &lt;p&gt;Enables full history sync (not just typed URLs) for signed-in users.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-grouped-history
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_157"&gt;--enable-grouped-history&lt;/h4&gt;
 
 &lt;p&gt;Enables grouping websites by domain and filtering them by period.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--homepage
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_158"&gt;--homepage&lt;/h4&gt;
 
 &lt;p&gt;Specifies which page will be displayed in newly-opened tabs. We need this
 for testing purposes so that the UI tests don&amp;#39;t depend on what comes up for
 &lt;a href="http://google.com"&gt;http://google.com&lt;/a&gt;.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--host-rules
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_159"&gt;--host-rules&lt;/h4&gt;
 
 &lt;p&gt;Comma-separated list of rules that control how hostnames are mapped.&lt;/p&gt;
 
@@ -994,152 +835,126 @@ for testing purposes so that the UI tests don&amp;#39;t depend on what comes up 
 connect and host resolver in a direct connection, and the CONNECT in an http
 proxy connection, and the endpoint host in a SOCKS proxy connection).&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--host-resolver-parallelism
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_160"&gt;--host-resolver-parallelism&lt;/h4&gt;
 
 &lt;p&gt;The maximum number of concurrent host resolve requests (i.e. DNS) to allow
 (not counting backup attempts which would also consume threads).
 &lt;code&gt;--host-resolver-retry-attempts&lt;/code&gt; must be set to zero for this to be exact.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--host-resolver-retry-attempts
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_161"&gt;--host-resolver-retry-attempts&lt;/h4&gt;
 
 &lt;p&gt;The maximum number of retry attempts to resolve the host. Set this to zero
 to disable host resolver retry attempts.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--hsts-hosts
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_162"&gt;--hsts-hosts&lt;/h4&gt;
 
 &lt;p&gt;Takes the JSON-formatted &lt;a href="http://tools.ietf.org/html/rfc6797"&gt;HSTS&lt;/a&gt; specification and loads it as if it were a
 preloaded &lt;a href="http://tools.ietf.org/html/rfc6797"&gt;HSTS&lt;/a&gt; entry. Takes precedence over both website-specified rules and
 built-in rules. The JSON format is the same as that persisted in
 &lt;code&gt;&amp;lt;profile_dir&amp;gt;/Default/TransportSecurity&lt;/code&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--import
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_163"&gt;--import&lt;/h4&gt;
 
 &lt;p&gt;Causes net::URLFetchers to ignore requests for SSL client certificates,
 causing them to attempt an unauthenticated SSL/TLS session. This is intended
 for use when testing various service URLs (eg: &lt;code&gt;kPromoServerURL&lt;/code&gt;, &lt;code&gt;kInstantURL&lt;/code&gt;,
 &lt;code&gt;kSbURLPrefix&lt;/code&gt;,&lt;code&gt;kSyncServiceURL&lt;/code&gt;, &lt;code&gt;kWalletServiceUrl&lt;/code&gt;, etc.)&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--import-from-file
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_164"&gt;--import-from-file&lt;/h4&gt;
 
 &lt;p&gt;Performs bookmark importing from an HTML file. The value associated with
 this setting encodes the file path. It may be used jointly with &lt;code&gt;kImport&lt;/code&gt;.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--incognito
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_165"&gt;--incognito&lt;/h4&gt;
 
 &lt;p&gt;Causes the browser to launch directly in incognito mode.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--install-from-webstore
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_166"&gt;--install-from-webstore&lt;/h4&gt;
 
 &lt;p&gt;Causes Chrome to attempt to get metadata from the webstore for the
 app/extension ID given, and then prompt the user to download and install it.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--instant-process
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_167"&gt;--instant-process&lt;/h4&gt;
 
 &lt;p&gt;Marks a renderer as an Instant process.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--instant-url
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_168"&gt;--instant-url&lt;/h4&gt;
 
 &lt;p&gt;URL to use for instant. If specified this overrides the url from the
 TemplateURL.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--keep-alive-for-test
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_169"&gt;--keep-alive-for-test&lt;/h4&gt;
 
 &lt;p&gt;Used for testing - keeps browser alive after last browser window closes.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--kiosk
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_170"&gt;--kiosk&lt;/h4&gt;
 
 &lt;p&gt;Enable Kiosk mode.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--kiosk-printing
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_171"&gt;--kiosk-printing&lt;/h4&gt;
 
 &lt;p&gt;Print automatically in kiosk mode. &amp;#39;kKioskMode&amp;#39; must be set as well.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--limited-install-from-webstore
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_172"&gt;--limited-install-from-webstore&lt;/h4&gt;
 
 &lt;p&gt;Causes Chrome to attempt to get metadata from the webstore for the
 given item, and then prompt the user to download and install it.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--load-and-launch-app
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_173"&gt;--load-and-launch-app&lt;/h4&gt;
 
 &lt;p&gt;Loads an app from the specified directory and launches it.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--load-component-extension
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_174"&gt;--load-component-extension&lt;/h4&gt;
 
 &lt;p&gt;Comma-separated list of directories with component extensions to load.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-cloud-policy-on-signin
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_175"&gt;--disable-cloud-policy-on-signin&lt;/h4&gt;
 
 &lt;p&gt;If present, disables the loading and application of cloud policy for
 signed-in users.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--load-extension
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_176"&gt;--load-extension&lt;/h4&gt;
 
 &lt;p&gt;Loads an extension from the specified directory.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--load-opencryptoki
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_177"&gt;--load-opencryptoki&lt;/h4&gt;
 
 &lt;p&gt;Loads the &lt;code&gt;opencryptoki&lt;/code&gt; library into NSS at startup. This is only needed
 temporarily for developers who need to work on WiFi/VPN certificate code.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--log-net-log
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_178"&gt;--log-net-log&lt;/h4&gt;
 
 &lt;p&gt;Enables displaying net log events on the command line, or writing the events
 to a separate file if a file name is given.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--uninstall-extension
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_179"&gt;--uninstall-extension&lt;/h4&gt;
 
 &lt;p&gt;Uninstalls an extension with the specified extension id.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--managed
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_180"&gt;--managed&lt;/h4&gt;
 
 &lt;p&gt;Starts the browser in managed mode.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--make-default-browser
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_181"&gt;--make-default-browser&lt;/h4&gt;
 
 &lt;p&gt;Makes Chrome default browser&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--media-cache-size
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_182"&gt;--media-cache-size&lt;/h4&gt;
 
 &lt;p&gt;Forces the maximum disk space to be used by the media cache, in bytes.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--memory-profile
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_183"&gt;--memory-profile&lt;/h4&gt;
 
 &lt;p&gt;Enables dynamic loading of the Memory Profiler DLL, which will trace all
 memory allocations during the run.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--message-loop-histogrammer
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_184"&gt;--message-loop-histogrammer&lt;/h4&gt;
 
 &lt;p&gt;Enables histograming of tasks served by MessageLoop. See
 about:histograms/Loop for results, which show frequency of messages on each
 thread, including APC count, object signalling count, etc.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--metrics-recording-only
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_185"&gt;--metrics-recording-only&lt;/h4&gt;
 
 &lt;p&gt;Enables the recording of metrics reports but disables reporting. In contrast
 to kDisableMetrics, this executes all the code that a normal client would
@@ -1147,69 +962,58 @@ use for reporting, except the report is dropped rather than sent to the
 server. This is useful for finding issues in the metrics code during UI and
 performance tests.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--multi-profiles
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_186"&gt;--multi-profiles&lt;/h4&gt;
 
 &lt;p&gt;Enables multiprofile Chrome.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--nacl-gdb
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_187"&gt;--nacl-gdb&lt;/h4&gt;
 
 &lt;p&gt;Native Client GDB debugger for loader. It needs switches calculated
 at run time in order to work correctly. That&amp;#39;s why NaClLoadCmdPrefix
 flag can&amp;#39;t be used.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--nacl-gdb-script
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_188"&gt;--nacl-gdb-script&lt;/h4&gt;
 
 &lt;p&gt;GDB script to pass to the nacl-gdb debugger at startup.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--nacl-loader-cmd-prefix
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_189"&gt;--nacl-loader-cmd-prefix&lt;/h4&gt;
 
 &lt;p&gt;On POSIX only: the contents of this flag are prepended to the nacl-loader
 command line. Useful values might be &lt;code&gt;valgrind&lt;/code&gt; or &lt;code&gt;xterm -e gdb --args&lt;/code&gt;.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--native-messaging-hosts
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_190"&gt;--native-messaging-hosts&lt;/h4&gt;
 
 &lt;p&gt;List of native messaging hosts outside of the default location. Used for
 tests. The value must be comma-separate lists of key-value pairs separated
 equal sign. E.g. &lt;code&gt;host1=/path/to/host1/manifest.json,host2=/path/host2.json&lt;/code&gt;.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--net-log-level
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_191"&gt;--net-log-level&lt;/h4&gt;
 
 &lt;p&gt;Sets the base logging level for the net log. Log 0 logs the most data.
 Intended primarily for use with &lt;code&gt;--log-net-log&lt;/code&gt;.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--no-default-browser-check
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_192"&gt;--no-default-browser-check&lt;/h4&gt;
 
 &lt;p&gt;Disables the default browser check. Useful for UI/browser tests where we
 want to avoid having the default browser info-bar displayed.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--no-displaying-insecure-content
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_193"&gt;--no-displaying-insecure-content&lt;/h4&gt;
 
 &lt;p&gt;By default, an https page can load images, fonts or frames from an http
 page. This switch overrides this to block this lesser mixed-content problem.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--no-events
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_194"&gt;--no-events&lt;/h4&gt;
 
 &lt;p&gt;Don&amp;#39;t record/playback events when using record &amp;amp; playback.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--no-experiments
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_195"&gt;--no-experiments&lt;/h4&gt;
 
 &lt;p&gt;Disables all experiments set on &lt;code&gt;chrome:flags&lt;/code&gt;. Does not disable &lt;code&gt;chrome:flags&lt;/code&gt;
 itself. Useful if an experiment makes chrome crash at startup: One can start
 chrome with &lt;code&gt;--no-experiments&lt;/code&gt;, disable the problematic lab at &lt;code&gt;chrome:flags&lt;/code&gt; and
 then restart chrome without this switch again.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--no-first-run
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_196"&gt;--no-first-run&lt;/h4&gt;
 
 &lt;p&gt;Skip First Run tasks, whether or not it&amp;#39;s actually the First Run. Overridden
 by &lt;code&gt;kForceFirstRun&lt;/code&gt;.&lt;/p&gt;
@@ -1217,8 +1021,7 @@ by &lt;code&gt;kForceFirstRun&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Also drops the First Run beacon so that First Run will not occur in
 subsequent runs as well.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--no-js-randomness
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_197"&gt;--no-js-randomness&lt;/h4&gt;
 
 &lt;p&gt;Support a separate switch that enables the v8 playback extension.
 The extension causes javascript calls to &lt;code&gt;Date.now()&lt;/code&gt; and &lt;code&gt;Math.random()&lt;/code&gt;
@@ -1226,80 +1029,66 @@ to return consistent values, such that subsequent loads of the same
 page will result in consistent js-generated data and &lt;code&gt;XHR&lt;/code&gt; requests.
 Pages may still be able to generate inconsistent data from plugins.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--no-managed
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_198"&gt;--no-managed&lt;/h4&gt;
 
 &lt;p&gt;Starts the browser outside of managed mode.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--no-network-profile-warning
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_199"&gt;--no-network-profile-warning&lt;/h4&gt;
 
 &lt;p&gt;Whether or not the browser should warn if the profile is on a network share.
 This flag is only relevant for Windows currently.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--no-pings
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_200"&gt;--no-pings&lt;/h4&gt;
 
 &lt;p&gt;Don&amp;#39;t send hyperlink auditing pings&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--no-proxy-server
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_201"&gt;--no-proxy-server&lt;/h4&gt;
 
 &lt;p&gt;Don&amp;#39;t use a proxy server, always make direct connections. Overrides any
 other proxy server flags that are passed.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--no-service-autorun
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_202"&gt;--no-service-autorun&lt;/h4&gt;
 
 &lt;p&gt;Disables the service process from adding itself as an autorun process. This
 does not delete existing autorun registrations, it just prevents the service
 from registering a new one.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--no-startup-window
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_203"&gt;--no-startup-window&lt;/h4&gt;
 
 &lt;p&gt;Does not automatically open a browser window on startup (used when
 launching Chrome for the purpose of hosting background apps).&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--num-pac-threads
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_204"&gt;--num-pac-threads&lt;/h4&gt;
 
 &lt;p&gt;Specifies the maximum number of threads to use for running the Proxy
 Autoconfig (PAC) script.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--new-window
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_205"&gt;--new-window&lt;/h4&gt;
 
 &lt;p&gt;When the option to block third-party cookies is enabled, only block
 third-party cookies from being set.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--organic
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_206"&gt;--organic&lt;/h4&gt;
 
 &lt;p&gt;Simulates an organic Chrome install.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--origin-port-to-force-quic-on
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_207"&gt;--origin-port-to-force-quic-on&lt;/h4&gt;
 
 &lt;p&gt;Force use of QUIC for requests over the specified port.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--pack-extension
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_208"&gt;--pack-extension&lt;/h4&gt;
 
 &lt;p&gt;Packages an extension to a .crx installable file from a given directory.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--pack-extension-key
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_209"&gt;--pack-extension-key&lt;/h4&gt;
 
 &lt;p&gt;Optional PEM private key to use in signing packaged .crx.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--parent-profile
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_210"&gt;--parent-profile&lt;/h4&gt;
 
 &lt;p&gt;Specifies the path to the user data folder for the parent profile.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--performance-monitor-gathering
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_211"&gt;--performance-monitor-gathering&lt;/h4&gt;
 
 &lt;p&gt;Launches PerformanceMonitor at startup, which will gather statistics about
 Chrome&amp;#39;s CPU and memory usage, page load times, startup times, and network
@@ -1309,50 +1098,42 @@ run with an integer value representing the interval between the timed
 metric gatherings, measured in seconds (if invalid or not provided, the
 default interval is used).&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--perform-crash-analysis
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_212"&gt;--perform-crash-analysis&lt;/h4&gt;
 
 &lt;p&gt;Enable the post crash analyzer which uploads detailed crash information in
 situations where a crash is determined to be particularly interesting.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--playback-mode
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_213"&gt;--playback-mode&lt;/h4&gt;
 
 &lt;p&gt;Read previously recorded data from the cache. Only cached data is read.
 See &lt;code&gt;kRecordMode&lt;/code&gt;.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--pnacl-dir
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_214"&gt;--pnacl-dir&lt;/h4&gt;
 
 &lt;p&gt;Overrides the path to the location that PNaCl is installed.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--ppapi-flash-in-process
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_215"&gt;--ppapi-flash-in-process&lt;/h4&gt;
 
 &lt;p&gt;Forces the PPAPI version of Flash (if it&amp;#39;s being used) to run in the
 renderer process rather than in a separate plugin process.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--ppapi-flash-path
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_216"&gt;--ppapi-flash-path&lt;/h4&gt;
 
 &lt;p&gt;Use the PPAPI (Pepper) Flash found at the given path.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--ppapi-flash-version
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_217"&gt;--ppapi-flash-version&lt;/h4&gt;
 
 &lt;p&gt;Report the given version for the PPAPI (Pepper) Flash. The version should be
 numbers separated by &lt;code&gt;.&lt;/code&gt;s (e.g., &lt;code&gt;12.3.456.78&lt;/code&gt;). If not specified, it
 defaults to &lt;code&gt;10.2.999.999&lt;/code&gt;.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--prerender-from-omnibox
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_218"&gt;--prerender-from-omnibox&lt;/h4&gt;
 
 &lt;p&gt;Triggers prerendering of pages from suggestions in the omnibox. Only has an
 effect when Instant is either disabled or restricted to search, and when
 prerender is enabled.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--prerender
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_219"&gt;--prerender&lt;/h4&gt;
 
 &lt;p&gt;These are the values the kPrerenderFromOmnibox switch may have, as in &lt;code&gt;--prerender-from-omnibox=auto&lt;/code&gt;. &lt;/p&gt;
 
@@ -1366,8 +1147,7 @@ prerender is enabled.&lt;/p&gt;
 prefetching. Both are dispatched from &lt;link rel=prefetch href=...&gt;
 elements.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--print-raster
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_220"&gt;--print-raster&lt;/h4&gt;
 
 &lt;p&gt;These are the values the kPrerenderMode switch may have, as in &lt;code&gt;--prerender=auto&lt;/code&gt;.&lt;/p&gt;
 
@@ -1380,26 +1160,22 @@ elements.&lt;/p&gt;
 
 &lt;p&gt;Enable conversion from vector to raster for any page.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--product-version
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_221"&gt;--product-version&lt;/h4&gt;
 
 &lt;p&gt;Outputs the product version information and quit. Used as an internal api to
 detect the installed version of Chrome on Linux.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--profile-directory
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_222"&gt;--profile-directory&lt;/h4&gt;
 
 &lt;p&gt;Selects directory of profile to associate with the first browser launched.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--profiling-at-start
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_223"&gt;--profiling-at-start&lt;/h4&gt;
 
 &lt;p&gt;Starts the sampling based profiler for the browser process at startup. This
 will only work if chrome has been built with the gyp variable &lt;code&gt;profiling=1&lt;/code&gt;.
 The output will go to the value of &lt;code&gt;kProfilingFile&lt;/code&gt;.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt; --profiling-file
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_224"&gt;--profiling-file&lt;/h4&gt;
 
 &lt;p&gt;Specifies a location for profiling output. This will only work if
 chrome has been built with the gyp variable &lt;code&gt;profiling=1&lt;/code&gt;.  &lt;code&gt;{pid}&lt;/code&gt; if
@@ -1407,57 +1183,48 @@ present will be replaced by the pid of the process.  &lt;code&gt;{count}&lt;/cod
 present will be incremented each time a profile is generated for this
 process.  The default is &lt;code&gt;chrome-profile-{pid}&lt;/code&gt;.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--profiling-output-file
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_225"&gt;--profiling-output-file&lt;/h4&gt;
 
 &lt;p&gt;Specifies a path for the output of task-level profiling which can be loaded
 and viewed in about:profiler.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--profiling-flush
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_226"&gt;--profiling-flush&lt;/h4&gt;
 
 &lt;p&gt;Controls whether profile data is periodically flushed to a file. Normally
 the data gets written on exit but cases exist where chrome doesn&amp;#39;t exit
 cleanly (especially when using single-process). A time in seconds can be
 specified.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--promo-server-url
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_227"&gt;--promo-server-url&lt;/h4&gt;
 
 &lt;p&gt;Specifies a custom URL for fetching NTP promo data.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--prompt-for-external-extensions
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_228"&gt;--prompt-for-external-extensions&lt;/h4&gt;
 
 &lt;p&gt;Should we prompt the user before allowing external extensions to install?
 Default is yes.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--proxy-auto-detect
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_229"&gt;--proxy-auto-detect&lt;/h4&gt;
 
 &lt;p&gt;Forces proxy auto-detection.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--proxy-bypass-list
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_230"&gt;--proxy-bypass-list&lt;/h4&gt;
 
 &lt;p&gt;Specifies a list of hosts for whom we bypass proxy settings and use direct
 connections. Ignored if &lt;code&gt;--proxy-auto-detect&lt;/code&gt; or &lt;code&gt;--no-proxy-server&lt;/code&gt; are also
 specified. This is a comma-separated list of bypass rules. See:
 &lt;code&gt;net/proxy/proxy_bypass_rules.h&lt;/code&gt; for the format of these rules.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--proxy-pac-url
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_231"&gt;--proxy-pac-url&lt;/h4&gt;
 
 &lt;p&gt;Uses the pac script at the given URL&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--proxy-server
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_232"&gt;--proxy-server&lt;/h4&gt;
 
 &lt;p&gt;Uses a specified proxy server, overrides system settings. This switch only
 affects HTTP and HTTPS requests.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--purge-memory-button
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_233"&gt;--purge-memory-button&lt;/h4&gt;
 
 &lt;p&gt;Adds a &lt;code&gt;Purge memory&amp;quot;&lt;/code&gt;button to the Task Manager, which tries to dump as
 much memory as possible. This is mostly useful for testing how well the
@@ -1465,774 +1232,641 @@ MemoryPurger functionality works. &lt;/p&gt;
 
 &lt;p&gt;NOTE: This is only implemented for Views.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--record-stats
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_234"&gt;--record-stats&lt;/h4&gt;
 
 &lt;p&gt;Capture resource consumption information through page cycling and output the
 data to the specified file.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--record-mode
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_235"&gt;--record-mode&lt;/h4&gt;
 
 &lt;p&gt;Chrome supports a playback and record mode.  Record mode saves &lt;em&gt;everything&lt;/em&gt;
 to the cache.  Playback mode reads data exclusively from the cache.  This
 allows us to record a session into the cache and then replay it at will.
 See also &lt;code&gt;kPlaybackMode&lt;/code&gt;.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--remote-debugging-frontend
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_236"&gt;--remote-debugging-frontend&lt;/h4&gt;
 
 &lt;p&gt;Uses custom front-end URL for the remote debugging.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--silent-debugger-extension-api
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_237"&gt;--silent-debugger-extension-api&lt;/h4&gt;
 
 &lt;p&gt;Does not show an infobar when an extension attaches to a page using
 chrome.debugger page. Required to attach to extension background pages.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--renderer-print-preview
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_238"&gt;--renderer-print-preview&lt;/h4&gt;
 
 &lt;p&gt;Enables print preview in the renderer. This flag is generated internally by
 Chrome and does nothing when directly passed to the browser.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--reset-local-passphrase
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_239"&gt;--reset-local-passphrase&lt;/h4&gt;
 
 &lt;p&gt;Forces a reset of the local passphrase of the managed user account, and
 the managed user settings dialog is shown where a new passphrase can be set.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--reset-variation-state
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_240"&gt;--reset-variation-state&lt;/h4&gt;
 
 &lt;p&gt;Forces a reset of the one-time-randomized FieldTrials on this client, also
 known as the Chrome Variations state.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--restore-last-session
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_241"&gt;--restore-last-session&lt;/h4&gt;
 
 &lt;p&gt;Indicates the last session should be restored on startup. This overrides the
 preferences value and is primarily intended for testing. The value of this
 switch is the number of tabs to wait until loaded before &amp;#39;load completed&amp;#39; is
 sent to the ui_test.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--save-page-as-mhtml
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_242"&gt;--save-page-as-mhtml&lt;/h4&gt;
 
 &lt;p&gt;Disable saving pages as HTML-only, disable saving pages as HTML Complete
 (with a directory of sub-resources). Enable only saving pages as MHTML.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--safebrowsing-url-prefix
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_243"&gt;--safebrowsing-url-prefix&lt;/h4&gt;
 
 &lt;p&gt;URL prefix used by safebrowsing to fetch hash, download data and report
 malware.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--safebrowsing-disable-auto-update
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_244"&gt;--safebrowsing-disable-auto-update&lt;/h4&gt;
 
 &lt;p&gt;If present, safebrowsing only performs update when
 &lt;code&gt;SafeBrowsingProtocolManager::ForceScheduleNextUpdate()&lt;/code&gt; is explicitly called.
 This is used for testing only.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--script-badges
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_245"&gt;--script-badges&lt;/h4&gt;
 
 &lt;p&gt;Disables safebrowsing feature that checks download url and downloads
 content&amp;#39;s hash to make sure the content are not malicious.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--script-bubble
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_246"&gt;--script-bubble&lt;/h4&gt;
 
 &lt;p&gt;Enable or diable the &lt;em&gt;script bubble&lt;/em&gt; icon in the URL bar that tells you how
 many extensions are running scripts on a page.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--search-in-omnibox-hint
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_247"&gt;--search-in-omnibox-hint&lt;/h4&gt;
 
 &lt;p&gt;Enables the showing of an info-bar instructing user they can search directly
 from the omnibox.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--set-token
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_248"&gt;--set-token&lt;/h4&gt;
 
 &lt;p&gt;Sets a token in the token service, for testing.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--show-app-list
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_249"&gt;--show-app-list&lt;/h4&gt;
 
 &lt;p&gt;If true the app list will be shown.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--show-autofill-type-predictions
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_250"&gt;--show-autofill-type-predictions&lt;/h4&gt;
 
 &lt;p&gt;Annotates forms with Autofill field type predictions.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--show-icons
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_251"&gt;--show-icons&lt;/h4&gt;
 
 &lt;p&gt;Makes component extensions appear in &lt;code&gt;chrome://settings/extensions&lt;/code&gt;.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--show-launcher-alignment-menu
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_252"&gt;--show-launcher-alignment-menu&lt;/h4&gt;
 
 &lt;p&gt;If true the alignment of the launcher can be changed.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--sideload-wipeout
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_253"&gt;--sideload-wipeout&lt;/h4&gt;
 
 &lt;p&gt;Enables or disables sideload wipeout extension effort.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--silent-dump-on-dcheck
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_254"&gt;--silent-dump-on-dcheck&lt;/h4&gt;
 
 &lt;p&gt;Changes the DCHECKS to dump memory and continue instead of displaying error
 dialog. This is valid only in Release mode when &lt;code&gt;--enable-dcheck&lt;/code&gt; is
 specified.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--silent-launch
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_255"&gt;--silent-launch&lt;/h4&gt;
 
 &lt;p&gt;Causes Chrome to launch without opening any windows by default. Useful if
 one wishes to use Chrome as an ash server.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--simulate-upgrade
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_256"&gt;--simulate-upgrade&lt;/h4&gt;
 
 &lt;p&gt;Simulates an update being available.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--simulate-critical-update
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_257"&gt;--simulate-critical-update&lt;/h4&gt;
 
 &lt;p&gt;Simulates a critical update being available.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--simulate-outdated
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_258"&gt;--simulate-outdated&lt;/h4&gt;
 
 &lt;p&gt;Simulates that current version is outdated.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--socket-reuse-policy
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_259"&gt;--socket-reuse-policy&lt;/h4&gt;
 
 &lt;p&gt;Socket reuse policy. The value should be of type enum
 &lt;code&gt;ClientSocketReusePolicy&lt;/code&gt;.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--spdy-proxy-auth-origin
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_260"&gt;--spdy-proxy-auth-origin&lt;/h4&gt;
 
 &lt;p&gt;Origin for which &lt;em&gt;SpdyProxy&lt;/em&gt; authentication is supported.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disabled
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_261"&gt;--disabled&lt;/h4&gt;
 
 &lt;p&gt;Speculative resource prefetching.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--learning
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_262"&gt;--learning&lt;/h4&gt;
 
 &lt;p&gt;Speculative resource prefetching will only learn about resources that need to
 be prefetched but will not prefetch them.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enabled
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_263"&gt;--enabled&lt;/h4&gt;
 
 &lt;p&gt;Speculative resource prefetching is enabled.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--ssl-version-max
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_264"&gt;--ssl-version-max&lt;/h4&gt;
 
 &lt;p&gt;Specifies the maximum SSL/TLS version (&lt;code&gt;ssl3&lt;/code&gt;, &lt;code&gt;tls1&lt;/code&gt;, &lt;code&gt;tls1.1&lt;/code&gt;, or
 &lt;code&gt;tls1.2&lt;/code&gt;).&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--ssl-version-min
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_265"&gt;--ssl-version-min&lt;/h4&gt;
 
 &lt;p&gt;Specifies the minimum SSL/TLS version (&lt;code&gt;ssl3&lt;/code&gt;, &lt;code&gt;tls1&lt;/code&gt;, &lt;code&gt;tls1.1&lt;/code&gt;, or
 &lt;code&gt;tls1.2&lt;/code&gt;).&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--start-maximized
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_266"&gt;--start-maximized&lt;/h4&gt;
 
 &lt;p&gt;Starts the browser maximized, regardless of any previous settings.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--suggestion-ntp-filter-width
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_267"&gt;--suggestion-ntp-filter-width&lt;/h4&gt;
 
 &lt;p&gt;Controls the width of time-of-day filters on the &amp;#39;suggested&amp;#39; ntp page, in
 minutes.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--suggestion-ntp-gaussian-filter
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_268"&gt;--suggestion-ntp-gaussian-filter&lt;/h4&gt;
 
 &lt;p&gt;Enables a normal distribution dropoff to the relevancy of visits with respect
 to the time of day.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--suggestion-ntp-linear-filter
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_269"&gt;--suggestion-ntp-linear-filter&lt;/h4&gt;
 
 &lt;p&gt;Enables a linear dropoff to the relevancy of visits with respect to the time
 of day.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--sync-invalidate-xmpp-login
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_270"&gt;--sync-invalidate-xmpp-login&lt;/h4&gt;
 
 &lt;p&gt;Allows insecure XMPP connections for sync (for testing).&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--sync-keystore-encryption
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_271"&gt;--sync-keystore-encryption&lt;/h4&gt;
 
 &lt;p&gt;Enable support for keystore key based encryption.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--sync-notification-method
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_272"&gt;--sync-notification-method&lt;/h4&gt;
 
 &lt;p&gt;Defines the sync notification method, not documented, but I assume either &lt;code&gt;ntp&lt;/code&gt; or &lt;code&gt;xmpp&lt;/code&gt; - you&amp;#39;ll have to look this one up though.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--sync-notification-host-port
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_273"&gt;--sync-notification-host-port&lt;/h4&gt;
 
 &lt;p&gt;Overrides the default &lt;code&gt;host:port&lt;/code&gt; used for sync notifications.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--sync-url
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_274"&gt;--sync-url&lt;/h4&gt;
 
 &lt;p&gt;Overrides the default server used for profile sync.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--sync-tab-favicons
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_275"&gt;--sync-tab-favicons&lt;/h4&gt;
 
 &lt;p&gt;Enables syncing of favicons as part of tab sync.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--sync-throw-unrecoverable-error
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_276"&gt;--sync-throw-unrecoverable-error&lt;/h4&gt;
 
 &lt;p&gt;Makes the sync code to throw an unrecoverable error after initialization.
 Useful for testing unrecoverable error scenarios.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--sync-try-ssltcp-first-for-xmpp
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_277"&gt;--sync-try-ssltcp-first-for-xmpp&lt;/h4&gt;
 
 &lt;p&gt;Tries to connect to XMPP using SSLTCP first (for testing).&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-tab-browser-dragging
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_278"&gt;--enable-tab-browser-dragging&lt;/h4&gt;
 
 &lt;p&gt;Enables tab dragging to create a real browser.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-tab-capture
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_279"&gt;--enable-tab-capture&lt;/h4&gt;
 
 &lt;p&gt;Enables tab capture.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--test-name
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_280"&gt;--test-name&lt;/h4&gt;
 
 &lt;p&gt;Passes the name of the current running automated test to Chrome.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--test-nacl-sandbox
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_281"&gt;--test-nacl-sandbox&lt;/h4&gt;
 
 &lt;p&gt;Runs the security test for the NaCl loader sandbox.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--test-type
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_282"&gt;--test-type&lt;/h4&gt;
 
 &lt;p&gt;Type of the current test harness (&amp;quot;browser&amp;quot; or &amp;quot;ui&amp;quot;).&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--testing-channel
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_283"&gt;--testing-channel&lt;/h4&gt;
 
 &lt;p&gt;Tells the app to listen for and broadcast testing-related messages on IPC
 channel with the given ID.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--track-active-visit-time
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_284"&gt;--track-active-visit-time&lt;/h4&gt;
 
 &lt;p&gt;Enables tracking the amount of non-idle time spent viewing pages.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--trusted-spdy-proxy
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_285"&gt;--trusted-spdy-proxy&lt;/h4&gt;
 
 &lt;p&gt;Disables same-origin check on HTTP resources pushed via a SPDY proxy.
 The value is the host:port of the trusted proxy.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--try-chrome-again
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_286"&gt;--try-chrome-again&lt;/h4&gt;
 
 &lt;p&gt;Experimental. Shows a dialog asking the user to try chrome. This flag is to
 be used only by the upgrade process.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--uninstall
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_287"&gt;--uninstall&lt;/h4&gt;
 
 &lt;p&gt;Runs un-installation steps that were done by chrome first-run.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--use-spdy
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_288"&gt;--use-spdy&lt;/h4&gt;
 
 &lt;p&gt;Uses Spdy for the transport protocol instead of HTTP. This is a temporary
 testing flag.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--use-spelling-suggestions
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_289"&gt;--use-spelling-suggestions&lt;/h4&gt;
 
 &lt;p&gt;Disables use of the spelling web service and only provides suggestions.
 This will only work if asynchronous spell checking is not disabled.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--max-spdy-sessions-per-domain
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_290"&gt;--max-spdy-sessions-per-domain&lt;/h4&gt;
 
 &lt;p&gt;Sets the maximum SPDY sessions per domain.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--max-spdy-concurrent-streams
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_291"&gt;--max-spdy-concurrent-streams&lt;/h4&gt;
 
 &lt;p&gt;Sets the maximum concurrent streams over a SPDY session.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--user-data-dir
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_292"&gt;--user-data-dir&lt;/h4&gt;
 
 &lt;p&gt;Specifies the user data directory, which is where the browser will look for
 all of its state.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--use-client-login-signin-flow
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_293"&gt;--use-client-login-signin-flow&lt;/h4&gt;
 
 &lt;p&gt;Uses the ClientLogin signin flow instead of the web-based signin flow.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--variations-server-url
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_294"&gt;--variations-server-url&lt;/h4&gt;
 
 &lt;p&gt;Specifies a custom URL for the server which reports variation data to the
 client. Specifying this switch enables the Variations service on
 unofficial builds. See variations_service.cc.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--version
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_295"&gt;--version&lt;/h4&gt;
 
 &lt;p&gt;Prints version information and quits.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--viewer-connection
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_296"&gt;--viewer-connection&lt;/h4&gt;
 
 &lt;p&gt;Requests that Chrome connect to a remote viewer process using an IPC
 channel of the given name.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--visit-urls
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_297"&gt;--visit-urls&lt;/h4&gt;
 
 &lt;p&gt;Cycle through a series of URLs listed in the specified file.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--wallet-secure-service-url
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_298"&gt;--wallet-secure-service-url&lt;/h4&gt;
 
 &lt;p&gt;Secure service URL for Online Wallet service. Used as the base url to escrow
 credit card numbers.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--wallet-service-url
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_299"&gt;--wallet-service-url&lt;/h4&gt;
 
 &lt;p&gt;Service URL for Online Wallet service. Used as the base url for Online Wallet
 API calls.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--whitelisted-extension-id
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_300"&gt;--whitelisted-extension-id&lt;/h4&gt;
 
 &lt;p&gt;Enable the &amp;quot;native services&amp;quot; feature of web-intents.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--window-position
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_301"&gt;--window-position&lt;/h4&gt;
 
 &lt;p&gt;Specify the initial window position: --window-position=x,y&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--window-size
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_302"&gt;--window-size&lt;/h4&gt;
 
 &lt;p&gt;Specify the initial window size: --window-size=w,h&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--winhttp-proxy-resolver
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_303"&gt;--winhttp-proxy-resolver&lt;/h4&gt;
 
 &lt;p&gt;Uses WinHTTP to fetch and evaluate PAC scripts. Otherwise the default is to
 use Chromium&amp;#39;s network stack to fetch, and V8 to evaluate.&lt;/p&gt;
 
-&lt;h2 id="toc_1"&gt;When plugin installation is enabled&lt;/h2&gt;
+&lt;h4 id="toc_304"&gt;When plugin installation is enabled&lt;/h4&gt;
 
-&lt;pre&gt;&lt;code&gt;--plugins-metadata-server-url
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_305"&gt;--plugins-metadata-server-url&lt;/h4&gt;
 
 &lt;p&gt;Specifies a custom URL for fetching plug-ins metadata. Used for testing.&lt;/p&gt;
 
-&lt;h2 id="toc_2"&gt;Android specific switches&lt;/h2&gt;
+&lt;h4 id="toc_306"&gt;Android specific switches&lt;/h4&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-spdy-proxy-auth
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_307"&gt;--enable-spdy-proxy-auth&lt;/h4&gt;
 
 &lt;p&gt;Enable SPDY proxy.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-translate
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_308"&gt;--enable-translate&lt;/h4&gt;
 
 &lt;p&gt;Pops the translate infobar if possible.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--tablet-ui
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_309"&gt;--tablet-ui&lt;/h4&gt;
 
 &lt;p&gt;Uses the tablet specific UI components when available.&lt;/p&gt;
 
-&lt;h2 id="toc_3"&gt;Chrome OS switches&lt;/h2&gt;
+&lt;h3 id="toc_310"&gt;Chrome OS switches&lt;/h3&gt;
 
 &lt;p&gt;For use when running Chrome/Chromium on ChromeOS.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--ash-webui-init
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_311"&gt;--ash-webui-init&lt;/h4&gt;
 
 &lt;p&gt;When wallpaper boot animation is not disabled this switch
 is used to override OOBE/sign in WebUI init type.
 Possible values: &lt;code&gt;parallel|postpone&lt;/code&gt;. Default: &lt;code&gt;parallel&lt;/code&gt;.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-carrier-switching
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_312"&gt;--enable-carrier-switching&lt;/h4&gt;
 
 &lt;p&gt;Enables switching between different cellular carriers from the UI.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-boot-animation
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_313"&gt;--disable-boot-animation&lt;/h4&gt;
 
 &lt;p&gt;Disables wallpaper boot animation (except of OOBE case).&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-drive
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_314"&gt;--disable-drive&lt;/h4&gt;
 
 &lt;p&gt;Disables Chrome Captive Portal detector, which initiates Captive
 Portal detection for new active networks.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-drive-prefetch
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_315"&gt;--enable-drive-prefetch&lt;/h4&gt;
 
 &lt;p&gt;Enables file prefetching in Google Drive Client for Chrome OS.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-login-animations
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_316"&gt;--disable-login-animations&lt;/h4&gt;
 
 &lt;p&gt;Avoid doing expensive animations upon login.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-oobe-animation
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_317"&gt;--disable-oobe-animation&lt;/h4&gt;
 
 &lt;p&gt;Avoid doing animations upon oobe.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-app-mode
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_318"&gt;--enable-app-mode&lt;/h4&gt;
 
 &lt;p&gt;Enable Kiosk app mode for ChromeOS.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-background-loader
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_319"&gt;--enable-background-loader&lt;/h4&gt;
 
 &lt;p&gt;Enables component extension that initializes background pages of
 certain hosted applications.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-drive-metadata-prefetch
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_320"&gt;--enable-drive-metadata-prefetch&lt;/h4&gt;
 
 &lt;p&gt;Enables Chrome Captive Portal detector, which initiates Captive
 Portal detection for new active networks.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-touchpad-three-finger-click
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_321"&gt;--enable-touchpad-three-finger-click&lt;/h4&gt;
 
 &lt;p&gt;Enables touchpad three-finger-click as middle button.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-touchpad-three-finger-swipe
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_322"&gt;--enable-touchpad-three-finger-swipe&lt;/h4&gt;
 
 &lt;p&gt;Enables touchpad three-finger swipe.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-kiosk-mode
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_323"&gt;--enable-kiosk-mode&lt;/h4&gt;
 
 &lt;p&gt;Enable Kiosk mode for ChromeOS.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-local-accounts
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_324"&gt;--disable-local-accounts&lt;/h4&gt;
 
 &lt;p&gt;Disable policy-configured local accounts.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-request-tablet-site
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_325"&gt;--enable-request-tablet-site&lt;/h4&gt;
 
 &lt;p&gt;Enables request of tablet site (via user agent override).&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-static-ip-config
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_326"&gt;--enable-static-ip-config&lt;/h4&gt;
 
 &lt;p&gt;Enables static ip configuration. This flag should be removed when it&amp;#39;s on by
 default.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--first-boot
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_327"&gt;--first-boot&lt;/h4&gt;
 
 &lt;p&gt;Passed to Chrome on first boot. Not passed on restart after sign out.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--force-login-manager-in-tests
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_328"&gt;--force-login-manager-in-tests&lt;/h4&gt;
 
 &lt;p&gt;Usually in browser tests the usual login manager bringup is skipped so that
 tests can change how it&amp;#39;s brought up. This flag disables that.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--has-chromeos-keyboard
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_329"&gt;--has-chromeos-keyboard&lt;/h4&gt;
 
 &lt;p&gt;If true, the Chromebook has a Chrome OS keyboard. Don&amp;#39;t use the flag for
 Chromeboxes.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--has-chromeos-diamond-key
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_330"&gt;--has-chromeos-diamond-key&lt;/h4&gt;
 
 &lt;p&gt;If true, the Chromebook has a keyboard with a diamond key.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--kiosk-mode-screensaver-path
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_331"&gt;--kiosk-mode-screensaver-path&lt;/h4&gt;
 
 &lt;p&gt;Path for the screensaver used in Kiosk mode&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--login-manager
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_332"&gt;--login-manager&lt;/h4&gt;
 
 &lt;p&gt;Enables Chrome-as-a-login-manager behavior.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--login-screen
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_333"&gt;--login-screen&lt;/h4&gt;
 
 &lt;p&gt;Allows to override the first login screen. The value should be the name of
 the first login screen to show&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--login-screen-size
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_334"&gt;--login-screen-size&lt;/h4&gt;
 
 &lt;p&gt;Controls the initial login screen size. Pass width,height.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--login-profile
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_335"&gt;--login-profile&lt;/h4&gt;
 
 &lt;p&gt;Specifies the profile to use once a chromeos user is logged in.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--login-user
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_336"&gt;--login-user&lt;/h4&gt;
 
 &lt;p&gt;Specifies the user which is already logged in.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--login-password
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_337"&gt;--login-password&lt;/h4&gt;
 
 &lt;p&gt;Specifies a password to be used to login (along with login-user).&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-natural-scroll-default
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_338"&gt;--enable-natural-scroll-default&lt;/h4&gt;
 
 &lt;p&gt;Enables natural scroll by default.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--no-discard-tabs
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_339"&gt;--no-discard-tabs&lt;/h4&gt;
 
 &lt;p&gt;Disables tab discard in low memory conditions, a feature which silently
 closes inactive tabs to free memory and to attempt to avoid the kernel&amp;#39;s
 out-of-memory process killer.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--bwsi
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_340"&gt;--bwsi&lt;/h4&gt;
 
 &lt;p&gt;Indicates that the browser is in &amp;quot;browse without sign-in&amp;quot; (Guest session)
 mode. Should completely disable extensions, sync and bookmarks.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--echo-ext-path
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_341"&gt;--echo-ext-path&lt;/h4&gt;
 
 &lt;p&gt;Enables overriding the path for the default echo component extension.
 Useful for testing.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--stub-cros-settings
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_342"&gt;--stub-cros-settings&lt;/h4&gt;
 
 &lt;p&gt;Indicates that a stub implementation of CrosSettings that stores settings in
 memory without signing should be used, treating current user as the owner.
 This option is for testing the chromeos build of chrome on the desktop only.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--auth-ext-path
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_343"&gt;--auth-ext-path&lt;/h4&gt;
 
 &lt;p&gt;Enables overriding the path for the default authentication extension.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--file-manager-packaged
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_344"&gt;--file-manager-packaged&lt;/h4&gt;
 
 &lt;p&gt;Power of the power-of-2 initial modulus that will be used by the
 auto-enrollment client. E.g. &amp;quot;4&amp;quot; means the modulus will be 2^4 = 16.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--oobe-skip-postlogin
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_345"&gt;--oobe-skip-postlogin&lt;/h4&gt;
 
 &lt;p&gt;Skips all other OOBE pages after user login. In NDebug mode&lt;/p&gt;
 
-&lt;h2 id="toc_4"&gt;Posix specific switches&lt;/h2&gt;
+&lt;h3 id="toc_346"&gt;Posix specific switches&lt;/h3&gt;
 
 &lt;p&gt;For running on any *nix, ie. Linux, Solaris, OS X, etc.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-crash-reporter
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_347"&gt;--enable-crash-reporter&lt;/h4&gt;
 
 &lt;p&gt;A flag, generated internally by Chrome for renderer and other helper process
 command lines on Linux and Mac. It tells the helper process to enable crash
 dumping and reporting, because helpers cannot access the profile or other
 files needed to make this decision.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--password-store
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_348"&gt;--password-store&lt;/h4&gt;
 
 &lt;p&gt;Used for turning on Breakpad crash reporting in a debug environment where
 crash reporting is typically compiled but disabled.&lt;/p&gt;
 
-&lt;h2 id="toc_5"&gt;OS X specific switches&lt;/h2&gt;
+&lt;h3 id="toc_349"&gt;OS X specific switches&lt;/h3&gt;
 
 &lt;p&gt;Mac only stuff...&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-expose-for-tabs
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_350"&gt;--enable-expose-for-tabs&lt;/h4&gt;
 
 &lt;p&gt;Enables the tabs expose feature&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--keychain-reauthorize
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_351"&gt;--keychain-reauthorize&lt;/h4&gt;
 
 &lt;p&gt;Performs Keychain reauthorization from the command line on behalf of a
 special Keychain reauthorization stub executable. Used during auto-update.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--relauncher
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_352"&gt;--relauncher&lt;/h4&gt;
 
 &lt;p&gt;A process type (switches::kProcessType) that relaunches the browser. See
 chrome/browser/mac/relauncher.h.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--use-mock-keychain
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_353"&gt;--use-mock-keychain&lt;/h4&gt;
 
 &lt;p&gt;Uses mock keychain for testing purposes, which prevents blocking dialogs
 from causing timeouts.&lt;/p&gt;
 
-&lt;h2 id="toc_6"&gt;Windows specific switches&lt;/h2&gt;
+&lt;h3 id="toc_354"&gt;Windows specific switches&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;--force-immersive
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_355"&gt;--force-immersive&lt;/h4&gt;
 
 &lt;p&gt;Enables media transfer protocol device media support for
 mediaGalleries extension API.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--force-desktop
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_356"&gt;--force-desktop&lt;/h4&gt;
 
 &lt;p&gt;For the DelegateExecute verb handler to launch Chrome in desktop mode on
 Windows 8 and higher.  Used when relaunching metro Chrome.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--overlapped-reads
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_357"&gt;--overlapped-reads&lt;/h4&gt;
 
 &lt;p&gt;Allows for disabling the overlapped I/O for TCP reads.
 Possible values are &amp;quot;on&amp;quot; or &amp;quot;off&amp;quot;.
 The default is &amp;quot;on&amp;quot; which matches the existing behavior.
 &amp;quot;off&amp;quot; switches to use non-blocking reads and WSAEventSelect.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--relaunch-shortcut
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_358"&gt;--relaunch-shortcut&lt;/h4&gt;
 
 &lt;p&gt;Relaunches metro Chrome on Windows 8 and higher using a given shortcut.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--wait-for-mutex
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_359"&gt;--wait-for-mutex&lt;/h4&gt;
 
 &lt;p&gt;Waits for the given handle to be signaled before relaunching metro Chrome on
 Windows 8 and higher.&lt;/p&gt;
 
-&lt;h2 id="toc_7"&gt;NDebug switches&lt;/h2&gt;
+&lt;h3 id="toc_360"&gt;NDebug switches&lt;/h3&gt;
 
 &lt;p&gt;I don&amp;#39;t know what NDebug is, so you&amp;#39;ll have to look that up.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--filemgr-ext-path
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_361"&gt;--filemgr-ext-path&lt;/h4&gt;
 
 &lt;p&gt;Enables overriding the path of file manager extension.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--image-loader-ext-path
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_362"&gt;--image-loader-ext-path&lt;/h4&gt;
 
 &lt;p&gt;Enables overriding the path of image loader extension.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--dump-profile-graph
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_363"&gt;--dump-profile-graph&lt;/h4&gt;
 
 &lt;p&gt;Dumps dependency information about our profile services into a dot file in
 the profile directory.&lt;/p&gt;
 
-&lt;h2 id="toc_8"&gt;Print preview in the browser process.&lt;/h2&gt;
+&lt;h3 id="toc_364"&gt;Print preview in the browser process.&lt;/h3&gt;
 
 &lt;p&gt;Google Chrome builds only.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-print-preview
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_365"&gt;--disable-print-preview&lt;/h4&gt;
 
 &lt;p&gt;Disables print preview (For testing, and for users who don&amp;#39;t like us. :[ )&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-print-preview
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_366"&gt;--enable-print-preview&lt;/h4&gt;
 
 &lt;p&gt;Enables print preview (Force enable on Chromium, which normally does not have the PDF viewer required for print preview.)&lt;/p&gt;
 
-&lt;h1 id="toc_9"&gt;Base switches&lt;/h1&gt;
+&lt;h1 id="toc_367"&gt;Base switches&lt;/h1&gt;
 
 &lt;p&gt;Although it&amp;#39;s likely you&amp;#39;ll never need these, I&amp;#39;ve added them for completeness, and Emacs just made short work of extracting them from the source code, so there you go...&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--debug-on-start
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_368"&gt;--debug-on-start&lt;/h4&gt;
 
 &lt;p&gt;If the program includes &lt;code&gt;base/debug/debug_on_start_win.h&lt;/code&gt;, the process will
 (on Windows only) start the JIT system-registered debugger on itself and
 will wait for 60 seconds for the debugger to attach to itself. Then a break
 point will be hit.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--disable-breakpad
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_369"&gt;--disable-breakpad&lt;/h4&gt;
 
 &lt;p&gt;Disables the crash reporting.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--enable-dcheck
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_370"&gt;--enable-dcheck&lt;/h4&gt;
 
 &lt;p&gt;Enable DCHECKs in release mode.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--full-memory-crash-report
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_371"&gt;--full-memory-crash-report&lt;/h4&gt;
 
 &lt;p&gt;Generates full memory crash dump.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--noerrdialogs
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_372"&gt;--noerrdialogs&lt;/h4&gt;
 
 &lt;p&gt;Suppresses all error dialogs when present.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--test-child-process
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_373"&gt;--test-child-process&lt;/h4&gt;
 
 &lt;p&gt;When running certain tests that spawn child processes, this switch indicates
 to the test framework that the current process is a child process.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--v
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_374"&gt;--v&lt;/h4&gt;
 
 &lt;p&gt;Gives the default maximal active V-logging level; 0 is the default.
 Normally positive values are used for V-logging levels.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--vmodule
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_375"&gt;--vmodule&lt;/h4&gt;
 
 &lt;p&gt;Gives the per-module maximal V-logging levels to override the value
 given by &lt;code&gt;--v&lt;/code&gt;.  E.g. &lt;code&gt;my_module=2,foo*=3&lt;/code&gt; would change the logging
@@ -2244,8 +1878,7 @@ against the whole pathname and not just the module.  E.g.,
 &lt;code&gt;*/foo/bar/*=2&lt;/code&gt; would change the logging level for all code in
 source files under a &lt;code&gt;foo/bar&lt;/code&gt; directory.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--wait-for-debugger
-&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="toc_376"&gt;--wait-for-debugger&lt;/h4&gt;
 
 &lt;p&gt;Will wait for 60 seconds for a debugger to come to attach to the process.&lt;/p&gt;
 
@@ -2312,10 +1945,10 @@ source files under a &lt;code&gt;foo/bar&lt;/code&gt; directory.&lt;/p&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"&gt;
     &lt;meta name="author" content="Jason Milkins" /&gt;
     &lt;title&gt;String.template()&lt;/title&gt;
-    &lt;link href="/assets/dinky/stylesheets/styles.css?0.09883990121852615" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.006494399525381556" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/dinky/stylesheets/styles.css?0.7813083127632217" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.9279375763577795" type="text/css" rel="stylesheet" media="all"&gt;
 
-&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.5264768251680243"&gt;&lt;/script&gt;
+&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.8484580722564794"&gt;&lt;/script&gt;
 
     &lt;!--[if lt IE 9]&gt;
     &lt;script src="//html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
@@ -2435,10 +2068,10 @@ source files under a &lt;code&gt;foo/bar&lt;/code&gt; directory.&lt;/p&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"&gt;
     &lt;meta name="author" content="Jason Milkins" /&gt;
     &lt;title&gt;iTerm2 color theme Soothe&lt;/title&gt;
-    &lt;link href="/assets/dinky/stylesheets/styles.css?0.9334718425439558" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7365106235800329" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/dinky/stylesheets/styles.css?0.5387434981372906" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.501671576149012" type="text/css" rel="stylesheet" media="all"&gt;
 
-&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.834372913406462"&gt;&lt;/script&gt;
+&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.2951802675434323"&gt;&lt;/script&gt;
 
     &lt;!--[if lt IE 9]&gt;
     &lt;script src="//html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
@@ -2560,10 +2193,10 @@ source files under a &lt;code&gt;foo/bar&lt;/code&gt; directory.&lt;/p&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"&gt;
     &lt;meta name="author" content="Jason Milkins" /&gt;
     &lt;title&gt;Tinkerbin.com&lt;/title&gt;
-    &lt;link href="/assets/dinky/stylesheets/styles.css?0.882549385636951" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.26081282364546154" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/dinky/stylesheets/styles.css?0.5322071813699345" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.28383669436453685" type="text/css" rel="stylesheet" media="all"&gt;
 
-&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.8894885187859628"&gt;&lt;/script&gt;
+&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.19686939541096615"&gt;&lt;/script&gt;
 
     &lt;!--[if lt IE 9]&gt;
     &lt;script src="//html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
