@@ -3,7 +3,7 @@
   <channel>
     <title>CodeFodder</title>
     <link>http://codefodder.github.com</link>
-    <pubDate>2013-03-05 18:35:58 +1100</pubDate>
+    <pubDate>2013-03-05 18:39:00 +1100</pubDate>
     <item>
       <title>Chrome/Chromium startup flags</title>
       <link>http://codefodder.github.com/chrome-chromium-startup-flags</link>
@@ -16,10 +16,10 @@
     &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"&gt;
     &lt;meta name="author" content="Jason Milkins" /&gt;
     &lt;title&gt;Chrome/Chromium startup flags&lt;/title&gt;
-    &lt;link href="/assets/dinky/stylesheets/styles.css?0.8241350497557235" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.02083911564209595" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/dinky/stylesheets/styles.css?0.753976648296846" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.13841397093715468" type="text/css" rel="stylesheet" media="all"&gt;
 
-&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.9295605847994759"&gt;&lt;/script&gt;
+&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.5979422866689463"&gt;&lt;/script&gt;
 
     &lt;!--[if lt IE 9]&gt;
     &lt;script src="//html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
@@ -62,6 +62,8 @@ the full source at
 &lt;a href="http://src.chromium.org/viewvc"&gt;http://src.chromium.org/viewvc&lt;/a&gt; - and
 you can find lots of info at
 &lt;a href="http://chromium.org"&gt;http://chromium.org&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; I&amp;#39;ve just found Peter Beverloo&amp;#39;s list here &lt;a href="http://peter.sh/experiments/chromium-command-line-switches/"&gt;http://peter.sh/experiments/chromium-command-line-switches/&lt;/a&gt; which has even more. However I know for sure all functioning switches aren&amp;#39;t listed in &lt;code&gt;chrome_switches.cc&lt;/code&gt; because I use &lt;code&gt;--disable-web-security&lt;/code&gt; every day.&lt;/p&gt;
 
 &lt;h3 id="toc_0"&gt;Chrome/Chromium switches.&lt;/h3&gt;
 
@@ -1961,10 +1963,10 @@ source files under a &lt;code&gt;foo/bar&lt;/code&gt; directory.&lt;/p&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"&gt;
     &lt;meta name="author" content="Jason Milkins" /&gt;
     &lt;title&gt;String.template()&lt;/title&gt;
-    &lt;link href="/assets/dinky/stylesheets/styles.css?0.3140184868292285" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.1210326607088279" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/dinky/stylesheets/styles.css?0.6052552238687795" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7947006152813343" type="text/css" rel="stylesheet" media="all"&gt;
 
-&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.7581803393193046"&gt;&lt;/script&gt;
+&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.28641838296952504"&gt;&lt;/script&gt;
 
     &lt;!--[if lt IE 9]&gt;
     &lt;script src="//html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
@@ -2084,10 +2086,10 @@ source files under a &lt;code&gt;foo/bar&lt;/code&gt; directory.&lt;/p&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"&gt;
     &lt;meta name="author" content="Jason Milkins" /&gt;
     &lt;title&gt;iTerm2 color theme Soothe&lt;/title&gt;
-    &lt;link href="/assets/dinky/stylesheets/styles.css?0.09228110403284862" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8732017952275241" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/dinky/stylesheets/styles.css?0.3776370512001762" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.35587356350099986" type="text/css" rel="stylesheet" media="all"&gt;
 
-&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.4047789692454251"&gt;&lt;/script&gt;
+&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.16601438459442586"&gt;&lt;/script&gt;
 
     &lt;!--[if lt IE 9]&gt;
     &lt;script src="//html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
@@ -2209,10 +2211,10 @@ source files under a &lt;code&gt;foo/bar&lt;/code&gt; directory.&lt;/p&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"&gt;
     &lt;meta name="author" content="Jason Milkins" /&gt;
     &lt;title&gt;Tinkerbin.com&lt;/title&gt;
-    &lt;link href="/assets/dinky/stylesheets/styles.css?0.4385245574586446" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8733924432671695" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/dinky/stylesheets/styles.css?0.004156221412292882" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.4016225862453042" type="text/css" rel="stylesheet" media="all"&gt;
 
-&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.9137365804678961"&gt;&lt;/script&gt;
+&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.6917204134011476"&gt;&lt;/script&gt;
 
     &lt;!--[if lt IE 9]&gt;
     &lt;script src="//html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
