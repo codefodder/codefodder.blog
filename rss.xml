@@ -3,7 +3,7 @@
   <channel>
     <title>CodeFodder</title>
     <link>http://codefodder.github.com</link>
-    <pubDate>2013-03-05 13:49:16 +1100</pubDate>
+    <pubDate>2013-03-05 13:52:04 +1100</pubDate>
     <item>
       <title>Chrome/Chromium startup flags</title>
       <link>http://codefodder.github.com/chrome-chromium-startup-flags</link>
@@ -16,10 +16,10 @@
     &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"&gt;
     &lt;meta name="author" content="Jason Milkins" /&gt;
     &lt;title&gt;Chrome/Chromium startup flags&lt;/title&gt;
-    &lt;link href="/assets/dinky/stylesheets/styles.css?0.5259388960671865" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.1408598333353499" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/dinky/stylesheets/styles.css?0.13595154657621555" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.23562591195237625" type="text/css" rel="stylesheet" media="all"&gt;
 
-&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.7160656838059831"&gt;&lt;/script&gt;
+&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.7132623500855436"&gt;&lt;/script&gt;
 
     &lt;!--[if lt IE 9]&gt;
     &lt;script src="//html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
@@ -2231,8 +2231,11 @@ to the test framework that the current process is a child process.&lt;/p&gt;
 &lt;p&gt;Gives the default maximal active V-logging level; 0 is the default.
 Normally positive values are used for V-logging levels.&lt;/p&gt;
 
+&lt;pre&gt;&lt;code&gt;--vmodule
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;Gives the per-module maximal V-logging levels to override the value
-given by --v.  E.g. &lt;code&gt;my_module=2,foo*=3&lt;/code&gt; would change the logging
+given by &lt;code&gt;--v&lt;/code&gt;.  E.g. &lt;code&gt;my_module=2,foo*=3&lt;/code&gt; would change the logging
 level for all code in source files &lt;code&gt;my_module.*&lt;/code&gt; and &lt;code&gt;foo*.*&lt;/code&gt;
 (&lt;code&gt;-inl&lt;/code&gt; suffixes are also disregarded for this matching).&lt;/p&gt;
 
@@ -2241,13 +2244,10 @@ against the whole pathname and not just the module.  E.g.,
 &lt;code&gt;*/foo/bar/*=2&lt;/code&gt; would change the logging level for all code in
 source files under a &lt;code&gt;foo/bar&lt;/code&gt; directory.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;--vmodule
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;// Will wait for 60 seconds for a debugger to come to attach to the process.&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;--wait-for-debugger
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Will wait for 60 seconds for a debugger to come to attach to the process.&lt;/p&gt;
 
   
   &lt;ul class="pagination"&gt;
@@ -2312,10 +2312,10 @@ source files under a &lt;code&gt;foo/bar&lt;/code&gt; directory.&lt;/p&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"&gt;
     &lt;meta name="author" content="Jason Milkins" /&gt;
     &lt;title&gt;String.template()&lt;/title&gt;
-    &lt;link href="/assets/dinky/stylesheets/styles.css?0.5145816680369184" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5803719368045692" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/dinky/stylesheets/styles.css?0.09883990121852615" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.006494399525381556" type="text/css" rel="stylesheet" media="all"&gt;
 
-&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.2550328281885418"&gt;&lt;/script&gt;
+&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.5264768251680243"&gt;&lt;/script&gt;
 
     &lt;!--[if lt IE 9]&gt;
     &lt;script src="//html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
@@ -2435,10 +2435,10 @@ source files under a &lt;code&gt;foo/bar&lt;/code&gt; directory.&lt;/p&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"&gt;
     &lt;meta name="author" content="Jason Milkins" /&gt;
     &lt;title&gt;iTerm2 color theme Soothe&lt;/title&gt;
-    &lt;link href="/assets/dinky/stylesheets/styles.css?0.3587990758802002" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5392160109485165" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/dinky/stylesheets/styles.css?0.9334718425439558" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7365106235800329" type="text/css" rel="stylesheet" media="all"&gt;
 
-&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.9649398996299948"&gt;&lt;/script&gt;
+&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.834372913406462"&gt;&lt;/script&gt;
 
     &lt;!--[if lt IE 9]&gt;
     &lt;script src="//html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
@@ -2560,10 +2560,10 @@ source files under a &lt;code&gt;foo/bar&lt;/code&gt; directory.&lt;/p&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"&gt;
     &lt;meta name="author" content="Jason Milkins" /&gt;
     &lt;title&gt;Tinkerbin.com&lt;/title&gt;
-    &lt;link href="/assets/dinky/stylesheets/styles.css?0.9868901337266898" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6611604793543334" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/dinky/stylesheets/styles.css?0.882549385636951" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.26081282364546154" type="text/css" rel="stylesheet" media="all"&gt;
 
-&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.040193032593938915"&gt;&lt;/script&gt;
+&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.8894885187859628"&gt;&lt;/script&gt;
 
     &lt;!--[if lt IE 9]&gt;
     &lt;script src="//html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;

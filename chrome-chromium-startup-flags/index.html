@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="author" content="Jason Milkins" />
     <title>Chrome/Chromium startup flags</title>
-    <link href="/assets/dinky/stylesheets/styles.css?0.7688033682810658" type="text/css" rel="stylesheet" media="all">
-<link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.03824208377437621" type="text/css" rel="stylesheet" media="all">
+    <link href="/assets/dinky/stylesheets/styles.css?0.17953524424982337" type="text/css" rel="stylesheet" media="all">
+<link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.7687265969217303" type="text/css" rel="stylesheet" media="all">
 
-<script src="/assets/dinky/javascripts/scale.fix.js?0.6040877053886629"></script>
+<script src="/assets/dinky/javascripts/scale.fix.js?0.37471282611922785"></script>
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -2221,8 +2221,11 @@ to the test framework that the current process is a child process.</p>
 <p>Gives the default maximal active V-logging level; 0 is the default.
 Normally positive values are used for V-logging levels.</p>
 
+<pre><code>--vmodule
+</code></pre>
+
 <p>Gives the per-module maximal V-logging levels to override the value
-given by --v.  E.g. <code>my_module=2,foo*=3</code> would change the logging
+given by <code>--v</code>.  E.g. <code>my_module=2,foo*=3</code> would change the logging
 level for all code in source files <code>my_module.*</code> and <code>foo*.*</code>
 (<code>-inl</code> suffixes are also disregarded for this matching).</p>
 
@@ -2231,13 +2234,10 @@ against the whole pathname and not just the module.  E.g.,
 <code>*/foo/bar/*=2</code> would change the logging level for all code in
 source files under a <code>foo/bar</code> directory.</p>
 
-<pre><code>--vmodule
-</code></pre>
-
-<p>// Will wait for 60 seconds for a debugger to come to attach to the process.</p>
-
 <pre><code>--wait-for-debugger
 </code></pre>
+
+<p>Will wait for 60 seconds for a debugger to come to attach to the process.</p>
 
   
   <ul class="pagination">
