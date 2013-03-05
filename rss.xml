@@ -3,7 +3,7 @@
   <channel>
     <title>CodeFodder</title>
     <link>http://codefodder.github.com</link>
-    <pubDate>2013-03-05 13:46:32 +1100</pubDate>
+    <pubDate>2013-03-05 13:49:16 +1100</pubDate>
     <item>
       <title>Chrome/Chromium startup flags</title>
       <link>http://codefodder.github.com/chrome-chromium-startup-flags</link>
@@ -16,10 +16,10 @@
     &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"&gt;
     &lt;meta name="author" content="Jason Milkins" /&gt;
     &lt;title&gt;Chrome/Chromium startup flags&lt;/title&gt;
-    &lt;link href="/assets/dinky/stylesheets/styles.css?0.12682305986794395" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.4827999330489663" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/dinky/stylesheets/styles.css?0.5259388960671865" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.1408598333353499" type="text/css" rel="stylesheet" media="all"&gt;
 
-&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.18841491269330435"&gt;&lt;/script&gt;
+&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.7160656838059831"&gt;&lt;/script&gt;
 
     &lt;!--[if lt IE 9]&gt;
     &lt;script src="//html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
@@ -1882,10 +1882,14 @@ use Chromium&amp;#39;s network stack to fetch, and V8 to evaluate.&lt;/p&gt;
 
 &lt;h2 id="toc_3"&gt;Chrome OS switches&lt;/h2&gt;
 
+&lt;p&gt;For use when running Chrome/Chromium on ChromeOS.&lt;/p&gt;
+
 &lt;pre&gt;&lt;code&gt;--ash-webui-init
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;For use when running Chrome/Chromium on ChromeOS.&lt;/p&gt;
+&lt;p&gt;When wallpaper boot animation is not disabled this switch
+is used to override OOBE/sign in WebUI init type.
+Possible values: &lt;code&gt;parallel|postpone&lt;/code&gt;. Default: &lt;code&gt;parallel&lt;/code&gt;.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;--enable-carrier-switching
 &lt;/code&gt;&lt;/pre&gt;
@@ -2308,10 +2312,10 @@ source files under a &lt;code&gt;foo/bar&lt;/code&gt; directory.&lt;/p&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"&gt;
     &lt;meta name="author" content="Jason Milkins" /&gt;
     &lt;title&gt;String.template()&lt;/title&gt;
-    &lt;link href="/assets/dinky/stylesheets/styles.css?0.330979420007676" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.21980083755739244" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/dinky/stylesheets/styles.css?0.5145816680369184" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5803719368045692" type="text/css" rel="stylesheet" media="all"&gt;
 
-&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.4515668477169512"&gt;&lt;/script&gt;
+&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.2550328281885418"&gt;&lt;/script&gt;
 
     &lt;!--[if lt IE 9]&gt;
     &lt;script src="//html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
@@ -2431,10 +2435,10 @@ source files under a &lt;code&gt;foo/bar&lt;/code&gt; directory.&lt;/p&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"&gt;
     &lt;meta name="author" content="Jason Milkins" /&gt;
     &lt;title&gt;iTerm2 color theme Soothe&lt;/title&gt;
-    &lt;link href="/assets/dinky/stylesheets/styles.css?0.25244591936760796" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.8790926317148451" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/dinky/stylesheets/styles.css?0.3587990758802002" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.5392160109485165" type="text/css" rel="stylesheet" media="all"&gt;
 
-&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.7653122385986019"&gt;&lt;/script&gt;
+&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.9649398996299948"&gt;&lt;/script&gt;
 
     &lt;!--[if lt IE 9]&gt;
     &lt;script src="//html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
@@ -2556,10 +2560,10 @@ source files under a &lt;code&gt;foo/bar&lt;/code&gt; directory.&lt;/p&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"&gt;
     &lt;meta name="author" content="Jason Milkins" /&gt;
     &lt;title&gt;Tinkerbin.com&lt;/title&gt;
-    &lt;link href="/assets/dinky/stylesheets/styles.css?0.256356708942321" type="text/css" rel="stylesheet" media="all"&gt;
-&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.3594971720641319" type="text/css" rel="stylesheet" media="all"&gt;
+    &lt;link href="/assets/dinky/stylesheets/styles.css?0.9868901337266898" type="text/css" rel="stylesheet" media="all"&gt;
+&lt;link href="/assets/dinky/widgets/google_prettify/stylesheets/twitter-bootstrap.css?0.6611604793543334" type="text/css" rel="stylesheet" media="all"&gt;
 
-&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.23197733637738827"&gt;&lt;/script&gt;
+&lt;script src="/assets/dinky/javascripts/scale.fix.js?0.040193032593938915"&gt;&lt;/script&gt;
 
     &lt;!--[if lt IE 9]&gt;
     &lt;script src="//html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
